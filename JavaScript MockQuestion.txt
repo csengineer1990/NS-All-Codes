@@ -1,0 +1,500 @@
+What is javascript and what is it used for?
+
+JavaScript is the Programming Language for the Web.
+JavaScript can update and change both HTML and CSS.
+JavaScript can calculate, manipulate and validate data.
+JavaScript variables can be:
+    Numbers
+    Strings
+    Objects
+    Arrays
+    Functions
+
+The primary use of JavaScript is to build web-based applications. Some of what JavaScript can do for the web includes:
+
+    adding interactive behavior to web pages like zooming in and out or playing audio/video
+    creating web and mobile apps, the most popular examples consist of the likes of Netflix and Uber
+    building web servers and server-side applications using Node.js
+    create games that operate inside the browser
+
+JavaScript is a just-in-time (JIT) compiled, multi-paradigm programming language with dynamic typing. 
+Combined with HTML and CSS, JavaScript is one of the leading technologies used in the World Wide Web. 1. 
+
+1. Web & Mobile Apps - JavaScript has several different frameworks for developing web and mobile apps including React Native, Ionic, and Angular. All these frameworks extend tooling to simplify development depending on what JavaScript is used for in each specific framework. 
+2. Game Development  JavaScript is even being used in the virtual reality industry, with the help of the WebXR Device API. 
+3. Server Applications JavaScript’s runtime environment, Node.js, developers can create server-side applications. 
+4. Interactive UX
+5. AI & Machine Learning Projects
+
+
+What are the different data types present in javascript?
+
+JavaScript Types are Dynamic
+JavaScript Strings
+JavaScript Numbers
+JavaScript Booleans
+JavaScript Arrays
+JavaScript Objects
+The typeof Operator
+Undefined
+Empty Values
+
+true, false						// 1. Boolean
+null 							// 2. Null
+undefined 						// 3. Undefined
+1, 4, 7, 231, 51, 11, 9			// 4. Number
+9007199254740991n				// 5. BigInt
+'Hello', 'World', 'Uzbekistan'	// 6. String
+let sym1 = Symbol()				// 7. Symbol
+{a: 123}, [1]					// 8. Object
+
+
+
+difference between not defined and undefined data types?
+
+In conclusion, "undefined" and "not defined" are two different values in JavaScript. "undefined" indicates that a variable has been declared but not given a value, while "not defined" indicates that a variable does not exist
+
+If the variable name which is being accessed doesn't exist in memory space then it would be not defined, and if exists in memory space but hasn't been assigned any value till now, then it would be undefined
+
+
+
+what is Local scope and global scope of variables ?
+When you use JavaScript, local variables are variables that are defined within functions. They have local scope, which means that they can only be used within the functions that define them. 
+Global Variable: In contrast, global variables are variables that are defined outside of functions
+
+Any variable that you declare inside a function is said to have Local Scope. 
+
+A variable declared outside a function, becomes GLOBAL.A global variable has Global Scope:
+All scripts and functions on a web page can access it
+    Global Scope
+    Local Scope 
+    Block Scope
+    Function Scope
+If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+
+
+Differences between declaring variables using var, let and const
+
+var
+//var is just like let but var is used to declare a variable value at top of
+//the program, its hoisted. 
+var a; // Initializing the variable.
+var b = 4; // Initializing and declaring variable.
+var b = 5; //b will be redeclared and we can update its value
+
+ES6 introduced two important new JavaScript keywords: let and const.
+These two keywords provide Block Scope in JavaScript.
+
+Variables declared with the var keyword can NOT have block scope.
+Variables declared inside a { } block can be accessed from outside the block. 
+
+let
+//let is used to declare the variable or initialize a variable..
+//let variable can be updated in future.
+//Its block scope and we cannot redeclare it.
+let a; // Initializing the variable.
+let b = 4; // Initializing and declaring variable.
+let b = 5; //Error:- cannot redeclare a value but we can update the value.
+
+const
+//const variable should be declared and intialized at same time.
+//const variable cannot be updated in future.
+//we cannot even redeclare the variable in future.
+const a = 10; //Initilizing and declaring a variable at a time.
+const b; //Error:- const should be declared and intialized.
+const a = 11 // Error:- cannot redeclare the variable again
+
+
+What is DOM?
+The HTML DOM model is constructed as a tree of Objects:
+The DOM is a W3C (World Wide Web Consortium) standard.
+"The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."
+The W3C DOM standard is separated into 3 different parts:
+
+    Core DOM - standard model for all document types
+    XML DOM - standard model for XML documents
+    HTML DOM - standard model for HTML documents
+
+The Document Object Model is a cross-platform and language-independent interface that treats an XML or HTML document as a tree structure wherein each node is an object representing a part of the document. The DOM represents a document with a logical tree.
+
+The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+
+
+Explain Hoisting in javascript
+
+Hoisting is JavaScript's default behavior of moving declarations to the top.
+In other words; a variable can be used before it has been declared.
+
+
+x = 5; // Assign 5 to x
+elem = document.getElementById("demo"); // Find an element
+elem.innerHTML = x;                     // Display x in the element
+var x; // Declare 
+
+Hoisting is a concept that enables us to extract values of variables and functions even before initializing/assigning value without getting errors and this is happening due to the 1st phase (memory creation phase) of the Execution Context.
+
+Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function
+
+Variables defined with let and const are hoisted to the top of the block, but not initialized.
+Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
+Using a let variable before it is declared will result in a ReferenceError.
+The variable is in a "temporal dead zone" from the start of the block until it is declare
+
+What is closure in javascript explain with example 
+closure - hometown
+Variable Enviorment attached to function exaclty as it was at the time and place the fucntion was created
+
+A closure is a function having access to the parent scope, even after the parent function has closed.
+A closure gives you access to an outer function’s scope from an inner function
+
+let i;
+for (i = 0; i < 3; i++) {
+  const log = () => {
+    console.log(i);
+  }
+  setTimeout(log, 100);
+} 
+
+
+Explain what a callback function is
+A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+
+to be “called back” at a later time 
+A function that accepts other functions as arguments is called a higher-order functions
+
+
+Difference between spread and rest operator"
+// We use the spread operator to spread array values or iterables into maybe an array or object.
+
+// While we use the Rest operator to gather the remaining elements passed into a function as an array.
+
+Spread syntax "expands" an array into its elements, while rest syntax collects multiple elements and "condenses" them into a single element.
+
+: The rest parameter is converse to the spread operator. while spread operator expands elements of an iterable, rest operator compresses them. It collects several elements. In functions when we require to pass arguments but were not sure how many we have to pass, the rest parameter makes it easier. 
+
+
+FirstClass Vs Higher Order
+
+First-Class Function: A programming language is said to have First-class functions if functions in that language are treated like other variables. So the functions can be assigned to any other variable or passed as an argument or can be returned by another function.
+JavaScript treat function as a first-class-citizens. This means that functions are simply a value and are just another type of object.
+
+
+What is event bubbling used for?
+In bubbling, the innermost element's event is handled first and then the outer element's event is handled.
+
+In capturing, the outermost element's event is handled first and then the inner.
+  
+Bubbling goes up the DOM(Document Object Model).
+Capturing goes down the DOM.
+But a handler can also take decision to stop the bubbling when the event has been processed completely. In JavaScript, we use the event.stopPropagation () method.
+
+Event bubbling is a method of event propagation in the HTML DOM API when an event is in an element inside another element, and both elements have registered a handle to that event. It is a process that starts with the element that triggered the event and then bubbles up to the containing elements in the hierarchy.
+
+
+What is a promise in JavaScript? 
+
+JavaScript is single threaded, meaning that two bits of script cannot run at the same time; they have to run one after another. A Promise is an object that represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
+
+"Producing code" is code that can take some time
+"Consuming code" is code that must wait for the result
+A Promise is a JavaScript object that links producing code and consuming code
+
+
+
+The call() method is a predefined JavaScript method.
+It can be used to invoke (call) a method with an owner object as an argument (parameter).
+With call(), an object can use a method belonging to another object.
+The call() method takes arguments separately.
+The apply() method takes arguments as an array.
+
+Function Borrowing
+With the bind() method, an object can borrow a method from another object.
+The example below creates 2 objects (person and member).
+The member object borrows the fullname method from the person object:
+
+Call invokes the function and allows you to pass in arguments one by one.
+Apply invokes the function and allows you to pass in arguments as an array.
+Bind returns a new function, allowing you to pass in a this array and any number of arguments.
+Apply vs. Call vs. Bind Examples
+--------------
+Call
+
+var person1 = {firstName: 'Jon', lastName: 'Kuperman'};
+var person2 = {firstName: 'Kelly', lastName: 'King'};
+
+function say(greeting) {
+    console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);
+}
+
+say.call(person1, 'Hello'); // Hello Jon Kuperman
+say.call(person2, 'Hello'); // Hello Kelly King
+
+--------------
+Apply
+
+var person1 = {firstName: 'Jon', lastName: 'Kuperman'};
+var person2 = {firstName: 'Kelly', lastName: 'King'};
+
+function say(greeting) {
+    console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);
+}
+
+say.apply(person1, ['Hello']); // Hello Jon Kuperman
+say.apply(person2, ['Hello']); // Hello Kelly King
+
+-------------
+Bind
+
+var person1 = {firstName: 'Jon', lastName: 'Kuperman'};
+var person2 = {firstName: 'Kelly', lastName: 'King'};
+
+function say() {
+    console.log('Hello ' + this.firstName + ' ' + this.lastName);
+}
+
+var sayHelloJon = say.bind(person1);
+var sayHelloKelly = say.bind(person2);
+
+sayHelloJon(); // Hello Jon Kuperman
+sayHelloKelly(); // Hello Kelly King
+
+Differences Between Promises and Async/Await in JavaScript
+Promises
+1. A promise represents a process that guaranteed to complete the execution.
+2. Promises have 3 states, these states are pending, resolved, and rejected.
+3. If the promise is chained with .then(), that continues the execution after adding the function to the callback chain.
+
+4. Error handling can be done with .then() and .catch() methods.
+5. Promise chaining can be difficult to understand and follow.
+6. Debugging can be very tricky with multiple promise chaining.
+7. Promises can be used for multiple promises in the promise chaining.
+
+Async/Await
+1. Async await is syntactic sugar for promises. Making code looks like executed synchronously.
+2. Async await does not have states. Async functions return a promise. This promise state can be either resolved or rejected.
+3. Await suspends the called function execution until the promise returns a result for that execution. If there are other functions been called after await, these executions wait until the promise finishes.
+4. Error handling can be done with a try-catch block.
+5. Async/Await makes reading the promises flow much easier. Understanding the functionality is also very easy compared to promises.
+6. Debugging is much easier with async/await.
+7. Await can be used for a single promise or promise.all().
+
+constructor function in js ?
+A constructor is a special function that creates and initializes an object instance of a class. In JavaScript, a constructor gets called when an object is created using the new keyword. The purpose of a constructor is to create a new object and set values for any existing object properties
+//Constructor Function
+function BellBoy (name, age, hasWorkPermit, languages) {
+  this.name = name;
+  this.age = age;
+  this.hasWorkPermit = hasWorkPermit;
+  this.languages = languages;
+}
+
+//Create New Object From Constructor Using Arguments
+var Earl = new BellBoy('Earl E.Bird', 23, true, ['French', 'German'])
+
+
+ Generator Function and object
+JavaScript also supports Generator functions and Generator Objects.
+Generator-Function : A generator-function is defined like a normal function, but whenever it needs to generate a value, it does so with the yield keyword rather than return. The yield statement suspends function’s execution and sends a value back to caller, but retains enough state to enable function to resume where it is left off. When resumed, the function continues execution immediately after the last yield run. 
+Syntax : 
+ 
+// An example of generator function
+function* gen(){
+     yield 1;
+     yield 2;
+     ...
+     ...
+}
+
+Generator-Object : Generator functions return a generator object. Generator objects are used either by calling the next method on the generator object or using the generator object in a “for of” loop (as shown in the above program) 
+The Generator object is returned by a generating function and it conforms to both the iterable protocol and the iterator protocol.
+
+Encountering yield and yield* syntax
+yield: pauses the generator execution and returns the value of the expression which is being written after the yield keyword.
+yield*: it iterates over the operand and returns each value until done is true.
+Advantages of generators: 
+They are memory efficient as lazy evaluation takes place, i.e, delays the evaluation of an expression until its value is needed.
+use-case (generators) 
+    writing generators in redux-saga
+    async-await (Implemented with promise and generators)
+
+
+
+What is javascript?
+ What is DOM
+ What is the callback function?
+ What is JS architecture
+-----------------------------
+ console.log('a')
+setTimeout(() => {
+    console.log('b')
+}, 2000)
+
+console.log('c')
+
+setTimeout(() => {
+   console.log('d');
+}, 0)
+console.log('e')
+
+What is the event loop, call stack and callback queue
+
+ What is closure
+ Code an example of closure
+ for (var i = 0; i < 3; i++) {
+  setTimeout(function log() {
+    console.log(i); // What is logged?
+  }, 1000);
+}
+
+var myObject = {
+foo: "bar",
+func: function() {
+var self = this;
+console.log("outer func: this.foo = " + this.foo);
+console.log("outer func: self.foo = " + self.foo);
+(function() {
+console.log("inner func: this.foo = " + this.foo);
+console.log("inner func: self.foo = " + self.foo);
+}());
+}
+};
+myObject.func();
+
+
+(function() {
+    console.log(1); 
+    setTimeout(function(){console.log(2)}, 1000); 
+    setTimeout(function(){console.log(3)}, 0); 
+    console.log(4);
+})();
+---------
+(function(x) {
+    return (function(y) {
+        console.log(x);
+    })(2)
+})(1);
+-------
+
+ What is the arrow function
+.What is the hoisting function 
+ console.log(b())
+console.log(a())
+
+const a = () => console.log('a')
+
+function b() {
+   console.log('b')
+}
+
+ What is this keyword in JavaScript? 
+
+
+Provide the explanation
+console.log(10>20>1)
+console.log(10<20<30)
+
+ What is promises
+ What is async await ?
+ What is promising chaining
+What are different statuses of promise
+ How to avoid promise chaining
+ What is currying
+
+
+
+Medium 191122
+1)Any projects you have worked on? -- worked on new projects
+2)explain data types? -- answered
+3) JS is treated as a Single threaded language. Why?	--answered
+4) In string, to return the character from a specific index which method is used?	-- not answered
+5) Let vs Var? Which one is better and why?  --answered
+6) What is spread syntax (...) in ES6?	 --answered
+7)What is a callback function? -- answered
+8) What are generator functions?	 -- not answered
+9) Can we use expressions in switch cases?	--answered
+10) What is a promise and how it works? --answered
+11) What is async / await?	--semi answered
+12) Explain event capturing --answered
+13) Explain Object Destructuring --answered
+14) What is a NaN property?	 --semi answered
+15) What is a DOM? what is DOM tree? --semi answered
+16) What is an anonymous function?	--answered
+17) What is a Temporal Dead Zone? --not answered
+Ans https://www.educative.io/answers/what-is-the-temporal-dead-zone-in-javascript
+18) What is the use of a constructor function in JS? --answered
+19) explain the method of array --answered
+
+
+1. What is javascript?
+2. Difference between var, let and cost.
+3. What is NaN property?
+4. What is strict mode?
+5. What is IIFE?
+6. setTimeout vs setInterval
+7. classes in javascript.
+8. What is hoisting?
+9. What are closures?
+10. Output based question.
+11. Return second largest element in the array.
+12. localStorage vs sessionStorage.
+13. Fetch data from api and sort the data in it.
+
+ /--------------------Easy-------------/
+What is closure in JS - Partially Answered
+What is the difference between function declaration and a function expression? - Not Answered
+Difference b/w let, var, and const - Partially Answered
+Some output based problem. - Incorrect Answer
+What is a call back? - Answered
+Simple HTML form-based question. -  Partially Implement
+/--------------------medium-------------/
+1. Enumerate the differences between Java and JavaScript? 
+2.  What are JavaScript Data Types?
+3. What is the use of isNaN function?
+4. What are undeclared and undefined variables?
+5.  What are features of ES6 ?
+6. What are global variables? How are these variable declared?
+7. What is === operator?
+8. What would be the result of 3+2+”7″?
+9. What would be the result of 3+2- ”7″?
+10. What are the different types of errors in JavaScript?
+11. What is the ‘Strict Mode in JavaScript, and how can it be enabled?
+12. What are objects in JS and how do you define them. 
+13. What is prototype?
+14. What is closures?
+15. Example for closures - 
+16. What is for-in loop in Javascript?
+17. anonymous function
+18 - What is the use of setTimeOut & setTimeInterval
+/--------------------hard-------------/
+1) Difference == and ===
+2) Pass by value and pass by reference and how it works in JS
+3) What is a HOF in JS?
+4) What is a callback?
+5) What is a promise?
+6) Diff between DOM and BOM
+7) Implement a calculator
+/--------------------medium--------------------------/
+FlexBox
+Grid
+Promises
+Callbacks
+Closures
+Async Await
+Media Queries
+Prototype
+Generators
+/--------------------Easy-------------/
+What is hoisting
+What is closure
+Difference between var let const
+Print 1 after 1 sec and upto 5 after 5 sec
+Some more questions based on array
+What is callback function 
+
+
+
+
+
+
+
+

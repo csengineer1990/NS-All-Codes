@@ -1,0 +1,1599 @@
+contest 150123
+
+Lexographical Rotation (Contest)
+easy
+Time Limit: 2 sec
+Memory Limit: 128000 kB
+Problem Statement
+Given an array Arr of length N. Print the lexographically minimum rotation of the array Arr.
+All the elements of the array are distinct.
+Input
+First line of input contains a single integer N.
+Second line of input contains N integers denoting the array Arr.
+
+Constraints:
+1 <= N <= 100000
+1 <= Arr[i] <= 1000000000
+Output
+Print the lexographically minimum rotation of the array Arr.
+Example
+Sample Input
+5
+2 3 1 4 10
+
+Sample Output
+1 4 10 2 3
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+         for(int i = 0; i < n; i++){
+            arr[i] = sc.nextInt();
+        }
+
+        int minIndex = 0;
+        for(int i = 0; i < n; i++){
+            if(arr[i] < arr[minIndex]){
+                //minIndex = i + 1;
+                minIndex = i;
+                //break;
+            }
+        }
+        for(int i = minIndex; i < n; i++){
+            System.out.print(arr[i] + " ");
+        }
+        for(int i = 0; i < minIndex;i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+
+Inversion of array
+easy
+Time Limit: 2 sec
+Memory Limit: 128000 kB
+Problem Statement
+Given an array of positive integers. The task is to find inversion count of array.
+
+Inversion Count : For an array, inversion count indicates how far (or close) the array is from being sorted. If array is already sorted then inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.
+Formally, two elements a[i] and a[j] form an inversion if a[i] > a[j] and i < j.
+
+Asked in Adobe, Amazon, Microsoft.
+Input
+The first line of each test case is N, the size of the array. The second line of each test case contains N elements.
+
+Constraints:-
+1 ≤ N ≤ 10^5
+1 ≤ a[i] ≤ 10^5
+Output
+Print the inversion count of array.
+Example
+Sample Input:
+5
+2 4 1 3 5
+
+Sample Output:
+3
+
+Explanation:
+Testcase 1: The sequence 2, 4, 1, 3, 5 has three inversions (2, 1), (4, 1), (4, 3).
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        int arr[] = new int[n];
+
+        for(int i = 0 ;i < n; i++){
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println(mergeSortAndCount(arr, 0, arr.length - 1));
+    }
+    public static long  merge(int arr[], int l, int mid, int r){
+        long inversionCount = 0;
+        int n1 = mid - l + 1;
+        int n2 = r - mid;
+        int left[] = new int [n1];
+        int right[] = new int[n2];
+        
+        for(int i = 0;i < n1; i++){
+            left[i] = arr[l + i];
+        }
+        for(int i = 0; i < n2;i++){
+            right[i] = arr[mid + i + 1];
+        }
+
+        int i = 0, j = 0, k = l;
+
+        while(i < left.length && j < right.length){
+   
+            if(left[i] <= right[j])
+                arr[k++] = left[i++];
+            else{
+                arr[k++] = right[j++];
+                inversionCount += n1 - i;
+            }
+        }
+
+        while(i < n1)
+            arr[k++] = left[i++];
+       
+        while(j < n2)
+            arr[k++] = right[j++];
+
+        return inversionCount;
+    }
+
+    private static long mergeSortAndCount(int arr[], int l, int r){
+        long inversionCount = 0;
+        if(l < r){
+            int mid= (l + r)/2;
+            inversionCount += mergeSortAndCount(arr, l, mid);
+            inversionCount += mergeSortAndCount(arr, mid + 1, r);
+            inversionCount += merge(arr, l, mid, r);
+        }
+        return inversionCount;
+    }
+}
+
+
+Contest Que From https://my.newtonschool.co/playground/code/459budbst9eq/
+The gabba test easy
+Time Limit: 2 sec
+Memory Limit: 128000 kB
+Problem Statement
+Australia hasn’t lost a Test Match at the Gabba since 1988. India has to win this one, but unfortunately all of their players are injured.
+
+You are given the following information:
+1. A total of N players are available, all are injured initially.
+2. You have M magic pills. Using X pills, you can make any one player fit for match.
+3. Alternatively, you can exchange any player for Y magic pills.
+Compute the maximum number of players you can make fit for the Gabba Test Match.
+Note: "Exchanging" a player means that player will no longer be available and you will gain Y extra magic pills for the exchange
+Input
+The input contains a single line containing 4 integers N M X Y.
+
+Constraints:-
+0 ≤ N, M, X, Y ≤ 10^9
+Output
+The output should contain a single integer representing the maximum number of players you can make fit before the match.
+Example
+Sample Input:-
+5 10 2 1
+
+Sample Output:-
+5
+
+Explanation:-
+You can make all players fit if you use all the pills.
+
+Sample Input:-
+3 10 4 2
+
+Sample Output:-
+2
+Explanation:-
+You can make 2 players fit using the initial candies. Otherwise, Exchanging one player would result in a total of 10+2=12 magic pills. This is enough to make 3 players fit, but you won't have 3 players remaining.
+import java.util.*;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int N = sc.nextInt();
+    int M = sc.nextInt();
+    int X = sc.nextInt();
+    int Y = sc.nextInt();
+
+    int intialFit = M/X;
+    if(N > intialFit){
+      N -= intialFit;
+      M -= intialFit*X;
+      while(N >= 1){
+        if(M<X){
+          N--;
+          M += Y;
+        }
+        else {
+          intialFit++;
+          N--;
+          M -= X;
+        }
+      }
+      System.out.print(intialFit);
+    }
+
+    else System.out.println(N);
+  }
+}
+
+
+
+
+Contest 04-12-22 
+
+Substring Reversal easy
+Given a string S. The letters are numbered from 1 to |S| from left to right. You have to perform M operations. In each operation, you will be given a number Pi. You need to reverse the substring from Pi to |S| - Pi + 1. Print the final string after all the operations.
+It is guaranteed that 2*Pi <= |S|
+|S| denotes the length of string S
+The first line contains a string S. Second line contains a single integer M. Third line contains M space separated integers denoting the value of Pi.
+1 <= |S| <= 100000
+1 <= M <= 100000
+1 <= Pi <= ceil(|S|/2)
+Output
+Print a single line containing the final string after all the operations
+Example
+Sample Input:
+abcdef
+3
+1 2 3
+Sample Output:fbdcea
+Explanation:
+After 1st step, S = fedcba
+After 2nd step, S = fbcdea
+After 3rd step, S = fbdcea
+
+//Sit ne approach bataya usase hua
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    
+    public static void main (String[] args) throws IOException{
+        //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+        // String str = br.readLine(); 
+        // int n = Integer.parseInt(br.readLine());
+        // String s = br.readLine(); 
+        // int[] operations = new int[n];
+        // String[] s1 = s.split(" ");
+        // for(int i = 0 ;i < n; i++){
+        //     operations[i] = Integer.parseInt(s1[i]);
+        //     //System.out.print(n +" " + str +"" + operations[i] + " ");
+        // }
+
+        //Anothe mestor approach using eeven odd swapping hogi index given pe
+        Scanner sc = new Scanner(System.in); //sc.nextLine();
+        String str = sc.next(); 
+        char[] arr = str.toCharArray();
+        int n = str.length();
+        int m = sc.nextInt();
+        
+        int[] swap = new int[n / 2];
+        for(int i = 0 ;i < m; i++){
+            int pi = sc.nextInt() - 1;
+            swap[pi] ++;
+        }
+        int ps = 0;
+        //evev odd swapping  character
+        for(int i = 0; i < n/2;i++){
+            ps += swap[i];
+            if(ps % 2 == 1){
+                swap(arr, i , n - 1 - i);
+            }
+        }
+        //int[] operations = {1, 2, 3};
+        System.out.println(new String(arr)); 
+        //System.out.println(reverseString(str, operations)); 
+    }
+
+    static void swap(char[] arr, int a, int b){
+        char temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
+    }
+}
+
+
+
+//Giving TLE 8 pass
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    public static String reverseString(String s, int[] operations) {
+        char[] chars = s.toCharArray();
+        int n = chars.length;
+
+        // Perform the operations
+        for (int op : operations) {
+        int left = op - 1;
+        int right = n - op;
+        while (left < right) {
+            char temp = chars[left];
+            chars[left] = chars[right];
+            chars[right] = temp;
+            left++;
+            right--;
+        }
+        }
+        return new String(chars);
+    }
+    
+    public static void main (String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //Scanner sc = new Scanner(System.in); //sc.nextLine();
+        String str = br.readLine(); 
+        int n = Integer.parseInt(br.readLine());
+
+        String s = br.readLine(); 
+        int[] operations = new int[n];
+        String[] s1 = s.split(" ");
+        for(int i = 0 ;i < n; i++){
+            operations[i] = Integer.parseInt(s1[i]);
+            //System.out.print(n +" " + str +"" + operations[i] + " ");
+        }
+        //int[] operations = {1, 2, 3};
+        System.out.println(reverseString(str, operations)); 
+    }
+}
+
+
+Yet Another Counting Problem (Contest) easy
+You are given an array A of size N. Find the number of pairs of indices (i, j) in the array A such that i < j and Ai - i = Aj - j.
+Input The first line of the input contains a single integer N.
+The second line of the input contains N space seperated integers.
+Constraints:
+1 <= N <= 105
+1 <= Ai <= 105
+Output
+Print the number of pairs of indices (i, j) in the given array A such that i < j and Ai - i = Aj - j.
+Example
+Sample Input:4
+1 3 3 4
+Sample Output:3
+Explaination:
+The three pairs of indices are:
+(1, 3) -> A[1] - 1 = A[3] - 3 -> 1 - 1 = 3 - 3 -> 0 = 0
+(1, 4) -> A[1] - 1 = A[4] - 4 -> 1 - 1 = 4 - 4 -> 0 = 0
+(3, 4) -> A[3] - 3 = A[4] - 4 -> 3 - 3 = 4 - 4 -> 0 = 0
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0 ;i < n; i++){
+            arr[i] = sc.nextInt();
+        }
+        // n^2 approach
+        // int count = 0;
+        // for(int i = 0; i < n; i++){
+        //     for(int j = i + 1; j < n; j++){
+
+        //         //if(i < j && (arr[i] - i == arr[j] - j)){
+        //         if (arr[i] - i == arr[j] - j) {
+        //             count ++;
+        //         }
+        //     }
+        // }
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            int val = arr[i] - i;
+            if (map.containsKey(val)) {
+                map.put(val, map.get(val) + 1);
+            } else {
+                map.put(val, 1);
+            }
+        }
+    // For each value in the map, the number of pairs of indices that satisfy the given condition
+    // is the number of occurrences of that value multiplied by (the number of occurrences of that value - 1)
+    // divided by 2 (since the pairs are unordered)
+        long count = 0;
+        for (int val : map.values()) {
+            count += (long) val * (val - 1) / 2;
+        }
+        System.out.println(count);
+    }
+}
+/*
+We can rewrite the equation as Ai - Aj = i - j.
+Let's consider two indices i and j such that i < j.
+If i and j are such that Ai - Aj = i - j, then we have the following:
+    if Ai > Aj, then Ai - i > Aj - j, which means that there is no pair of indices i and j such that i < j and Ai - i = Aj - j.
+    if Ai < Aj, then Ai - i < Aj - j, which means that there is no pair of indices i and j such that i < j and Ai - i = Aj - j.
+Therefore, there are no pairs of indices i and j such that i < j and Ai - i = Aj - j.
+*/
+
+
+
+Contest 22-10-22
+Permutation - 2 easy
+A ​ permutation is simply a name for a reordering. So the permutations of the string
+‘abc’ are ‘abc’, ‘acb’, ‘bac’, ‘bca’, ‘cab’, and ‘cba’. Note that a sequence is a
+permutation of itself (the trivial permutation). For this problem, you’ll need
+to write a ​ recursive​ function ​​ that takes a string and returns a
+list of all its permutations.
+A couple of notes on the requirements:
+1. The order of the returned permutations must be lexicographically.
+2. Avoid returning duplicates in your final list.
+Input Input contains a single string S.
+Constraints:- 1<=|S|<=8
+Output Print all the permutations of string S in lexicographical order.
+ExampleSample Input:ABC
+Sample Output :ABC ACB BAC BCA CAB CBA
+Sample Input:(T(
+Sample Output:- ((T (T( T((
+
+Reduce to 1 easy
+Given an integer N which is to be reduced to 1 by performing the given operation:-
+In one operation you can subtract any divisor of N other than N itself from N.
+Your task is to find the minimum number to reduce N to 1.
+InputThe input contains a single integer N.
+Constraints:-1 <= N <= 1000
+OutputPrint the minimum number of operations need to convert N to 1.
+ExamplSample Input:-5
+Sample Output:-3
+Explanation:- 5 - > 4 - > 2 - > 1
+Sample Input:-8
+Sample Output:-3
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    public static void main (String[] args) {
+        Scanner sc =new Scanner(System.in);
+        int n = sc.nextInt();
+        int []dp = new int[n + 1];
+        
+        Arrays.fill(dp,Integer.MAX_VALUE);
+        dp[0] = 0;
+        dp[1] = 0;
+
+        for(int i = 2; i <= n; i++){
+            for(int j = 2; j*j <= i; j++){
+                if (i % j == 0) {
+                    dp[i] = Math.min(dp[i], 1 + dp[i - j]);
+                    dp[i] = Math.min(dp[i], 1 + dp[i - (i/j)]);
+                }
+            }
+            dp[i] = Math.min(dp[i], 1 + dp[i - 1]);
+        }
+        System.out.println(dp[n]);   
+    }
+}
+
+Contest 25-09-22
+
+The EndGame : Maximum Sliding Window easy
+You are given an array A of size N. You have to print the maximum in every K-sized subarray from the left to the right in the array A.
+More formally, you have to print N - K + 1 integers X1, X2, ..., XN-K+1 such that Xi (1 <= i <= N - K + 1) is the maximum element in the subarray Ai, Ai+1, ..., Ai+K-1.
+Input
+1. The first line contains an integer N, denoting the size of the array.
+2. The second line has N space- separated integers of the array A.
+3. The third line contains integer K, denoting the size of the sliding window
+Constraints :
+1 <= N <= 10^5
+10^-4 <= A[i] <= 10^4
+1 <= K <= N
+Output Print the max of K numbers for each position of sliding window
+Example Sample Input:-
+8
+1 3 -1 -3 5 3 6 7
+3
+Sample Output:- 3 3 5 5 6 7
+Explanation:-
+Window position Max
+- - - -
+[1 3 -1] -3 5 3 6 7 3
+1 [3 -1 -3] 5 3 6 7 3
+1 3 [-1 -3 5] 3 6 7 5
+1 3 -1 [-3 5 3] 6 7 5
+1 3 -1 -3 [5 3 6] 7 6
+1 3 -1 -3 5 [3 6 7] 7
+
+Sample Input:-
+1
+1
+1
+Sample Output:-1 
+With TLE need to be Fix
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    static class node {
+		public int data;
+		public int maximum;
+		public node(int data, int maximum)
+		{
+			this.data = data;
+			this.maximum = maximum;
+		}
+	}
+
+    public static void main (String[] args)throws IOException {
+        //Scanner sc = new Scanner(System.in);]
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br= new BufferedReader(isr);
+        int size = Integer.parseInt(br.readLine());
+        long[] arr = new long[size]; 
+
+        String line = br.readLine(); // to read multiple integers line
+        String[] strs = line.trim().split(" ");
+        for(int i = 0; i < size; i++ ){
+            //arr[i] = sc.nextInt();
+            arr[i] = Long.parseLong(strs[i]);
+            //System.out.print(arr[i] + " ");    
+        }
+        //System.out.println(arr);
+        int k = Integer.parseInt(br.readLine());
+
+        //printKMax(arr, arr.length, k);
+        List<Long> res = findKMaxElement(arr, k, arr.length);
+        for (Long x : res)
+           System.out.print(x + " ");
+        
+    }
+
+    static ArrayList<Long> findKMaxElement(long[] arr, int K, int N) {
+        // creating the max heap ,to get max element always
+        PriorityQueue<Long> queue = new PriorityQueue<>(Collections.reverseOrder());
+ 
+        ArrayList<Long> res = new ArrayList<>();
+        int i = 0;
+ 
+        for (; i < K; i++)
+            queue.add(arr[i]);
+ 
+        // adding the maximum element among first k elements
+        res.add(queue.peek());
+ 
+        // removing the first element of the array
+        queue.remove(arr[0]);
+ 
+        // iterarting for the next elements
+        for (; i < N; i++) {
+            // adding the new element in the window
+            queue.add(arr[i]);
+            // finding & adding the max element in the current sliding window
+            res.add(queue.peek());
+            // finally removing the first element from front end of queue
+            queue.remove(arr[i - K + 1]);
+        }
+        return res;
+        // this code is Contributed by Pradeep Mondal P
+    }
+ 
+
+    static void printKMax(int arr[], int N, int K) {
+        long max;
+        for (int i = 0; i <= N - K; i++) {
+ 
+            max = arr[i];
+ 
+            for (int j = 1; j < K; j++) {
+                if (arr[i + j] > max)
+                    max = arr[i + j];
+            }
+            System.out.print(max + " ");
+        }
+    }
+}
+
+
+Building Tower easy  https://www.hackerearth.com/practice/data-structures/queues/basics-of-queues/practice-problems/algorithm/disk-tower-b7cc7a50/discussion/java-solution-b3baca27/
+Sara is building a tower with N disks of sizes 1 to N.
+The rules for building the tower are simple:-
+*Every day you are provided with one disk of distinct size.
+*The disk with larger sizes should be placed at the bottom of the tower.
+*The disk with smaller sizes should be placed at the top of the tower.
+*You cannot put a new disk on the top of the tower until all the larger disks that are given to you get placed.
+Your task is to print N lines denoting the disk sizes that can be put on the tower on the ith day.
+Input The first line of input contains a single integer N. The next line of input contains N space separated integers depicting the size of the discs.
+Constraints:- 1 <= N <= 100000 1 <= Size <= N
+Output Print N lines. In the ith line, print the size of disks that can be placed on the top of the tower in descending order of the disk sizes.
+If on the ith day no disks can be placed, then leave that line empty.
+ExampleSample Input:-
+5
+4 5 1 2 3
+Sample Output:-
+
+5 4
+
+
+3 2 1
+Explanation
+On the first day, the disk of size 4 is given. But you cannot put the disk on the bottom of the tower as a disk of size 5 is still remaining.
+On the second day, the disk of size 5 will be given so now the disk of sizes 5 and 4 can be placed on the tower.
+On the third and fourth days, disks cannot be placed on the tower as the disk of 3 needs to be given yet. Therefore, these lines are empty.
+On the fifth day, all the disks of sizes 3, 2, and 1 can be placed on the top of the tower. 
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class MyComparator implements Comparator{
+    public int compare(Object obj1,Object obj2)  {
+        Integer i1=(Integer)obj1;
+        Integer i2=(Integer)obj2;
+        return i2.compareTo(i1);
+    }
+}
+class Main {
+    public static void main (String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n = sc.nextInt();
+        int max = n;
+
+        Queue<Integer> queue=new PriorityQueue<Integer>(new MyComparator());
+        int disks[]=new int[n];
+        for(int i = 0;i < n;i++)  {
+            disks[i] = sc.nextInt();
+            queue.add(disks[i]);
+            while(!queue.isEmpty() && queue.peek()==max)  {
+                System.out.print(queue.poll() + " ");
+                max--;
+            }  
+            System.out.println();
+        }
+    }
+}
+
+
+
+Contest 28-08-22
+
+Maximum Weapon easy
+The black panther is preparing for a war against Erik killmonger. He needs to gather supplies in order to win the war. There are n number of containers, each containing random number of weapons. To congregate the weapons, he has to follow only one basic rule: He cannot collect weapons from two consecutive containers. Help him by designing a code that maximizes the number of weapons collected from the containers whilst abiding by the rules to win the war.
+InputThe first line contains an integer n which denotes the number of containers.
+The second line contains an array consisting of n elements that denote the maximum weapons that a particular container can contribute to the supplies.
+Constraints:1 ≤ n ≤ 10000 1 ≤ a[i] ≤ 10000
+Output An integer that corresponds to the maximum weapons collected.
+Example Sample Input:
+6
+5 6 10 100 10 5
+Sample Output:111
+Explanation:-6 + 100 + 5 
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    public static void main (String[] args) {
+        //PriorityQueue<Integer> pq = new PriorityQueue<Integer>(Collections.reverseOrder());
+        Scanner sc = new Scanner (System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        for(int i = 0; i < n; i ++){
+            arr[i] = sc.nextInt();
+        }
+        //System.out.println(maxWeapons(arr))
+        System.out.println(maxWeaponsLooted(arr));
+    }
+    //using memoization success
+    public static int maxWeaponsLooted(int[] arr) {
+        int[] dp = new int[arr.length];
+        for(int i = 0; i < dp.length; i++){
+            dp[i] = -1;
+        }
+        return getMaxWeapons(arr,0, dp); //start with 0
+    }
+    public static int getMaxWeapons(int arr[],int index, int[] dp){
+        
+        if( arr.length == 0 || index >= arr.length)
+            return 0;
+        
+        if(dp[index] != -1){
+            return dp[index];
+        }
+      
+        int op1 = arr[index] + getMaxWeapons(arr, index + 2, dp); //if we include array[index]
+        int op2 = getMaxWeapons(arr, index + 1, dp); //if we dont include array[index]   
+        dp[index] = Math.max(op1, op2);
+        return  dp[index] ;
+    }
+    //using dp need to check again
+    /*public static int maxWeapons(int[]  arr){
+        if(arr.length == 0) return 0;
+
+        int[] dp = new int[arr.length];
+        dp[0] = arr[0];
+        dp[1] = Math.max(arr[1], dp[0]);
+        
+        //i - 2 + house i is not include or i -1 includ conditon hai icnlud kre ya nahi
+        for(int i = 2; i < dp.length; i++ ){
+		
+            dp[i] = Math.max(arr[i] + dp[i - 2], dp [i - 1]);
+        }
+        return dp[dp.length - 1];
+    }*/
+}
+
+
+Coin Change - Minimum Number of Coins easy https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/
+You have infinite supply of coins, of given denominations. Can you figure out the minimum number of coins required so that coins sum- up to a certain required value. We'll use dynamic programmic to solve this question.
+You are given an amount denoted by value. You are also given an array of coins. The array contains the denominations of the given coins. You need to find the minimum number of coins to make the change for value using the coins of the given denominations. Also, keep in mind that you have infinite supply of the coins.
+If making the change is not possible then print "Not Possible" without quotes.
+Input The first line of input contains one integer T - the number of testcases. Then T testcases follow.
+Each testcase contains three lines of input. The first line contains value for which you need to make the change. The second line contains the Size of the array. The third line contains the denominations of the coins.
+Constraints:
+1 <= T <= 100
+1 <= value <= 1000
+1 <= numberOfCoins <= 1000
+1 <= denominationOfCoins <= 1000
+Output
+For each testcase, in a new line, print the minimum number of coins required.
+If making the change is not possible then print "Not Possible" without quotes.
+Example
+Input:
+2
+10
+4
+2 5 3 6
+5
+3
+3 6 3
+Output:
+2
+Not Possible
+
+Explanation:
+Testcase1:
+There are five ways to make 10 using [2, 5, 3, 6].
+{2, 2, 2, 2, 2}
+{2, 2, 3, 3}
+{2, 2, 6}
+{2, 3, 5}
+{5, 5}
+Minimum number of coins is required when we use two 5 coins
+Thus answer is 2
+Testcase2:
+There are no ways to make 5 using [3, 6, 3]
+Thus answer is Not Possible.
+
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+class Main {
+    public static void main (String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int testCases = Integer.parseInt(br.readLine());
+        //int value = Integer.parseInt(br.readLine());
+        while(testCases-- > 0){
+            int value = Integer.parseInt(br.readLine());
+            
+            int numOfCoins = Integer.parseInt(br.readLine());
+            
+            int[] coinsArr = new int[numOfCoins];
+            String str = br.readLine();
+            String[] s1 = str.split(" ");
+
+            for(int i = 0 ; i < numOfCoins; i++){
+                coinsArr[i] = Integer.parseInt(s1[i]);
+               // System.out.println(coinsArr[i]);
+            }  
+            if(minCoin(coinsArr, coinsArr.length,value) == -1){
+                System.out.println("Not Possible");
+            }else{
+                System.out.println(minCoin(coinsArr,coinsArr.length, value));
+            }
+        }
+    }
+    public static int minCoin(int[] coins, int m, int v){
+        int dp[] = new int[v + 1];
+        dp[0] = 0;
+        for(int i = 1; i <= v; i++){
+            dp[i] = Integer.MAX_VALUE;
+        }
+
+        for(int i = 0; i <= v; i++){
+            for(int j = 0; j < m; j++){
+                if(coins[j] <= i){
+                    int subres = dp[i - coins[j]];
+                    if(subres != Integer.MAX_VALUE && subres + 1 < dp[i])
+                        dp[i] = subres + 1; 
+                }
+            }
+        }
+
+        if(dp[v] == Integer.MAX_VALUE){
+            return -1;
+        }
+        return dp[v];
+
+    }
+}
+
+Longest Common Substring easy https://www.geeksforgeeks.org/longest-common-substring-dp-29/
+Given two strings X and Y containing both uppercase and lowercase alphabets. The task is to find the length of the longest common substring.
+ Input consist of two lines containing the strings X and Y respectively.
+1 <= length(X), length(Y) <= 100
+Output
+Print in a single line the length of the longest common substring of the two strings.
+Example
+Input
+abcdgh
+acdghr
+Output 4
+Example:
+Testcase 1: cdgh is the longest substring present in both of the strings.
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+class Main {
+
+    static String a, b ;
+    public static void main (String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //Scanner sc = new Scanner(System.in);
+        //a = sc.nextLine();
+        //b = sc.nextLine();
+        a = br.readLine();
+        b = br.readLine();
+        //System.out.println(longestCommonSubstring(a.length(),b.length(),0));
+        System.out.println(longestCommonSubstring1(a, b, a.length(), b.length()));
+    }
+
+    public static int longestCommonSubstring1(String s, String t, int n, int m ){
+            int dp[][] = new int[2][m + 1];
+            int res = 0;
+            for(int i = 1; i<=n; i++){
+                for(int j = 1; j <= m; j++){
+                    if(s.charAt(i - 1) == t.charAt(j - 1)){
+                        dp[i%2][j] = dp[(i - 1) % 2][j - 1] + 1;
+                        if(dp[i%2][j] > res)
+                            res = dp [i%2][j];
+                    }else{
+                        dp[i%2][j] = 0;
+                    }
+                }
+            }
+            return res;
+     }
+    public static int longestCommonSubstring(int i, int j, int count){
+        if(i == 0 || j == 0){
+            return count;
+        }
+        if(a.charAt(i - 1) == b.charAt(j - 1)){
+            count = longestCommonSubstring(i - 1, j - 1, count + 1 );
+        }
+        count = Math.max(count, 
+                        Math.max(longestCommonSubstring(i, j - 1, 0), 
+                        longestCommonSubstring(i - 1, j, 0)));
+
+        return count;                
+    }
+}
+
+
+N meetings in one roomeasy https://www.geeksforgeeks.org/find-maximum-meetings-in-one-room/
+There is one meeting room in a firm. There are N (i.e. from 1st, 2nd, 3rd, and so on) meetings in the form of (start[i], end[i]) where start[i] is start time of meeting i and end[i] is finish time of meeting i.
+What is the maximum number of meetings that can be accommodated in the meeting room?
+Note: Meeting starts from 1
+InputThe first line of input consists number of the test cases, T. The description of T test cases is as follows:
+The first line consists of the size of the array.
+The second line has the array containing the starting time of all the meetings each separated by a space, i.e., start[i].
+The third line has the array containing the finishing time of all the meetings each separated by a space, i.e., end[i].
+Constraints:
+1 ≤ T ≤ 100
+1 ≤ N ≤ 100
+1 ≤ start[i], end[i] ≤ 10^7
+Output
+Print the maximum number of meeting possible.
+Example
+Input:
+2
+6
+1 3 0 5 8 5
+2 4 6 7 9 9
+8
+75250 50074 43659 8931 11273 27545 50879 77924
+112960 114515 81825 93424 54316 35533 73383 160252
+Output:
+4
+3
+Explanation:
+Testcase 1:
+First meeting [1, 2]
+Second meeting [3, 4]
+Fourth meeting [5, 7]
+Fifth meeting [8, 9]
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    public static void main (String[] args)throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int testCases = Integer.parseInt(br.readLine());
+
+        while(testCases-- > 0){
+            int noOfMeetings = Integer.parseInt(br.readLine());
+            int[] startTime = new int[noOfMeetings];
+            String str = br.readLine();
+            String[] s1 = str.split(" ");
+            for(int i=0;i<noOfMeetings; i++){
+                startTime[i] = Integer.parseInt(s1[i]);
+                //System.out.print(startTime[i]+ " ");
+            }
+
+            int[] endTime = new int[noOfMeetings];
+            String str1 = br.readLine();
+            String[] s2 = str1.split(" ");
+
+            for(int j = 0; j<noOfMeetings; j++){
+                endTime[j] = Integer.parseInt(s2[j]);
+                //System.out.print(endTime[j] + " ");
+            }
+            
+            maxMeetings(startTime,endTime,noOfMeetings);
+        }
+    }
+
+    static void maxMeetings(int start[], int end[], int n) {
+        ArrayList<meeting> meet = new ArrayList<>();
+        
+        for(int i = 0; i < start.length; i++)
+            meet.add(new meeting(start[i], end[i], i+1));
+        
+        meetingComparator mc = new meetingComparator(); 
+        Collections.sort(meet, mc); 
+        ArrayList<Integer> answer = new ArrayList<>();
+        answer.add(meet.get(0).pos);
+        int limit = meet.get(0).end; 
+        
+        for(int i = 1;i<start.length;i++) {
+            if(meet.get(i).start > limit) {
+                limit = meet.get(i).end; 
+                answer.add(meet.get(i).pos);
+            }
+        }
+        //System.out.println("The order in which the meetings will be performed is ");
+        // for(int i = 0;i < answer.size(); i++) {
+        //     System.out.print(answer.get(i) + " ");
+            
+        // }
+        System.out.println(answer.size());
+    }
+}
+
+
+class meeting {
+    int start;
+    int end;
+    int pos;
+     
+    meeting(int start, int end, int pos) {
+        this.start = start;
+        this.end = end;
+        this.pos = pos;
+    }
+}
+class meetingComparator implements Comparator<meeting>{
+    @Override
+    public int compare(meeting o1, meeting o2) 
+    {
+        if (o1.end < o2.end)
+            return -1;
+        else if (o1.end > o2.end)
+            return 1;
+        else if(o1.pos < o2.pos)
+            return -1;
+        return 1; 
+    }
+}
+
+
+Test Question 20822
+
+Shop Sales (contest)easy
+There are N items in a shop with the ith item's quantity being Ai. The price of an item is dynamically decided and is equal to the quantity of that item left in the shop. M customers enter the shop. The shopkeeper being very greedy asked you to find the maximum money he can earn if each customer buys exactly one item.
+InputThe first line of the input contains two integers N and M.
+The second line of the input contains N space seperated integers.
+Constraints:
+1 <= N, M <= 105
+1 <= A, sub>i <= 105
+M <= Sum of all Ai
+OutputPrint the maximum money the shopkeeper can earn if each customer buys exactly one item.
+Example Sample Input:
+3 4
+1 2 4
+Sample Output: 11
+Explaination:The first customer buys the 2nd item. It costs him 2 units, the array becomes [1, 1, 4]
+The second customer buys the 3rd item. It costs him 4 units, the array becomes [1, 1, 3]
+The third customer buys the 3rd item. It costs him 3 units, the array becomes [1, 1, 2]
+The fourth customer buys the 3rd item. It costs him 2 units, the array becomes [1, 1, 1]
+Total Sales = 2 + 4 + 3 + 2 = 11
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+class Main {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        Queue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        while(n-- > 0){
+            pq.add(sc.nextInt());
+        }
+        long ans = 0;
+        int temp = 0;
+        while(m-- > 0){
+            temp = pq.poll();
+            ans+= temp;
+            pq.add(temp - 1);
+        }
+        System.out.println(ans);
+    }
+}
+
+Ram and Sum (Contest) medium
+Ram is given an array A of N integers. He was asked to perform the following operation, The operation goes like, Ram can choose atmost X number of distinct elements from the array. After choosing those elements he had to add them up and print the maximum sum he can achieve.
+Input The first line of the input contains an integer T denoting number of test cases.
+For each test cases there will be two lines.
+The first line will contain two space separated integers N and X.
+The second line will contain the N space separated integers denoting array A.
+Constraints 1 ≤ T ≤ 1000   1 ≤ X, N ≤ 105  -109 ≤ A[i] ≤ 109
+Sum of N over all test cases will not exceed 2 x 106
+Output
+For each test case print single Integer denoting the maximum sum Ram can achieve.
+Example
+Sample Input
+2
+4 1
+1 2 3 4
+5 1
+1 3 3 2 5
+
+Sample Output
+4
+6
+ExplanationFor first test case we can choose 4 and maximise the sum. For second test case we can choose two 3 as we have chosen only 1 distinct integer and maximise the result.
+
+
+
+
+Test Question 14822
+Chocolates
+Everyone loves having chocolates. Saloni loves having chocolates more than anyone.
+She has n bags having a[1], a[2], ..., a[n] number of chocolates. In one unit time, she can choose any bag a[i], eat all a[i] chocolates and then fill the bag with floor(a[i]/2) chocolates.
+Find the maximum number of chocolates she can eat in k units of time.
+Input The first line of the input contains an integer n and k, the number of bags Saloni has and the units of time she will eat.
+The second line of input contains n integers, the number of chocolates in ith bag.
+Constraints
+1 <= n, k <= 100000
+1 <= a[i] <= 1000000000
+OutputOutput a single integer, the maximum number of chocolates she can have in k units of time.
+Example Sample Input
+3 3
+7 5 1
+Sample Output15
+Explanation In 1st unit time, she will eat from 1st bag (7 chocolates)
+In 2nd unit time, she will eat from 2nd bag (5 chocolates)
+In 3rd unit time, she will eat from 1st bag (3 chocolates)
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int n = sc.nextInt();
+        int k= sc.nextInt();
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        //int[] arr = new int[n];
+
+        for(int i = 0; i<n; i++){
+            //arr[i] = sc.nextInt();
+            pq.add(sc.nextInt());
+        } 
+        long sum = 0;
+        int temp = 0;
+        //int max = arr[0];
+
+        for(int i = 0; i < k ;i++){
+            temp = pq.poll();
+            sum += temp;
+            pq.add(temp / 2);
+        }
+        System.out.println(sum);
+    }
+}
+
+
+Parity's Largest Number After Digit Swaps
+A positive integer num is given to you. Any two digits of num with the same parity can be swapped (i. e. both odd digits or both even digits).
+After any number of swaps, output the largest attainable value of num.
+Input The first line contains the integer num.
+Constraints: 1<= num <= 1e9
+Output After any number of digit swaps, output the largest number possible.
+Example Sample Input 1:
+1234 Sample Output 1:3412
+Explanation 1:
+When the digit 3 is swapped with the digit 1, the result is 3214.
+The number 3412 is obtained by swapping the digit 2 with the numeral 4.
+It's worth noting that there might be alternative swap sequences, but 3412 is the maximum feasible number.
+Also, because the parities of the digits 4 and 1 are different, we cannot swap them.
+Sample Input 2: 65875
+Sample Output 2: 87655
+Explanation 2:
+The number 85675 is obtained by replacing the digit 8 with the digit 6.
+If you swap the initial digit 5 with the seventh digit, you'll get the number 87655.
+There may be alternative swap sequences, but it can be demonstrated that 87655 is the maximum conceivable number.
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in );
+        int n = sc.nextInt();
+
+        System.out.println(maximizedNumber(n));
+
+    }
+
+    static int maximizedNumber(int num){
+        ArrayList<Character> oddDigit = new ArrayList<>();
+
+        ArrayList<Character> evenDigit = new ArrayList<Character>();    
+
+        char[] s = (String.valueOf(num)).toCharArray();
+        for(int i = 0;i<s.length;i++){
+            if((s[i] - '0') % 2 == 0){
+                evenDigit.add(s[i]);
+            }else{
+                oddDigit.add(s[i]);
+            }
+        }
+
+        oddDigit.sort(new cSort());
+        evenDigit.sort(new cSort());
+        
+        int i1 = 0, j1 = 0;
+
+        for(int i = 0;i <s.length;i++){
+            if((s[i] - '0') % 2 == 0){
+                s[i] = evenDigit.get(i1);
+                i1++;
+            }else{
+                s[i] = oddDigit.get(j1);
+                j1++;
+            }
+        } 
+        return Integer.parseInt(new String(s));
+    }
+}
+
+class cSort implements Comparator<Character>{
+    @Override 
+    public int compare (Character c1, Character c2){
+        return Character.compare(Character.toLowerCase(c2), Character.toLowerCase(c1));
+    }
+};
+
+
+Diagonal Traverse
+Given a 2D integer array nums, output all elements of nums in diagonal order as shown in the below images.
+For this array output will be 1 4 2 7 5 3 8 6 9
+Input First line will contains an integer 'row' represents number of rows, and next 'row' line contains 'row' arrays, each row contains an integer 'col' and col elements of rowth row.
+Constraints:
+1<= col,row <= 100000
+1<= total number of elements <= 100000
+1<= nums[i][j] <= 100000
+Output Output all elements of nums in diagonal order.
+Example
+Sample Input:
+5
+5 1 2 3 4 5
+2 6 7
+1 8
+3 9 10 11
+5 12 13 14 15 16
+Sample Output:
+1 6 2 8 7 3 9 4 12 10 5 13 11 14 15 16
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    public static void main (String[] args) {
+        LinkedList<LinkedList<Integer>> ll = new LinkedList<>();
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        int r = 0;
+        while(t-- >0){
+            r = sc.nextInt() - 1;
+            System.out.print(sc.nextInt() + " ");
+
+            for(int i = ll.size() - 1; i>=0; i--){
+                if(ll.get(i).size() > 0){
+                    System.out.print(ll.get(i).poll() + " ");
+                }else{
+                    ll.remove(i);
+                }
+            }
+
+            LinkedList<Integer> temp = new LinkedList<>();
+            while(r-- > 0){
+                temp.add(sc.nextInt());
+            }
+            ll.add(temp);
+        }
+
+        while(ll.size() > 0){
+            for(int i = ll.size() - 1; i >= 0 ; i --){
+                if(ll.get(i).size() > 0){
+                    System.out.print(ll.get(i).poll() + " ");
+
+                }else{
+                    ll.remove(i);
+                }
+            }
+        }
+    }
+
+    
+}
+
+
+Greedy and Binarytree
+Test Question 31722
+
+
+Deep Nodes easy
+Given a binary tree of N nodes, with root 1, find the number of nodes at depth D of the tree for all D from 1 to N, where depth of root node is taken to be 1.
+Input First line contains the integer N, denoting the number of nodes in the binary tree.
+Next N lines contains two integers denoting the left and right child of the i'th node respectively.
+If the node doesn't have a left or right child, it is denoted by '-1'
+1 <= N <= 100000
+Output
+Print a single line containing N integers denoting the number of nodes at depth D of the tree.
+Example
+Sample Input 1:
+5
+2 4
+5 3
+-1 -1
+-1 -1
+-1 -1
+Sample output 1:
+1 2 2 0 0
+Explanation: Given binary tree
+1
+/ \
+2 4
+/ \
+5 3 
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    static class Node{
+        int val;
+        Node left;
+        Node right;
+        Node(int val){
+            this.val = val;
+            this.left = null;
+            this.right = null;
+        }
+    }
+    public static void countlevel(Node root, int level, int ans[]) {
+        if(root == null) return;
+        ans[level]++;
+        countlevel(root.left,level + 1,ans);
+        countlevel(root.right,level + 1,ans);
+    }
+    public static void main (String[] args) {
+        // Scanner sc = new Scanner(System.in);
+        // int n = sc.nextInt();
+        // int[][] arr = new int[n+1][2];
+        
+        // for(int i = 1; i <= n; i++ ){
+        //     arr[i][0] = sc.nextInt();
+        //     arr[i][1] = sc.nextInt();
+        // }
+        //int[] brr = new int[ n + 1]; 
+        // DepthOfTree(arr, 1, brr, 1);
+        // for(int i = 1; i < n + 1; i++ ){
+        //     if(brr[i] > 0){
+        //         System.out.print(brr[i] +" ");
+        //     }
+        // }
+        // System.out.print("0 0");
+        //Using HashMap creting the tree to find depth of the tree
+        //this is another way to create tree
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Node root = new Node(1);
+        HashMap<Integer, Node> m = new HashMap<>();
+        m.put(1, root);
+        for(int i = 1; i < n; i++){
+            Node node = m.get(i);
+            int left = sc.nextInt();
+            int right = sc.nextInt();
+            if(left != -1){
+                Node temp = new Node(left);
+                node.left = temp;
+                m.put(left,temp);
+            }
+            if(right !=-1){
+                Node temp = new Node(right);
+                node.right = temp;
+                m.put(right,temp);
+            }
+        }
+
+        int ans[] = new int[n+1];                         //ans= [0,0,0,0,0,0]
+        countlevel(root, 1 ,ans);
+        for(int i = 1; i <= n; i++)
+            System.out.print(ans[i] + " ");
+    }
+
+    /*public static void DepthOfTree(int arr[][], int indexNode, int[] brr, int count ){
+        int left = arr[indexNode][0];
+        int right = arr[indexNode][1];
+        brr[count] = brr[count]+1;
+        
+        if(left > 0){
+            DepthOfTree(arr, left, brr, count + 1);
+        }
+        
+        if(right > 0){
+            DepthOfTree(arr, right, brr, count + 1);
+        }
+    }*/
+}
+
+
+Good Numbers
+You are given a positive integer N. You have to the find the count of good numbers from 1 to N.
+A good number is a number which consists of only 1 unique digit. More formally, it consists of only one digit repeating one or more times. Some examples of good numbers are- 3, 77, 8888, 444444, while 48, 99913, 777770 are not good numbers.
+Constraints:1 <= N <= 1018
+Output]Print the count of good numbers from 1 to N.
+Example
+Sample Input:13
+Sample Output: 10
+
+Explaination:
+The 10 good numbers from 1 to 13 are:
+1, 2, 3, 4, 5, 6, 7, 8, 9, 11
+
+class Main {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+        long S = Long.parseLong(str);
+        int n = str.length();
+
+        int ans  = (n - 1 ) * 9;
+        long divide = 1;
+        while(divide < Math.pow(10, n - 1)){
+            divide = (divide * 10) + 1;
+        }
+        ans += (S / divide);
+
+        System.out.print(ans);
+        /*long n = sc.nextInt();
+        long count = 0;
+        int a = getDigit(n);
+        count = (a - 1) * 9;
+        long b = findDigit(n);
+        count += (b - 1);
+        
+        long temp = b;
+        for(int i = 1; i<a; i++){
+            temp = temp * 10 + b;
+        }
+        if(n >= temp){
+            count++;
+        }
+        System.out.println(count);*/
+    }
+
+	/*public static long findDigit(long n){
+        while(n >= 10){
+            n = n / 10;
+        }
+        return n;
+    }
+
+    public static int getDigit(long n){
+        int c = 0;
+        while(n > 0){
+            c++;
+            n = n / 10;
+        }
+        return c;
+    }
+
+    public static boolean checkGoodNum(long n){
+        if(n/10 == 0){
+            return true;
+        }
+        long temp = n % 10;
+        while(n > 0){
+            if(temp != n % 10){
+                return false;
+            }
+            n = n / 10;
+        }
+        return true;
+    }*/
+}
+
+
+
+
+Postorder traversalGiven a binary tree, with root 1, print the postorder traversal of the tree.
+Algorithm Postorder(tree)
+1. Traverse the left subtree
+2. Traverse the right subtree
+3. Visit the root
+InputThe input consists of N+1 lines.
+First line contains the integer N, denoting the number of nodes in the binary tree.
+Next N lines contains two integers denoting the left and right child of the i'th node respectively.
+If the node doesn't have a left or right child, it is denoted by '-1' 
+Print a single line containing N space separated integers representing the postorder traversal of the given tree
+Example Sample Input 1:
+5
+2 4
+5 3
+-1 -1
+-1 -1
+-1 -1
+Sample output 1: 5 3 2 4 1
+Explanation: Given binary tree
+1
+/ \
+2 4
+/ \
+5 3 
+
+
+class Main {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[][] arr = new int[n+1][2];
+        
+        for(int i = 1; i <= n; i++ ){
+            arr[i][0] = sc.nextInt();
+            arr[i][1] = sc.nextInt();
+        }
+        postTraversalTree(arr,1);
+    }
+
+    public static void postTraversalTree(int arr[][], int count){
+
+        int left = arr[count][0];
+        int right = arr[count][1];
+        if(left>0){
+            postTraversalTree(arr,left);
+        }
+        
+        if(right>0){
+            postTraversalTree(arr,right);
+        }
+        System.out.print(count+ " ");
+    }
+}
+
+Toy Company Greedy
+Priyanka works for an international toy company that ships by container. Her task is to the determine the lowest cost way to combine her orders for shipping. She has a list of item weights. The shipping company has a requirement that all items loaded in a container must weigh less than or equal to 4 units plus the weight of the minimum weight item. All items meeting that requirement will be shipped in one container.
+What is the smallest number of containers that can be contracted to ship the items based on the given list of weights? 
+Output
+Print the integer value of the number of containers Priyanka must contract to ship all of the toys.
+Example
+Sample Input9
+1 2 3 4 5 10 11 12 13
+Sample Output 2
+There are items with weights w = [1, 2, 3, 4, 5, 10, 11, 12, 13]. This can be broken into two containers: [1, 2, 3, 4, 5] and [10, 11, 12, 13]. Each container will contain items weighing within 4 units of the minimum weight item.
+class Main {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numOfOrderToShip = sc.nextInt();
+        int[] arrWeight = new int[numOfOrderToShip];
+        
+        for(int i = 0; i < numOfOrderToShip; i++ ){
+            arrWeight[i] = sc.nextInt();
+        }
+        Arrays.sort(arrWeight);
+
+        int min = arrWeight[0];
+        int count = 1;
+        int i = 1;
+        while(i < numOfOrderToShip){
+            if(arrWeight[i] <= min + 4 ){
+                i++;
+            }else{
+                count++;
+                min = arrWeight[i];
+                i++;
+            }
+        }
+        System.out.println(count);
+    }
+}
+
+
+
+
+Test19622
+Given a matrix, the task is to find the maximum element of each row.
+https://www.geeksforgeeks.org/find-maximum-element-row-matrix/
+public class GFG{
+ 
+    // Function to get max element
+    public static void maxelement(int no_of_rows, int[][] arr) {
+        int i = 0;
+         
+        // Initialize max to 0 at beginning
+        // of finding max element of each row
+        int max = 0;
+        int[] result = new int[no_of_rows];
+        while (i < no_of_rows) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+            }
+            result[i] = max;
+            max =0;
+            i++;
+ 
+        }
+        printArray(result);
+ 
+    }
+ 
+    // Print array element
+    private static void printArray(int[] result) {
+        for (int i =0; i<result.length;i++) {
+            System.out.println(result[i]);
+        }
+ 
+    }
+ 
+    // Driver code
+    public static void main(String[] args) {
+        int[][] arr = new int[][] { {3, 4, 1, 8},
+                                    {1, 4, 9, 11},
+                                    {76, 34, 21, 1},
+                                   {2, 1, 4, 5} };
+       // Calling the function 
+        maxelement(4, arr);
+    }
+}
+
+
+Max Product
+Given an array of N integers, You have to find the maximum product of two integers.
+Sample Input:- 5
+-1 -2 3 4 -5
+Sample Output:- 12 
+class Main {
+	public static void main (String[] args) {
+                      // Your code here
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		short arr[]=new short[n];
+		for(int i=0;i<n;i++){
+			arr[i]=sc.nextShort();
+		}
+		Arrays.sort(arr);
+			int c=Math.max(arr[0]*arr[1],arr[n-1]*arr[n-2]);
+			System.out.println(c);
+		
+	}
+}

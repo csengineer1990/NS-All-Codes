@@ -1,0 +1,4403 @@
+https://github.com/Aniket-Wali?tab=repositories
+https://github.com/Suraj-Rajmane/React-will-you-be-my-valentine---Amazon-Prime-Trending/blob/main/src/components/App.js
+
+https://github.com/m2-madhav?language=&page=3&q=&sort=&tab=repositories
+
+https://github.com/Aniket-Wali
+https://codesandbox.io/u/arbaazmakandar
+https://github.com/sachinprajapati8604?tab=repositories&q=&type=&language=&sort=
+
+//Project Links
+https://www.the-art-of-web.com/javascript/maze-generator/
+
+https://github.com/conorbailey90/Javascript-DFS-Maze
+https://github.com/thinkswell/javascript-mini-projects
+
+https://www.geeksforgeeks.org/pong-game-in-javascript/
+https://iq.opengenus.org/minesweeper-game-using-js/#google_vignette
+https://www.101computing.net/minesweeper-in-javascript/
+
+https://dmitripavlutin.com/javascript-this-interview-questions/
+
+Another Batch Assignment
+https://my.newtonschool.co/playground/markup/wmhs5qwgted9/
+https://my.newtonschool.co/playground/code/3q9px9ijf376/
+Simple BOM Alert
+https://my.newtonschool.co/playground/markup/6a7evg7fa906/
+
+
+Data link fro class video to perform promises and apis operation
+https://reqres.in/api/users
+
+Api Key
+http://omdbapi.com/
+
+Creating a chessboard pattern with JavaScript and DOM
+https://www.geeksforgeeks.org/creating-a-chessboard-pattern-with-javascript-and-dom/
+
+
+Dyanmic Css- Frontend
+//https://my.newtonschool.co/playground/markup/n5tww0b9ilv5/
+
+
+Bubble Sort visualizer
+In this project, we will be building a bubble sort visualizer.
+    Take input from the user, It will be numbers separated by commas from input tag with id numbers_input.
+
+    Create a button with id create-btn with text create array, which on click creates individual div for each element in the array.
+
+    All such elements will be stored in div with class num-holder. Make this div a flexbox, and space out all the child elements evenly
+
+    Each number inside the above-mentioned div will be div and have class num along with num-${idx}, where idx starts from zero.
+
+    Also they will have an attribute data-val which equals the number they are representing.
+
+    Also, set the CSS property order of each element according to their place in the original array input by users. (Order property starts from one, and this is what we will be manipulated to show the array being sorted ).
+
+    Also, each num div will have the same width as each other but different heights depending upon their values.
+    Create a button with id sort-btn, which will step by step sort the array.
+    The exact sorting algorithm that you have to use is already mentioned. And you may have noticed that this algorithm is not fully optimized because even for a fully sorted array it will still do all the comparisons which are intended.
+    So each "step" of the sorting is the iteration of the inner for loop. And on each step, we highlight the two elements in comparison by setting the border property to '2px solid black' for 100ms, then remove it.
+
+    if they are supposed to change places, we change their order property so they automatically change places.
+
+Example :-
+    User enters 1,2,3,4,5 and clicks create array button.
+    5 divs with class "num" are created, each also have class "num-1", "num-2" and so on.
+    They are all inside the div "num-holder".
+    On clicking sort-btn, num-1 and num-2 will be highlighted, since these are the first 2 comparisons in the algorithm, followed by num-2 and num-3 and so on.
+    This is a sorted array so all comparisons will show, but no element will change its position.
+    So if instead the array was 2,1,3,4,5.
+    On the first comparison num-1 and num-2 will highlight and their order attribute will change to each other so they switch places.
+
+<form onsubmit="createArray(event)" action="#">
+  <label for="number_input">Enter numbers seperated by comma here<label>
+  <input text="text" id="numbers-input">
+ <button type="submit" id="create-btn">Create Array</button>
+
+</form>
+
+<main id="number-display"></main>
+<button onclick="next()" id="sort-btn">Next</button>
+
+
+
+
+
+
+
+
+Frontend Search Strings
+Given a article picked from internet, Implement the following.
+Make search implementation on whole page
+When a string is typed in input (id: #search-bar) and the button(id: '#search-button') is clicked, all the strings present in the page should be marked with tag so that they will be highlighted.
+If you search another string and hit the button previous mark tags should be removed.
+question
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Strings</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="main">
+        <h1 class='header'>Search Strings</h1>
+        <div class="content">
+            <div class='search-bar-container'>
+                <label for='search-bar'>Type String you need to search: </label>
+                <input type='text' id='search-bar'></input>
+                <button class='btn btn-primary' id='search-button'>Search</button>
+            </div>
+            <div class="content-container">
+                <div class="content-headers">
+                    <h1>Where will the next pandemic come from?</h1>
+                    <h4>And how can we stop it?</h4>
+                </div>
+                <div class="img-container">
+                    <div class="img-box">
+                        <img src="https://www.popsci.com/uploads/2019/03/18/VLXCPDCHZXBBG5T5H76K4BZRYI.jpg" alt="rabbit"
+                            class="main-img"></img>
+                        <p>
+                            Lyles flying fox (Pteropus lylei) upside down with mouth open. Gary
+                            Ombler
+                        </p>
+                    </div>
+                </div>
+                <div class="para-content">
+                    <i>This article is adapted from David Quammen’s new book, Spillover.</i>
+                    <p class="first-para">
+                        <b>In June 2008, a Dutch woman </b>
+                        <span>
+                            named Astrid Joosten left the Netherlands with her husband for an
+                            adventure vacation in Uganda. It wasn’t their first trip to Africa,
+                            but it would be more consequential than the others.
+                        </span>
+                    </p>
+                    <p id="test-para">
+                        At home in Noord-Brabant, Joosten, 41, worked as a business analyst
+                        for an electrical company. Both she and her spouse, a financial
+                        manager, enjoyed escaping Europe on annual getaways. In 2002, they had
+                        flown to Johannesburg and, stepping off the airplane, felt love for
+                        Africa at first sight. On later trips they visited Mozambique, Zambia,
+                        and Mali. The journey to Uganda in 2008, booked through an
+                        adventure-travel outfitter, would allow them to see mountain gorillas
+                        in the southwestern highlands of the country as well as some other
+                        wildlife and cultures. They worked their way south toward Bwindi
+                        Impenetrable Forest, where the gorillas reside. On one day, the
+                        operators offered a side trip, an option, to a place called the
+                        Maramagambo Forest, where the chief attraction was a site known as
+                        Python Cave. African rock pythons lived there, languid and content,
+                        grown large on a diet of bats.
+                    </p>
+                    <p>
+                        Joosten’s husband, later her widower, is a fair-skinned man named Jaap
+                        Taal, a calm fellow with a shaved head and dark, roundish glasses.
+                        Most of the other travelers didn’t fancy this Python Cave offering, he
+                        told me later. “But Astrid and I always said, ‘Maybe you come here
+                        only once in your life, and you have to do everything you can.’ ” They
+                        rode to Maramagambo Forest and then walked a mile or so, gradually
+                        ascending, to a small pond. Nearby, half-concealed by moss and other
+                        greenery, like a crocodile’s eye barely surfaced, was a low, dark
+                        opening. Joosten and Taal, with their guide and one other client,
+                        climbed down into the cave.
+                    </p>
+                    <p>
+                        The footing was bad: rocky, uneven, and slick. The smell was bad too:
+                        fruity and sour. Think of a dreary barroom, closed and empty, with
+                        beer on the floor at three a.m. The cave seemed to have been carved by
+                        a creek, or at least to have channeled its waters, and part of the
+                        overhead rock had collapsed, leaving a floor of boulders and coarse
+                        rubble, a moonscape, coated with guano like a heavy layer of vanilla
+                        icing. It served as a major roosting site for the Egyptian fruit bat
+                        (Rousettus aegyptiacus), a crow-size chiropteran that’s widespread and
+                        relatively abundant in Africa and the Middle East. The cave’s ceiling
+                        was thick with them—many thousands, agitated and chittering at the
+                        presence of human intruders, shifting position, some dropping free to
+                        fly and then settling again. Joosten and Taal kept their heads low and
+                        watched their step, trying not to slip, ready to put a hand down if
+                        needed. “I think that’s how Astrid got infected,” Taal told me. “I
+                        think she put her hand on a piece of rock, which contained droppings
+                        of a bat, which are infected. And so she had it on her hand.” Maybe
+                        she touched her face an hour later, or put a piece of candy in her
+                        mouth, “and that’s how I think the infection got in her.”
+                    </p>
+                    <p>
+                        No one had warned Joosten and Taal about the potential hazards of an
+                        African bat cave. They knew nothing of a virus called Marburg (though
+                        they had heard of Ebola). They only stayed in the cave about 10
+                        minutes. They saw a python, large and torpid. Then they left,
+                        continued their Uganda vacation, visited the mountain gorillas, took a
+                        boat trip, and flew back to Amsterdam. Thirteen days after the cave
+                        visit, home in Noord-Brabant, Joosten fell sick.
+                    </p>
+                    <p>
+                        No one had warned Joosten and Taal about the potential hazards of an
+                        African bat cave.At first it seemed no worse than the flu. Then her
+                        temperature climbed higher and higher. After a few days, she began
+                        suffering organ failure. Her doctors, knowing of her recent time in
+                        Africa, suspected Lassa virus or maybe Marburg. “Marburg,” said Taal,
+                        “what’s that?” Joosten’s brother looked it up on Wikipedia and told
+                        him: “Marburg virus: It kills, could be big trouble.” In fact, it’s a
+                        filovirus, the closest relative to the ebolaviruses (of which there
+                        are five species, including the most infamous, Ebola). Marburg was
+                        first discovered in 1967, when a group of African monkeys, imported to
+                        Marburg an der Lahn, in western Germany, for medical research uses,
+                        passed a nasty new virus to laboratory workers. Five people died. In
+                        the decades since, it has also struck hundreds of Africans, with a
+                        case fatality rate of up to 90 percent.
+                    </p>
+                    <p>
+                        <b> A horse dies mysteriously in Australia </b>,
+                        <span>
+                            and people around it fall sick. A chimpanzee carcass in Central
+                            Africa passes Ebola to the villagers who scavenge and eat it. A palm
+                            civet, served at a Wild Flavors restaurant in southern China,
+                            infects one diner with a new ailment, which spreads to Hong Kong,
+                            Toronto, Hanoi, and Singapore, eventually to be known as SARS. These
+                            cases and others, equally spooky, represent not isolated events but
+                            a pattern, a trend: the emergence of new human diseases from
+                            wildlife.
+                        </span>
+                    </p>
+                    <p>
+                        The experts call such diseases zoonoses, meaning animal infections
+                        that spill into people. About 60 percent of human infectious diseases
+                        are zoonoses. For the most part, they result from infection by one of
+                        six types of pathogen: viruses, bacteria, fungi, protists, prions, and
+                        worms. The most troublesome are viruses. They are abundant, adaptable,
+                        not subject to antibiotics, and only sometimes deterred by antiviral
+                        drugs. Within the viral category is one particularly worrisome
+                        subgroup, RNA viruses. AIDS is caused by a zoonotic RNA virus. So was
+                        the 1918 influenza, which killed 50 million people. Ebola is an RNA
+                        virus, which emerged in Uganda this summer after four years of
+                        relative quiescence. Marburg, Lassa, West Nile, Nipah, dengue, rabies,
+                        yellow fever virus, and the SARS bug are too.
+                    </p>
+                    <p>
+                        Over the last half dozen years, I have asked eminent disease
+                        scientists and public-health officials, including some of the world’s
+                        experts on Ebola, on SARS, on bat-borne viruses, on HIV-1 and HIV-2,
+                        and on viral evolution, the same two-part question: 1) Will a new
+                        disease emerge, in the near future, sufficiently virulent and
+                        transmissible to cause a pandemic capable of killing tens of millions
+                        of people? and 2) If so, what does it look like and from where does it
+                        come? Their answers to the first part have ranged from maybe to
+                        probably. Their answers to the second have focused on zoonoses,
+                        particularly RNA viruses. The prospect of a new viral pandemic, for
+                        these sober professionals, looms large. They talk about it; they think
+                        about it; they make contingency plans against it: the Next Big One.
+                        They say it might happen anytime.
+                    </p>
+                    <p>
+                        To understand what killed Astrid Joosten, and to see her case within
+                        the context of the Next Big One, you need to understand how viruses
+                        evolve. Edward C. Holmes is one of the world’s leading experts in
+                        viral evolution. He sits in a bare office at the Center for Infectious
+                        Disease Dynamics, which is part of Pennsylvania State University, and
+                        discerns patterns of viral change by scrutinizing sequences of genetic
+                        code. That is, he looks at long runs of the five letters (A, C, T, G,
+                        and U) that represent nucleotide bases in a DNA or RNA molecule,
+                        strung out in unpronounceable streaks as though typed by a manic
+                        chimpanzee. Holmes’s office is tidy and comfortable, furnished with a
+                        desk, a table, and several chairs. There are few bookshelves, few
+                        books, few files or papers. A thinker’s room. On the desk is a
+                        computer with a large monitor. That’s how it all looked when I
+                        visited, anyway.
+                    </p>
+                    <p>
+                        Above the computer was a poster celebrating “the Virosphere,” meaning
+                        the totality of viral diversity on Earth. Beside that was another
+                        poster, showing Homer Simpson as a character in Edward Hopper’s famous
+                        painting “Nighthawks.” Homer is seated at the diner counter with a
+                        plate of doughnuts before him.
+                    </p>
+                    <p>
+                        Holmes is an Englishman, transplanted to central Pennsylvania from
+                        London and Cambridge. His eyes bug out slightly when he discusses a
+                        crucial fact or an edgy idea, because good facts and ideas impassion
+                        him. His head is round and, where not already bald, shaved austerely.
+                        He wears wiry glasses with a thick metal brow, and while he looks a
+                        bit severe, Holmes is anything but. He’s lively and humorous, a
+                        generous soul who loves conversation about what matters: viruses.
+                        Everyone calls him Eddie.
+                    </p>
+                    <p>
+                        During the early 20th century, disease scientists from the Rockefeller
+                        Foundation and other institutions conceived the ambitious goal of
+                        eradicating some infectious diseases entirely. They tried hard with
+                        yellow fever, spending millions of dollars and many years of effort,
+                        and failed. They tried with malaria and failed. They tried later with
+                        smallpox and succeeded. Why? The differences among those three
+                        diseases are many and complex, but probably the most crucial one is
+                        that smallpox resided neither in a reservoir host nor in a vector,
+                        such as a mosquito or tick. Its ecology was simple. It existed in
+                        humans—in humans only—and was therefore much easier to eradicate. The
+                        campaign to eradicate polio, begun in 1998 by WHO and other
+                        institutions, is a realistic effort for the same reason: Polio isn’t
+                        zoonotic. Eradicating a zoonotic disease, whether a directly
+                        transmitted one like Ebola or an insect-vectored one such as yellow
+                        fever, is much more complicated. Do you exterminate the pathogen by
+                        exterminating the species of bat or primate or mosquito in which it
+                        resides? Not easily, you don’t, and not without raising an outcry. The
+                        notion of eradicating chimpanzees as a step toward preventing the
+                        future spillover of another HIV would provoke a deep and bitter
+                        discussion, to put it mildly.
+                    </p>
+                    <p>
+                        That’s the salubrious thing about zoonotic diseases: They remind us,
+                        as St. Francis did, that we humans are inseparable from the natural
+                        world. In fact, there is no “natural world,” it’s a bad and artificial
+                        phrase. There is only the world. Humankind is part of that world, as
+                        are the ebolaviruses, as are the influenzas and the HIVs, as are
+                        Marburg and Nipah and SARS, as are chimpanzees and palm civets and
+                        Egyptian fruit bats, as is the next murderous virus—the one we haven’t
+                        yet detected. And while humans don’t evolve nearly as fast and as
+                        variously as an RNA virus does, we may—let me repeat that word, may—be
+                        able to keep such threats at bay, fighting them off, forestalling the
+                        more cataclysmic of the dire scenarios they present, for one reason:
+                        At our best, we’re smarter than they are.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
+
+let totalContent = document.getElementById('main');
+let inputRef = document.getElementById('search-bar');
+const startHtml = totalContent.innerHTML
+
+const click = () =>{
+    markMatches(totalContent, inputRef.value)
+}
+// const click = () => {
+//  // Select the whole paragraph
+//             var ob = new Mark(document.querySelector(".select"));
+//             // First unmark the highlighted word or letter
+//             ob.unmark();
+//             // Highlight letter or word
+//             ob.mark(
+//                 document.getElementById("searched").value,
+//                 { className: 'a' + param }
+//             );
+// };
+const markMatches = (currentNode, pattern) => {
+    if(!pattern) return
+    let regex = new RegExp (`(?<!</?[^>]*|&[^;]* )(${pattern})`,'g');
+    currentNode.innerHTML = startHtml.replace(regex,`<mark>${pattern}</mark>`);
+    document.getElementById('search-button').addEventListener('click', click);
+    inputRef = document.getElementById('search-bar');
+    totalContent = document.getElementById("main");
+};
+
+document.getElementById('search-button').addEventListener('click', click)
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  .content {
+    margin: 0 10px;
+    padding: 0 10px;
+    border-left: 4px solid rgb(62, 183, 224);
+  }
+  .header {
+    font-weight: 500;
+    text-align: center;
+  }
+  .search-bar-container {
+    margin: 10px 20px;
+  }
+  .search-bar-container button{
+    margin: 0 20px;
+  }
+  .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .content-headers {
+    text-align: center;
+  }
+  .content-headers h1 {
+    margin: 10px 0px;
+    font-weight: 400;
+    line-height: 52px;
+    max-width: 550px;
+  }
+  .content-headers h4 {
+    margin: 10px auto;
+    color: #808088;
+  }
+  .main-img{
+      width: 35vw;
+  }
+  .img-box p{
+      font-size: 0.8rem;
+  }
+  .para-content{
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column;
+  }
+  .para-content p{
+      width: 80vw;
+  }
+
+
+ES6 version, JS currying, ES6 Classes, JS Static Methods, ES6 Getters & Setters, ... - Post Class
+
+Class Inheritance
+Acceptance Criteria
+    Create a base class called "Shape" with methods drawShape, calculateArea and color property that is initialised with a color.
+    In another module make a class called "Circle" that extends the "Shape" class and overrides the calculateArea method.
+    Write code for Shape class in shape.js and Circle in circle.js
+    Export the class from each file.
+Note: Don't remove any file from the cloned repo, otherwise all test cases will fail. Use module.exports for export and require for import. If it is not covered in class, google it :)
+
+Circle.js
+//Use module.exports for export and require for import.
+// Mentioned in question
+//we can use this as alternate to export and import
+// import using require
+var Shape = require('./shape.js');
+// declare class
+class Circle extends Shape {
+     constructor(color) {
+          super();
+     }
+     calculateArea() {
+
+     }
+}
+// export class using module.exports
+module.exports = Circle;
+
+In Shape.js
+// Use module.exports for export and require for import.
+// Mentioned in question
+//we can use this as alternate to export and import
+// declare class
+
+class Shape {
+  constructor() {
+    this.color = "green";
+  }
+  drawShape() {
+   
+  }
+  calculateArea() {
+
+  }
+}
+
+
+// export class using module.exports
+module.exports = Shape;
+
+
+
+JS Candy Crush medium
+John has N candies. He want to crush all of them. He feels that it would be boring to crush the candies randomly, so he devices a method to crush them. He divides these candies in minimum number of groups such than no group contains more than 3 candy. He crushes one candy from each group. If there are G groups in a single step, then the cost incurred in crushing a single candy for that step is G dollars. After candy from each group is crushed, he takes all the remaining candies and repeats the process until he has no candies left. He hasn't started crushing yet, but he wants to know how much total cost would be incurred. Can you help him?
+Input 1 <= N <= 10^9
+ Output return the cost from the function
+Example Sample Input 1: 4
+Explanation: Query 1: First step John divides the candies in two groups of 3 and 1 candy respectively. Crushing one- one candy from both group would cost him 2x2 = 4 dollars. He is now left with 2 candies. He divides it into one group. He crushes one candy for 1 dollar. Now, he is left with 1 candy. He crushes the last candy for 1 dollar. So, the total cost incurred is 4+1+1 = 6 dollars.
+
+// n is the number (number of candies) as  provided in input
+    function findCost(n) {
+        let sum = 0;
+        while (n > 0){
+            let group;
+            if(n == 2){
+                return sum + 2;
+            }else if(n == 1){
+                return sum + 1;
+            }
+            //mKING group by mod by n via 3
+            if(n % 3 == 0){
+                group = n / 3;
+            }else{
+                group = parseInt(n / 3) + 1 ;
+            }
+
+            sum += group * group;
+            n = n - group;
+        }
+        return sum;
+   
+    }
+
+
+ES6 Getters and setters easy
+Write a class named School and add the following:
+1)A Constructor which instantiates an empty student array
+2)A method named add to push students to the array
+3)A get method named latest which returns the last student added to the list
+Input Input contains only one line i. e list of students separated by whitespace
+Output Output the latest student enrolled(i. e the last student to join)
+class School{
+    constructor(student = [], str ){
+        this.student = student;
+    }
+    //simple add method
+    add(str) {
+        this.student.push(str);
+    }
+    // getter method to get result
+    get latest(){
+        return this.student.slice(-1).pop();
+    }
+}
+
+JS Closure Counter hard
+Complete the function countBy
+Such that it takes a initial number which is the defualt value of out counter. And returns
+a function which also takes a number and returns the initialCount + number supplied to second function.
+Ex:-
+const count = countBy(4) // initial value of counter 4, returns a function
+console. log(count(2)) // prints 6 because 4 + 2
+console. log(count(-4)) // prints 2 because 6 - 4
+console. log(count(8)) // prints 10 because 2 + 8
+You have to return implement countBy function such that it can be run like that.
+Input countBy will take one number as input which will be the initial count.
+Output countBy will return a function which can be run many times and takes a number as input and returns the sum of it with previously maintained counter values
+const count = countBy(4) // initial value of counter 4, returns a function
+console. log(count(2)) // prints 6 because 4 + 2
+console. log(count(-4)) // prints 2 because 6 - 4
+console. log(count(8)) // prints 10 because 2 + 8 
+function countBy(initial){
+     let sum = initial;
+    return function result(number) {
+        return sum += number;
+    }
+}
+
+
+
+Closure Multiplication easy
+Complete the "mul" function which will properly return answer by performing multiplication when invoked as below syntax.
+Ex:- mul(2)(3)(4) - > 24
+Input Your function will be run by giving 3 numbers in this format
+mul(1)(5)(2)
+Output Number resulting multiplication of 3 input numbers
+Example Sample input:-1 5 2
+Sample output:-10 
+Explanation:- 1*5*2 = 10
+
+function mul (x){
+// write your code  here
+    return function(y){
+        return function(z){
+            console.log(x * y * z);
+        }
+    }
+}
+
+
+Ajax intro, JS fetch, Async await try catch, Promise.all - Post Class
+
+Github Issues JS
+In this project, you will be using the github api to get list of issues and display it in a pagewise manner.
+You will specifically be using this url for fetching issues
+https://api.github.com/repositories/1296269/issues?page=${pageNumberHere}&per_page=5
+By default you will start with page 1 when your app loads. This API returns a lot of data, your task is to only display issue names in an ordered list.
+Also display "Page number 1" on first page, and keep changing it depending on number of page.
+You will make 2 buttons,
+One button with id="load_next" which loads the next page of issues by calling the above mentioned API with the current page number + 1, replacing the currently displayed issues with new issues and also changing the "Page number 1" heading to "Page number 2".
+And the second button with id="load_prev", which goes back one page and displays the previous, page's issues and also changes the Page number heading.(Edge case hint:- you cannot go to Page number 0)
+Note:- Do not change the per_page parameter in URL, you only have to display 5 issues per page.
+
+<div class="container">
+    <h1 id="heading">Page Number 1</h1>
+    <ol id="list">
+    </ol>
+    <div class="buttons">
+        <button id="load_prev">Prev</button>
+        <button id="load_next">Next</button>
+    </div>
+</div>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+}
+.container{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#heading{
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button{
+    background-color: rgb(20,91,199);
+    padding: .4rem 1rem;
+    font-size: 1.2rem;
+    border-radius: .2rem;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+}
+const heading = document.getElementById('heading');
+const next = document.getElementById('load_next');
+const prev = document.getElementById('load_prev');
+const list = document.getElementById('list');
+
+let pageNumber = 1;
+
+function getIssues(pageNumber){
+    return fetch(`https://api.github.com/repositories/1296269/issues?page=${pageNumber}&per_page=5`)
+    .then(res => res.json()).then(res => res);
+}
+
+async function renderIssues(pageNumber){
+    let issues = await getIssues(pageNumber);
+    list.innerHTML = '';
+    heading.innerHTML = `Page number ${pageNumber}`;
+    issues.forEach(issue => {
+        let li = document.createElement('li');
+        li.innerHTML = issue.node_id;
+        list.appendChild(li); 
+    });
+}
+
+renderIssues(1);
+
+next.addEventListener("click", () => {
+    pageNumber++;
+    renderIssues(pageNumber);
+});
+
+prev.addEventListener("click", () => {
+    if(pageNumber > 1){
+        pageNumber --;
+        renderIssues(pageNumber);
+    }
+});
+
+
+Random User JS
+In this app, you will be using this https://randomuser.me/api/ endpoint to get a random user and show their info.
+This endpoint returns a lot of info, but you only need to display specific things,
+By default only full name (first name + last name) and image will be visible. The API returns URLs for 3 image sizes , use only the large one.
+Display 3 buttons with for Age, Email and Phone
+each having attribute "data-attr" with value equal to "age", "email" and "phone" respectively.
+Make a section with heading additional info, which upon clicking the above mentioned buttons displays the relevant data inside it.
+Upon clicking one of the button you will display the relevant info, for ex:- If user clicks age button, display the age of that user you got
+from the initial API call, do not make another API call and display some other user's age.
+If user clicks another button for ex:- email button, remove whatever was being displayed earlier (not name and photo) and only show the email instead.
+By default when page loads, age,email and phone are not being showed.
+The last feature you have to implement is a button with id="getUser" which upon clicking makes another call to the API and gets a new user and displays there photo and full name, and subsequently on clicking phone,email buttons etc displays their relevant info.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Random User</title>
+     
+</head>
+<body>
+     <div class="container">
+          <div class="img-container">
+               <img src="" id="image" alt="img">
+          </div>
+          <h1 id="name">Roshan Goswami</h1>
+          <div class="buttons">
+               <button id="age" data-attr = "age">Age</button>
+               <button id="email" data-attr = "email">Email</button>
+               <button id="phone" data-attr = "phone">Phone</button>
+          </div>
+          <section>
+               <h1 id="additional-info">Additional info</h1>
+          </section>
+          <button id="getUser">Get User</button>
+     </div>
+     
+</body>
+</html>
+
+const imageElement = document.getElementById('image');
+const nameElement = document.getElementById('name');
+const ageButton = document.getElementById('age');
+const emailButton = document.getElementById('email');
+const phoneButton = document.getElementById('phone');
+const additionalInfoElement = document.getElementById('additional-info');
+const getUserButton = document.getElementById('getUser');
+
+const RANDOM_USER_API = "https://randomuser.me/api/";
+let age = 24;
+let email = "csengineer23@gmail.com";
+let phone = "(+91) 9970843786";
+
+function getRandomUser(){
+     return fetch(RANDOM_USER_API).then(res => res.json()).then(res => res.results[0]);
+}
+
+async function renderRandomUser(){
+     let randomUser = await getRandomUser();
+     imageElement.src = randomUser.picture.large;
+     nameElement.innerText = `${randomUser.name.first} ${randomUser.name.last}`;
+     age = randomUser.dob.age;
+     email = randomUser.email;
+     phone = randomUser.phone;
+     console.log(randomUser);
+}
+
+renderRandomUser();
+
+ageButton.addEventListener('click', _ => {
+     additionalInfoElement.innerText = age;
+});
+emailButton.addEventListener('click', _ => {
+     additionalInfoElement.innerText = email;
+});
+phoneButton.addEventListener('click', _ => {
+     additionalInfoElement.innerText = phone;
+});
+
+getUserButton.addEventListener('click', renderRandomUser);
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+body{
+     height: 100vh;
+     width: 100vw;
+     display: grid;
+     place-content: center;
+}
+.container{
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+}
+.img-container{
+     height: 250px;
+     width: 250px;
+     margin: 0 auto;
+     border-radius: .5rem;
+     border: 4px solid black;
+}
+.img-container img{
+     width: 100%;
+     height: 100%;
+     border-radius: .5rem;
+}
+#name{
+     text-align: center;
+}
+.buttons{
+     display: flex;
+     justify-content: space-around;
+     gap: 1rem;
+}
+.buttons button, #getUser{
+     width: 100px;
+     height: 35px;
+     font-size: 1.1rem;
+     color: #fff;
+     background-color: #5886b1;
+     cursor: pointer;
+     outline: none;
+     border: none;
+     border-radius: .4rem;
+}
+#additional-info{
+     text-align: center;
+}
+#getUser{
+     width: 150px;
+     height: 40px;
+     background-color: #0b66bb;
+}
+
+
+
+setInterval, Promises - Post Class
+
+Online Notepad
+Create a notepad as shown in the picture.
+Save My Notes is a feature-flag used to turn on/off the autosave feature.
+    When on, the text inside the textarea is stored or updated in the local storage of the browser every 1 sec.
+    When off, the local storage is no longer updated & contain only previously saved content.
+Note:
+1. On opening the app the Save My Notes checkbox is unchecked.
+2. The key in the local storage should be 'autosave-data'.
+3. he textarea should contain placeholder 'Write your notes here'.
+
+Acceptance Criteria
+    All the components should be present with their correct id & value.
+    Autosave should only work when the feature-flag is turned on.
+    On closing the app & then reopening it, the textarea should contain previously saved content.
+
+<div class="container">
+    <header>
+        <h1 id="heading">Online Notepad</h1>
+        <div class="checkbox-container">
+            <label for="feature-flag">Save My Notes</label>
+            <input type="checkbox" id="feature-flag">
+        </div>
+    </header>
+    <textarea id="textarea" placeholder="Write your notes here"></textarea>
+</div>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+}
+.container{
+    width: 70vw;
+    height: 80vh;
+}
+header{
+    width: 100%;
+    height: 40px;
+    background-color: #ddd;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#textarea{
+    width: 100%;
+    padding: 5px;
+    height: calc(100% - 40px);
+}
+
+JS
+const textarea = document.getElementById("textarea");
+const featureflag = document.getElementById("feature-flag");
+(function getDataFromStorage(){
+    let data = localStorage.getItem('autosave-data');
+    textarea.value = data;
+})
+featureflag.addEventListener('change', ()=>{
+    let autoSave;
+    if(featureflag.checked){
+        autoSave = setInterval(()=>{
+            localStorage.setItem('autosave-data', textarea.value);
+        }, 1000);
+    } else clearInterval(autoSave);
+})
+
+
+
+Whack a mole
+Whack a mole is a game in which there is a mole in the grid and you have to hit it under a time limit as many times as you can.
+Specifications
+There has to be a grid of 9 cells. There has to be one mole (it can be an image) that keeps changing its position in the grids every second. The player has to hit the mole by clicking on the cell in which it appears. Every time the mouse click happens before the mole disappears, the score increases. There should be a timer running backwards.
+There should be two buttons- Start and Reset. The game starts when Start button is clicked and ends when the timer hits zero. If the user wants to Restart the game, they can press Reset button.
+1). An h1 tag with the text Whack a mole.
+2). An h3 tag with id="score" where your score of the game will be rendered.
+3). An h3 tag with id="time-left" where time left for the game will be rendered(should be greater than 10s initially).
+4). A start button and a reset button with id="start" and id="reset" respectively.
+5). The start button should start the game and the reset button should reset it.
+6). Make a grid with 9 squares each with the class name square.
+7). Take the interval of one second for a mole position change.
+8). The class name of the grid box should include the class name "mole" if the mole is rendered in that particular box.
+9). Only one box will contain the class name "mole" as only one mole will be rendered at a particular instant.
+10) Your score increases if you hit the mole with your mouse click when it's visible in the grid
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Whack a mole</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Whack a mole</h1>
+        <div class="score-timeLeft-container">
+            <p>Score:
+            <h3 id="score"></h3>
+            </p>
+            <p>Time Left:
+            <h3 id="time-left"></h3>
+            </p>
+        </div>
+        <div id="grid">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+
+            <div class="square mole">
+                <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/512/external-whack-a-mole-bowling-alley-and-arcade-flaticons-lineal-color-flat-icons-2.png" id="mole-img">
+            </div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+
+        <div class="buttons">
+            <button id="start">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+     color: #072227;
+}
+body{
+     height: 100vh;
+     width: 100vw;
+     display: grid;
+     place-content: center;
+     background-color: #aaa;
+}
+.container{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 1rem;
+}
+.container h1{
+     letter-spacing: 5px;
+}
+.score-timeLeft-container{
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-size: 1.3rem;
+     font-weight: 600;
+}
+#grid{
+     display: grid;
+     grid-template-columns: repeat(3, 80px);
+     grid-template-rows: repeat(3, 80px);
+     grid-row-gap: 0.5rem;
+     grid-column-gap: 0.5rem;
+}
+.square{
+     box-shadow: inset -5px -5px 9px #eee,
+    inset 5px 5px 9px #222;
+      border-radius: 5px;
+}
+img{
+     width: 90%;
+     height: 80%;
+}
+.buttons{
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+}
+button{
+     width: 140px;
+     height: 40px;
+     border-radius: 5px;
+     border: none;
+     background: transparent;
+     box-shadow:inset 5px 5px 7px #ddd,
+      inset -5px -5px 7px #000;
+     font-weight: 600;
+      cursor: pointer;
+      font-size: 1.2rem;
+}
+
+//JS
+
+const score = document.getElementById('score');
+const timeLeft = document.getElementById('time-left');
+const squares = document.querySelectorAll('.square');
+const start = document.getElementById('start');
+const reset = document.getElementById('reset');
+const grid = document.getElementById('grid');
+
+let moleInterval;
+let scoreCounter = 0;
+let gameTimer;
+let gameTimeCount = 15;
+let gameStarted = false;
+
+const showMole = `<img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/512/external-whack-a-mole-bowling-alley-and-arcade-flaticons-lineal-color-flat-icons-2.png" id="mole-img">`;
+
+//set random location of the mole
+const randomizeMole = () => {
+    let mole = document.querySelector('.mole');
+    mole.classList.remove('mole');
+    mole.innerHTML = '';
+    let randomSquare = squares[Math.floor(Math.random() * squares.length)]
+    randomSquare.classList.add('mole');
+    randomSquare.innerHTML = showMole;
+}
+
+//set time interval when game starts;
+const startGame = () => {
+    if (!gameStarted) {
+        gameStarted = true;
+        scoreCounter = 0;
+        moleInterval = setInterval(_ => {
+            randomizeMole();
+        }, 1000);
+        gameTimer = setInterval(_ => {
+            gameTimeCount--;
+            timeLeft.innerHTML = gameTimeCount + "s";
+            checkGameTimer();
+
+        }, 1000)
+    }
+}
+
+//check timeout of the game
+const checkGameTimer = () => {
+    if (gameTimeCount === 0) {
+        clearInterval(gameTimer);
+        clearInterval(moleInterval);
+        gameStarted = false;
+        gameTimeCount = 15;
+    }
+}
+//count score
+const countScore = () => {
+    if (gameStarted) {
+        scoreCounter++;
+        score.innerHTML = scoreCounter;
+    }
+}
+
+//Reset the game
+const resetGame = () => {
+    clearInterval(moleInterval);
+    clearInterval(gameTimer);
+    
+    scoreCounter = 0;
+    gameTimeCount = 15;
+
+    timeLeft.innerHTML = gameTimeCount + "s";
+    score.innerHTML = scoreCounter;
+    gameStarted = false;
+}
+
+//start the game when start button is clicked;
+start.addEventListener('click', startGame);
+grid.addEventListener('click', (e) => {
+    if (e.target.parentElement.classList.contains('mole'));
+    countScore();
+})
+reset.addEventListener('click', resetGame);
+
+
+
+
+JS Promise me - 1easy
+Complete the function promiseMe
+Such that it takes a number as first arguement(time) and a string as second argument(data).
+It returns a promise which resolves after time milliseconds and data is returned.
+Note:- You only have to implement the function, in the example it
+shows your implemented question will be ran.
+Input
+Function should take number as first argument and data to be returned as second.
+Output
+Resolves to the data given as input
+Example
+promiseMe(200, 'hi'). then(data=>{
+console. log(data) // prints hi
+})
+
+function promiseMe(time , data) {
+    // return the output using return keyword
+    // do not console.log it
+    return new Promise((resolve, rejected) =>{
+        setTimeout(() => {
+            resolve(data);
+        },time);
+    
+    });
+}
+
+JS Promise - 2 easy
+Complete the function checkCanIVote
+    Takes 2 arguments
+    1st argument time, which is the number of milliseconds after the function will resolve or reject
+    Second argument is the age upon (also a number) which you will use to return the string based on logic mentioned below
+    Resolves to "You can vote" after x milliseconds if age is greater than or equal to 18
+    Rejects with "You can not vote" after x milliseconds if age less than 18
+Note:- You only have to implement the function, in the example it
+shows how your implemented question will be ran.
+InputFunction will take two arguments
+1) 1st argument will be a number which tells after how much milliseconds promise will be resolved or rejected.
+2) 2nd argument will be a number (age)
+Output
+Function returns a promise which resolves to "You can vote" or rejects to "You can not vote".
+If age >= 18 resolves to "You can vote" else rejects to "You can not vote".
+Example
+checkCanIVote(200, 70). then(data=>{
+console. log(data) // prints 'You can vote'
+}).catch((err)=>{
+console.log(err) // does not do anything
+})
+checkCanIVote(200, 16). then(data=>{
+console. log(data) // does not do anything
+}).catch((err)=>{
+console.log(err) // prints 'You can not vote'
+})
+
+
+
+JS Primitive types, Callback function, Js objects, setTimeout, JS Date - Post Class
+JS Date - 1 easy
+Unix time is a system for describing a point in time. It is the number of seconds that have elapsed since the Unix epoch, excluding leap seconds. The Unix epoch is 00:00:00 UTC on 1 January 1970
+Implement the function msSinceEpoch, which returns milliseconds since Unix epoch. (Use JS built in functions)
+InputFunction takes no argument
+OutputFunction returns a number
+Exampleconsole. log(msSinceEpoch()) // prints 1642595040109
+function msSinceEpoch() {
+    // write code here
+    // return the output , do not use console.log here   
+    return Math.floor(Date.now());
+}
+
+
+JS Primitive types, Callback function, Js objects, setTimeout, JS Date - Post Class
+JS callbackseasy
+Complete the function callThisFnBack
+Such that it takes a number as first arguement and a function (callback function) as an
+argument and returns the result of the callback function with its argument as the first argument
+to the callThisFnBack.Input Function will take two arguments, one which is a number and second which will be a function.
+Output Returns the result of the second argument which is a function that is ran with the first argument.
+ExampleEx:-
+const result = callThisFnBack(5, (num)=>{
+return num+6
+})
+console. log(result) // prints 11 because 5+6
+function callThisFnBack(a, add) {
+    return add(a);
+}
+function add(number){
+    return number + number;
+}
+
+
+
+
+JS BOM, DOM Manipulation, JS BOM history, JS BOM navigator, JS BOM window, DOM M ... - Post Class 
+
+Search through the Bill (Group Contest: April '21)
+You are provided with a list of items for your Grocery List. You want to display the list and add a feature of filter to it.
+Acceptance Criteria:
+    Render the Grocery List in a table.
+    Each item should have a table row corresponding to it.
+    The table should also have a header.
+    There should be an input box for search with id="search-bar"
+    When some string is typed in the search bar, the table should get updated to only show the matching items
+    Search should be case insensitive
+    When no items are matched, render text No items found! inside the table directly. Remove all the data rows and table header in this case
+    When search box is cleared, all the original items of the list should come back
+    Do not update the original list as test cases depend on it
+    An item is matched with a search string if the search string is a substring of that item. For example: If search string is m, the matching items are Tomatoes, Pomegranate, Mango. If the search string is ma, the matching items are Tomatoes, Mango. Note how the search string is case insensitive. 
+
+<h1>Grocery Bill</h1>
+
+<input placeholder="search"  id="search-bar" onchange="update()" />
+<table>
+</table>
+
+td,th,tr{
+    padding: 5px;
+    border: 2px solid black;
+    margin-top: 15px;
+}
+tr:nth-child(1){
+    background-color: rgba(128, 128, 128, 0.589);
+}
+
+const billItems = [{
+  id: 1,
+  itemName: "Bread",
+  price: 20
+}, {
+  id: 2,
+  itemName: "Butter",
+  price: 50
+}, {
+  id: 3,
+  itemName: "Tomatoes",
+  price: 30
+}, {
+  id: 4,
+  itemName: "Onion",
+  price: 40
+}, {
+  id: 5,
+  itemName: "Pomegranate",
+  price: 60
+}, {
+  id: 6,
+  itemName: "Apple",
+  price: 40
+}, {
+  id: 7,
+  itemName: "Grapes",
+  price: 30
+}, {
+  id: 8,
+  itemName: "Mango",
+  price: 100
+}]
+
+
+var t;
+window.onload = function() {
+    t = document.getElementsByTagName("table").item(0);
+    var r = document.createElement("tr");
+    var d1 = document.createElement("th");
+    var d2 = document.createElement("th");
+    var d3 = document.createElement("th");
+    d1.innerHTML = "<b>id</b>";
+    d2.innerHTML = "<b>itemName</b>";
+    d3.innerHTML = "<b>price</b>";
+    r.appendChild(d1);
+    r.appendChild(d2);
+    r.appendChild(d3);
+    t.appendChild(r);
+    for(let i = 0; i < 8; i++){
+        var r = document.createElement("tr");
+        var d1 = document.createElement("td");
+        var d2 = document.createElement("td");
+        var d3 = document.createElement("td");
+        d1.innerText = billItems[i]["id"];
+        d2.innerText = billItems[i]["itemName"];
+        d3.innerText = billItems[i]["price"];
+        r.appendChild(d1);
+        r.appendChild(d2);
+        r.appendChild(d3);
+        t.appendChild(r);
+    }
+  }
+
+function update() {
+    t.innerHTML = "";
+    var text = document.getElementById("search-bar").value;
+    text = text.toLowerCase();
+    var a = [];
+    for(let i = 0; i < 8; i++){
+        var p = billItems[i]["itemName"].toLowerCase();
+        if(p.indexOf(text) != -1) a.push(i);
+    }
+    if(a.length == 0){
+        t.innerText = "No items found!";
+        return;
+    }
+    var r = document.createElement("tr");
+    var d1 = document.createElement("th");
+    var d2 = document.createElement("th");
+    var d3 = document.createElement("th");
+    d1.innerHTML = "<b>id</b>";
+    d2.innerHTML = "<b>itemName</b>";
+    d3.innerHTML = "<b>price</b>";
+    r.appendChild(d1);
+    r.appendChild(d2);
+    r.appendChild(d3);
+    t.appendChild(r);
+    for(let i = 0; i < a.length; i++){
+        var r = document.createElement("tr");
+        var d1 = document.createElement("td");
+        var d2 = document.createElement("td");
+        var d3 = document.createElement("td");
+        d1.innerText = billItems[a[i]]["id"];
+        d2.innerText = billItems[a[i]]["itemName"];
+        d3.innerText = billItems[a[i]]["price"];
+        r.appendChild(d1);
+        r.appendChild(d2);
+        r.appendChild(d3);
+        t.appendChild(r);
+    }
+}
+
+
+Rock Paper Scissors
+Let's build the game of Rock, Paper and Scissors! (Learn game here).
+This is how you may proceed:
+    Take number of turns in a game from the user ( an input box of type number ).
+    Start the game when the user clicks the play button.
+    User can select (Rock, Paper, Scissors ) from clickable DOM object ( such as button, div, image etc )
+    You have to keep count of User Points, Computer Points, turns left and result of the round. You have to show what computer chooses as text
+    If there's no round left then show game result
+    Do Not hide input box and play button
+    Show the round Result after each round
+    Acceptance Criteria ( attribute = data-ns-test ) :-
+    Eg :- data-ns-test="attribute value given below"
+    1. Use “game-number” attribute-value for INPUT Tag element (number of turns in the game)
+    2. Use “play-game” attribute-value for the play button
+    3. Use “rock”, “paper”, “scissors” attribute-values for rock, paper, scissors (clickable DOM objects) respectively.
+    4. Use “computer-choose” attribute-value which renders “SCISSORS”, “PAPER” or “ROCK” for computer choice in the game.
+    5. Use “round-result” attribute-value to show the result of the particular round which renders “WON”, “TIE” and “LOSE” after each round.
+    6. Use “rounds-left”, “user-points”, and “computer-points” attribute-values for rounds left, user points, and computer points respectively which renders the number of round-left, user-points, and computer-points, and Update them after each round.
+    7. Use “game-result” attribute-value which will have values “WON”, “TIE” or “LOSE” to show the result of the game.
+    8. Create a window.computerChoose property denoting computer choice having value in [0, 1, 2] in each round for ["ROCK", "PAPER", "SCISSORS"] respectively.
+<h1 class="header">
+        Rock Paper Scissors
+    </h1>
+    <label for="game-number">Number of rounds:-</label>
+    <input type="number" name="game-number" id="game-number" data-ns-test="game-number" />
+    <button id="play-game" data-ns-test="play-game" onclick="playGame()">Play</button>
+    <div class="game-container" id="game-container">
+        <div>
+            <button data-ns-test="rock" id="rock" value="0">rock</button>
+            <button data-ns-test="paper" id="paper" value="1">paper</button>
+            <button data-ns-test="scissors" id="scissors" value="2">scissors</button>
+        </div>
+        <div>
+            <!-- Computer choose :- -->
+            <span data-ns-test="computer-choose" id="computer-choose"></span>
+        </div>
+        <span id="round-result" data-ns-test="round-result">
+            WON
+        </span>
+        <div>
+            <!-- User Points :- -->
+            <span data-ns-test="user-points" id="user-points">0</span>
+            <!-- Computer Points :- -->
+            <span data-ns-test="computer-points" id="computer-points">0</span>
+        </div>
+        <div>
+            <!-- Rounds Left :- -->
+            <span data-ns-test="rounds-left" id="rounds-left">0</span>
+        </div>
+    </div>
+    <div id="game-result" data-ns-test="game-result">
+        WON
+    </div>
+
+let gameNumberEl = document.getElementById("game-number");
+let gameContainerEl = document.getElementById("game-container");
+let rockBtnEl = document.getElementById("rock");
+let paperBtnEl = document.getElementById("paper");
+let scissorBtnEl = document.getElementById("scissors");
+let computerChooseEl = document.getElementById("computer-choose");
+let roundResultEl = document.getElementById("round-result");
+let userPointsEl = document.getElementById("user-points");
+let computerPointsEl = document.getElementById("computer-points");
+let roundsLeftEl = document.getElementById("rounds-left");
+let gameResultEl = document.getElementById("game-result");
+
+const ROCK = 0;
+const PAPER = 1;
+const SCISSORS = 2;
+function playGame() {
+    userPoints = 0;
+    userPointsEl.innerText = 0;
+    computerPoints = 0;
+    computerPointsEl.innerText = 0;
+    roundsLeft = parseInt(gameNumberEl.value, 10);
+    if (roundsLeft < 0) {
+        alert("Number of turns cannot be -ve");
+    } else {
+        roundsLeftEl.innerText = roundsLeft;
+        gameContainerEl.style.display = "block";
+        gameResultEl.style.display = "none";
+    }
+}
+// game variables
+let userPoints = 0;
+let computerPoints = 0;
+let roundsLeft = parseInt(gameNumberEl.value, 10);
+
+roundsLeftEl.innerText = roundsLeft;
+function userChoose(e) {
+    if (roundsLeft <= 0) return;
+    const choices = ["ROCK", "PAPER", "SCISSORS"];
+    const outcomes = ["WON", "TIE", "LOSE"];
+    const userChoose = parseInt(e.target.value, 10);
+    const computerChoose = Math.floor(Math.random() * 3);
+    window.computerChoose = computerChoose
+    console.log(window.computerChoose);
+    computerChooseEl.innerText = choices[computerChoose];
+    let outcome = 1; // [win, tie, loose]
+    if ((choices[computerChoose] == 'ROCK' && choices[userChoose] == 'PAPER') 
+        || (choices[computerChoose] == 'SCISSORS' && choices[userChoose] == 'ROCK') 
+        || (choices[computerChoose] == 'PAPER' && choices[userChoose] == 'SCISSORS')) {
+        // use Wins
+        outcome = 0;
+        userPoints += 1;
+    } else if ((choices[computerChoose] == 'PAPER' && choices[userChoose] == 'ROCK') 
+                || (choices[computerChoose] == 'ROCK' && choices[userChoose] == 'SCISSORS') 
+                || (choices[computerChoose] == 'SCISSORS' && choices[userChoose] == 'PAPER')) {
+        // lose
+        outcome = 2;
+        computerPoints += 1;
+    } else {
+        // tie
+        outcome = 1;
+    }
+    // setting game variables after move
+    roundsLeft -= 1;
+    roundResultEl.innerText = `${outcomes[outcome]}`;
+    roundResultEl.style.display = "block";
+    userPointsEl.innerText = userPoints;
+    computerPointsEl.innerText = computerPoints;
+    roundsLeftEl.innerText = roundsLeft;
+    if (roundsLeft == 0) {
+        // game over
+        gameResultEl.innerText = `${outcomes[userPoints == computerPoints ? 1 : userPoints > computerPoints ? 0 : 2]}`;
+        gameResultEl.style.display = "block";
+        gameContainerEl.style.display = "none";
+    }
+}
+// button click
+rockBtnEl.addEventListener('click', userChoose);
+paperBtnEl.addEventListener('click', userChoose);
+scissorBtnEl.addEventListener('click', userChoose);
+
+
+Minesweeper
+Most of us have played the game of Minesweeper on our computers in the past. Let's try to replicate it to some extent.
+The rules for the game are simple:
+    You have a 9*9 grid which makes a total of 81 boxes.
+    Out of these 81 boxes, 10 boxes contain bombs and other boxes are safe.
+    If a safe box is clicked, the user is awarded a point
+    If a user clicks on a box containing a bomb, the game gets over and you need to give an option to the user to start a fresh game.
+This is how you may proceed:
+    Create an array of random numbers having 10 numbers where each number lies between 1 to 81.
+    Every number in the array should be unique.
+    The numbers in the array are nothing but indices where the bomb is planted.
+    If a bomb is clicked you need to highlight all the boxes that contained the bomb with red color.
+    You need to distinguish the boxes which have been clicked and which have
+    not been clicked. (As a standard you may color clicked boxes with green color
+    and boxes which have not been clicked should remain white).
+    As soon as a box containing a bomb is clicked you need to color that box red, also include the bombs' background-image
+    If the user makes 71 guesses and still has not clicked on a bomb you need
+    to notify the user with a message.
+    If the user completes the game or clicks the bomb box, he should be able
+    to start a fresh game.
+You may want to use a grid structure of bootstrap
+The choice of data structure while working on the grid may lead you to an easier algorithm for the game or you may get stuck in the loop if you choose a data
+structure that is not appropriate for the game. CHOOSE WISELY!
+Below given is an example of such a grid
+Acceptance Criteria-:
+0. Each of 81 grid cells must have id attribute cell_{i}, where is i = {1, 2, 3, . . . , 81}.
+1. Create a window.random variable inside which 10 unique random number will be there showing the location of the bomb.
+2.Use "https://img.icons8.com/emoji/48/000000/bomb-emoji.png" this as a bomb image after clicking on the bomb all the bombs will be shown as background image. Note: background-image css-style property.
+3.Player which selects all 71 grids without bomb will be the winner.
+4.Create an element with id "resultDisplay" inside which text result will be shown as "win" for the winner "game over" for the loser. Change text-content of "resultDispaly" to final-message. Note: In case of no-result of the game, make it empty(no-content inside it).
+5.Create an element with id "gameScore" inside which text points will be incremented after every successful click in which bomb is not clicked
+6.Create a reset button with id resetButton after which game should restart
+7. Reset button should be visible all the time.
+<!DOCTYPE html>
+  <body>
+    <div class="mainContainer">
+      <div>
+        <span class="Evey">Mine Sweeper</span>
+        <div class="container" id="container"></div>
+      </div>
+      <div class="right">
+        <p>
+          Score :
+          <span id="gameScore"></span>
+        </p>
+        <button id="resetButton" onclick="resetGrid()">Reset</button>
+        <p>
+          Result :
+          <span id="resultDisplay"></span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #ffffff;
+}
+
+.mainContainer {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  max-width: 1250px;
+}
+
+.Evey {
+  font-size: 1.5rem;
+  color: black;
+  margin-left: 20px;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 0.3rem;
+  background-color: #ffffff;
+  display: grid;
+  grid-template: repeat(9, 50px) / repeat(9, 50px);
+  grid-gap: 3px;
+  border: 2px solid black;
+}
+
+.right {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  background: #d8d8d8;
+  width: 200px;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  border: 2px solid black;
+}
+
+.right button {
+  border: 2px solid black;
+  color: black;
+  background: #f2f2f2;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  border-radius: 0.3rem;
+}
+
+.cell {
+  border-radius: 3px;
+  background-color: #d8d8d8;
+  cursor: pointer;
+}
+
+.safe {
+  background-color: #2dcc70;
+}
+
+.containBomb {
+  background-color: red;
+}
+
+@media only screen and (max-width: 750px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .container {
+    grid-template: repeat(9, 40px) / repeat(9, 40px);
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .container {
+    grid-template: repeat(9, 30px) / repeat(9, 30px);
+  }
+}
+
+window.onload = loadGrid();
+let bomb;
+let score = 0;
+function loadGrid() {
+  const container = document.getElementById("container");
+  const gameScore = document.getElementById("gameScore");
+  const resultDisplay = document.getElementById("resultDisplay");
+  gameScore.innerHTML = "0";
+  resultDisplay.innerHTML = "";
+
+  container.innerHTML = "";
+  for (let i = 1; i <= 81; i++) {
+    const cell = document.createElement("div");
+    cell.id = `cell_${i}`;
+    cell.classList.add("cell");
+    cell.addEventListener("click", updateGame);
+    container.append(cell);
+  }
+
+  score = 0;
+  window.random = [];
+  while (window.random.length < 10) {
+    var r = Math.floor(Math.random() * 81) + 1;
+    if (window.random.indexOf(r) === -1) window.random.push(r);
+  }
+
+  for (let b of window.random) {
+    const cell = document.getElementById(`cell_${b}`);
+    cell.classList.add("bomb");
+  }
+
+}
+
+function revealBombs(cell_id) {
+  document.getElementById(cell_id).classList.add("containBomb");
+  document.getElementById("resultDisplay").innerText = "game over";
+
+  for (let b of window.random) {
+    document.getElementById(`cell_${b}`).style.backgroundImage =
+      "url(https://img.icons8.com/emoji/48/000000/bomb-emoji.png)";
+  }
+
+  for (let i = 1; i <= 81; i++) {
+    document
+      .getElementById(`cell_${i}`)
+      .removeEventListener("click", updateGame);
+  }
+}
+
+function allSafeSelected() {
+  const safeElements = document.getElementsByClassName("safe");
+  return safeElements.length >= 70 ? true : false;
+}
+
+function loadSafe(cell_id) {
+  if (allSafeSelected()) {
+    document.getElementById("resultDisplay").innerText = "win";
+    for (let b of window.random) {
+      document
+        .getElementById(`cell_${b}`)
+        .removeEventListener("click", updateGame);
+    }
+  }
+  document.getElementById(cell_id).classList.add("safe");
+  document.getElementById(cell_id).removeEventListener("click", updateGame);
+  score += 1;
+  document.getElementById("gameScore").innerText = score;
+}
+
+function updateGame() {
+  if (this.classList.contains("bomb")) {
+    revealBombs(this.id);
+  } else {
+    loadSafe(this.id);
+  }
+}
+
+function resetGrid() {
+  loadGrid();
+}
+
+
+Dark Theme
+Have you seen the different themes of the editors? There's light theme, and there's dark theme. We will be building today a toggle theme functionality where we will click a button to change the theme from dark to light.
+The HTML and CSS is already provided to you.
+    The p element should have the text I am a Newton School student, ready to become an awesome full stack developer
+    The main div should have id="app" and class="day"
+    The button should have id="swap" and class="button_day"
+    Write the swapTheme function to change the classes of the div with id="app" and the button with id="swap"
+<div id="app" class="day">
+    <p>I am a Newton School student, ready to become an awesome full stack developer</p>
+    <button onclick="swapTheme()" id="swap" class="button_day">Toggle theme</button>
+</div>
+
+function swapTheme() {
+    let app = document.getElementById("app");
+    let swapButtom = document.getElementById("swap");
+
+    if(app.classList.contains("day")){
+        app.classList.remove("day");
+        app.classList.add("night");
+    }else if(app.classList.contains("night")){
+        app.classList.remove("night");
+        app.classList.add("day");
+    }
+
+    if(swapButtom.classList.contains("button_day")){
+        swapButtom.classList.remove("button_day")
+        swapButtom.classList.add("button_night")
+    }else if (swapButtom.classList.contains("button_night")){
+        swapButtom.classList.remove("button_night")
+        swapButtom.classList.add("button_day")
+    }
+
+}
+
+.day {
+    background-color: white;
+    color: black;
+}
+
+.night {
+    background-color: black;
+    color: gold;
+}
+
+.button_night {
+    background-color: darkblue;
+    color: white;
+}
+
+.button_day{
+    background-color: white;
+    color: black;
+}
+
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+#app {
+    height: 100%;
+    padding: 10px;
+}
+
+JS Form Validation - 1
+We will be designing a small phone survey form, the HTML is already built for you.
+You need to implement, the JS validation functions.
+ageChange function, will be run when someone types on age input, if they enter an age less than 5,
+show the error 'You need to be atleast 5 years old to participate' in #errors-holder div.
+Also since the default age is zero, if the user tries to submit without entering the age show the error
+'Please choose age' in #errors-holder div.
+After filling the details when user clicks on submit button display according to given rules.
+If user checked own a phone box, then if their age is less than 13 show 'You are too young to have a phone'
+else show 'Use your phone in moderation' in #result-holder div.
+If they haven't checked that option and their age entered is less than 13 show 'You will get a phone soon'
+else show 'You should get a phone'
+
+<h1>Phone Survey Form</h1>
+    <form onsubmit="handleSubmit(event)">
+        <label for="age">Your age</label>
+        <input type="number" id="q_age" min="0" oninput="ageChange(event)" value="0">
+        <br>
+        <label for="q_owns_phone">Do you own a phone</label>
+        <input type="checkbox" id="q_owns_phone">
+        <br>
+
+        <button type="submit" id="mybtn">Submit</button>
+    </form>
+    <div id="errors-holder"></div>
+    <div id="result-holder"></div>
+
+function ageChange(e){
+
+    var age = document.getElementById("q_age").value;
+    if(age < 5){
+        document.getElementById("errors-holder").innerHTML = "You need to be atleast 5 years old to participate"
+        const btn = document.getElementById("mybtn").disabled = true;
+    }else{
+        const btn = document.getElementById("mybtn").disabled = false;
+        document.getElementById('errors-holder').innerHTML = "";
+    }
+}
+
+function handleSubmit(e){
+    e.preventDefault();
+    var age = document.getElementById("q_age").value;
+    var result = document.getElementById("result-holder");
+    var isChekedBox = document.getElementById("q_owns_phone");
+    var error = document.getElementById("errors-holder");
+
+    if(age == 0){   
+        error.innerHTML = "Please choose age"   
+    } else{
+        if(isChekedBox.checked){
+            if(age < 13){
+                result.innerHTML = "You are too young to have a phone"
+            } else{
+                result.innerHTML = "Use your phone in moderation";
+            }
+
+        }else{
+            if(age < 13){
+                result.innerHTML = "You will get a phone soon";
+            }else{
+                result.innerHTML = "You should get a phone"
+            } 
+        }
+    }
+}
+// function ageChange(e) {
+//     var x = document.getElementById("q_age").value;
+
+//     //console.log(x);
+//     if (x < 5) {
+//         document.getElementById("errors-holder").innerHTML = " You need to be atleast 5 years old to participate"
+//         const button = document.getElementById("mybtn").disabled = true;
+//         //console.log(button);
+//     } else {
+//         const button = document.getElementById("mybtn").disabled = false;
+//         document.getElementById("errors-holder").innerHTML = ""
+//     }
+// }
+
+// function handleSubmit(e) {
+//     e.preventDefault();
+//     var age = document.getElementById("q_age").value;
+//     var box = document.getElementById("q_owns_phone");
+//     var result = document.getElementById("result-holder");
+//     var error = document.getElementById("errors-holder");
+//     if (age == 0) {
+//         error.innerHTML = "Please choose age"
+//     }else {
+//         if (box.checked) {
+//             if (age < 13) {
+//                 result.innerHTML = "You are too young to have a phone"
+//             }   else {
+//                 result.innerHTML = "Use your phone in moderation";
+//             }
+//         } else {
+//             if (age < 13) {
+//                 result.innerHTML = "You will get a phone soon";
+//             } else {
+//                 result.innerHTML = "You should get a phone"
+//             }
+//         }
+//     }
+// }
+
+GRE Essay Tool
+In a GRE exam, there are essays you have to write. Instead of counting the words every few hours, you want students to be able to see the word count of their essays real-time.
+There should be a textbox with id="evaluatedText" and an h3 tag with id="wordCount". The h3 renders the calculated word count of the text in the textbox. The words should be counted in realtime, i.e. when users update the text in the textbox, the h3 should also update the word count displayed. If there's no text, it should display 0.
+<textarea id="evaluatedText" oninput="countWord()" value=""></textarea>
+<h3 id="wordCount">0</h3>
+
+// JS code here
+function countWord(){
+    var words = document.getElementById('evaluatedText').value;
+    var count = 0;
+    var split = words.split(' ');
+
+    for(var i = 0; i < split.length; i++){
+        if(split[i] != ""){
+            count += 1;
+        }
+    }
+
+    document.getElementById('wordCount').innerHTML = count;
+}
+
+
+Tip Calculator
+Alex often went out for dinner, but he used to have difficulty calculating the right tip since he is not good with Maths. He always googles "Tip calculator" and ends up using the internet to calculate the tip for him. But every time he googles, he finds different apps with different tipping standards which confuses him even more. He has decided upon his own tipping standard (how much to tip and when) and wants to create his own "Tip Calculator". The problem is, he doesn't know Javascript either. Since you are learning Javascript and looking for a project to upkill yourself, do help Alex out by creating the app for him.
+Make sure you have the following elements in your app:
+    "Bill amount" Input tag id="billamt"
+    Number of people input tag id="peopleamt"
+    Calculate button id = "calculate"
+    . It should have the label Calculate
+    Select tag id="serviceQual"
+    Select tag with 6 different values ​​for option tags. The values should be {"0.05", "0.1", "0.15", "0.2", "0.25", "0.3"} corresponding to { 5%, 10%, 15%, 20%, 25%, 30%} Note: values ​​should exactly match
+   You should 'alert' when nothing is entered in bill amount and user try to calculate tip with message Please Enter Bill Amount
+Tip calculation:
+    Calculate the tip on the basis of the selected option. The tip can be 5%, 10%, 15%, 20%, 25% or 30% based on the quality of service.
+    Round Tip amount up to two decimal places. Example: 2.48, 23.50, 3:00 (Hint: Math.round () or toFixed (2) )
+    The calculated tip is shared among all the people mentioned in the number of people to calculate the final share. If the count of people is not mentioned, we can assume that Alex ate alone
+The following images are for demonstration only. You can choose your own design.
+
+<div class="container">
+    <div class="header">TIP CALCULATOR </div>
+    <div>
+        <div>
+            <p>How much was your bill?</p>
+            ₹ <input type="number" id="billamt" placeholder="Amount to be paid">
+            <p>How was the service?</p>
+            <select id="serviceQual">
+                <option selected="" disabled="" hidden="">
+                    Select
+                </option>
+                <option value="0.05">5% - Terrible</option>
+                <option value="0.1">10% - Bad</option>
+                <option value="0.15">15% - It Was Ok</option>
+                <option value="0.2">20% - Good</option>
+                <option value="0.25">25% - Great</option>
+                <option value="0.3">30% - Outstanding</option>
+            </select>
+                <p>How many people are sharing the bill?</p>
+            <input type="number" id="peopleamt"  placeholder="Number of people"><br>
+            <button id="calculate">Calculate</button>
+        </div>
+        <div class="tip">
+            <p> Tip Amount </p>
+            ₹ <span id="total">0.10</span>
+            <span id="each" style="display: none;">each</span>
+        </div>
+    </div>
+</div>
+
+window.onload = () => {
+    document.querySelector('#calculate').onclick = calculateTip;
+}
+
+function calculateTip(){
+    var bill = document.querySelector("#billamt").value;
+    var tipPercentage = document.querySelector("#serviceQual").value;
+    var persons = document.querySelector("#peopleamt").value;
+
+    if(bill === '' || tipPercentage === 'Select' || persons === ''){
+        alert("Please Enter Bill Amount");
+        return;
+    }
+
+    if(persons === '1') {
+        document.querySelector('#each').style.display = 'none';
+    }else {
+        document.querySelector('#each').style.display = 'block';
+    }
+
+var tip = (bill * tipPercentage) / persons;
+tip = tip.toFixed(2);
+    document.getElementById("total").innerHTML = tip;
+}
+
+body {
+    background-color: grey;
+    text-align: center;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.container {
+    width: 300px;
+    height: 515px;
+    border-radius: 25px;
+    background-color: honeydew;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.header{
+    font-family: 'Annie Use Your Telescope';
+    background-color: black;
+    color: rgb(241, 173, 173);
+    font-size: 25px;
+    text-align: center;
+    height: 50px; 
+     width: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 15px;
+}
+
+button {
+    margin: 20px auto;
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover{
+   color: rgb(178, 241, 67);
+}
+input, select {
+    width: 85%;
+    border: none;
+    border-bottom: 1px solid green;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+
+Calculator
+Create a basic calculator using HTML, CSS and JAVASCRIPT which perform simple +, - , /, * operations. Make it clean and pretty
+Acceptance Criteria:
+    Create number buttons with id "block0" to "block9".
+    Create buttons for operations with ids "plus", "minus", "multiply", "divide" for the respective operation.
+    and make one clear button.
+    Create button for decimal operations with id "dot" for respective operation.
+    There should be a button that, on click, displays the answer. This button should have id="ans"
+    There should be a reset button that, on click, clears the answer. This button should have id="clr"
+    On division by 0, the answer should be 'Infinity'
+    On division of 0/0 it should give 'NaN'
+    The element where input/output is displayed should be of input type and have id="input". The value should get updated with every calculation
+<!-- HTML here -->
+<div class="maindiv">
+    <form name="form1">
+        <input id="input" type="text" name="answer"><br>
+        <input type = "button" id="block1" value = "1" onclick = "form1.answer.value += '1' ">
+        <input type = "button"  id="block2" value = "2" onclick = "form1.answer.value += '2' ">
+        <input type = "button"  id="block3" value = "3" onclick = "form1.answer.value += '3' ">
+        <input type = "button"  id="plus" value = "+" onclick = "form1.answer.value += '+' ">
+        <br> <br>
+        <input type = "button" value = "4"  id="block4" onclick = "form1.answer.value += '4' ">
+        <input type = "button" value = "5" id="block5" onclick = "form1.answer.value += '5' ">
+        <input type = "button" value = "6" id="block6" onclick = "form1.answer.value += '6' ">
+        <input type = "button" value = "-" id="minus" onclick = "form1.answer.value += '-' ">
+        <br> <br>
+
+        <input type = "button" value = "7"  id="block7" onclick = "form1.answer.value += '7' ">
+        <input type = "button" value = "8" id="block8" onclick = "form1.answer.value += '8' ">
+        <input type = "button" value = "9" id="block9" onclick = "form1.answer.value += '9' ">
+        <input type = "button" value = "*"  id="multiply" onclick = "form1.answer.value += '*' ">
+        <br> <br>
+
+
+        <input type = "button" value = "/"  id="divide" onclick = "form1.answer.value += '/' ">
+        <input type = "button" value = "0"  id="block0" onclick = "form1.answer.value += '0' ">
+        <input type = "button" value = "."  id="dot" onclick = "form1.answer.value += '.' ">
+        <input type = "button" value = "="  id="ans" onclick = "form1.answer.value = eval(form1.answer.value) ">
+        <br>
+
+        <input type="button" value="ClearAll" id="clr" onclick="form1.answer.value = ' '">
+        <br>
+    </form>
+</div>
+
+Simple BOM Alert
+Implement the Browser Alert as following:
+1)If the given text field with id#word is empty and the button with id #click is clicked then alert some text
+2)If the given text field is not empty then alert the text typed in the text field on button click
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="word">Text:</label>
+    <input type="text" id="word">
+    <button id="click">Alert</button>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+const text = document.getElementById("word");
+const btn = document.getElementById("click");
+
+btn.addEventListener("click", () => {
+    if(text.value === ""){
+        alert("Text Field is Empty")
+    }else{
+        alert("You have enterd text " + text.value);
+    }
+    
+});
+
+Sharable URLs
+We can share a lot of information through the URLs Make an HTML form and use JS for manipulation.
+Acceptance Criteria:
+Make an input field with id="name" and name="name" 
+Make an input field with id="year" and name="year"
+Make a submit button element with id="button"
+Make a h3 element with id="url". Initially it has the text https://localhost:8080/
+When submit button is clicked, text in h3 should be updated with the appropriate query string.
+
+<h3 id="url" > https://localhost:8080/<span id="change"></span></h3>
+<input type="text" id="name" name="name">
+<input type="number" id="year" name="year">
+<button id="button" onclick="updateHeading()">Submit</button>
+
+function updateHeading(){
+    let head3 = document.getElementById('url');
+    head3.innerText = 'https://localhost:8080/';
+
+    let fname = document.getElementById('name');
+    let year = document.getElementById('year');
+
+    if(fname.value === "" && year.value === "")
+        return;
+    else if(year.value === "")
+        head3.innerText += '?' + 'name=' + fname.value;
+    else if(fname.value === "")
+        head3.innerText += '?' + 'year=' + year.value;
+    else
+        head3.innerText += '?' + 'name=' + fname.value + '&year=' + year.value;
+    
+    fname.value = "";
+    year.value = "";
+}
+
+Asian Paints (Group Contest: April '21)
+Asian Paints wants the users to be able to preview and compare how different colours will look on their walls. They also decided that limiting it to 9 walls is the best bet to not confuse the users and still give them ample colours and shades to compare.
+You are a developer at Asian Paints and have decided to build a feature for this.
+You designed the feature in such a way that users will be able to see 9 walls on their screen. There will be 2 input boxes and 2 buttons.
+Each wall will have an id associated with it. The first input box will take the id of the wall. The second input box will take the colour from the users. The Apply button will apply the colour to the wall. The Reset button will reset the colour of the walls to transparent
+Acceptance Criteria:
+Create 9 walls, 2 input fields, and 2 buttons.
+Each block should have a unique id corresponding to it in 1-9 and the same value. For example, the first wall will have <div id="1" value="1"></div>
+The first input box that accepts the id of the wall should have id="wall_id"
+The first input box that accepts the colour of the wall should have id="wall_color"
+The Apply button should have id="apply" The Reset button should have id="reset"
+If Apply button is pressed, take the colour from the input#wall_color and the wall from the input #wall_id and set the colour as the background-color of the wall wall. The background-color for all other walls should turn transparent.
+If Reset button is pressed, the background-color for all the blocks should turn transparent
+<input type="number" min="1" max="9" id="wall_id">
+<input id="wall_color">
+<button id="apply" onclick="changeHandler()">Change</button>
+<button id="reset"onclick="resetHandler()">Reset</button>
+
+<div id="1" value="1"></div>
+<div id="2" value="2"></div>
+<div id="3" value="3"></div>
+<div id="4" value="4"></div>
+<div id="5" value="5"></div>
+<div id="6" value="6"></div>
+<div id="7" value="7"></div>
+<div id="8" value="8"></div>
+<div id="9" value="9"></div>
+
+div{
+    width: 20px;
+    height: 20px;
+}
+header{
+    display: flex;
+    
+}
+
+var coloridvalue = document.querySelector("#wall_id")
+var colorid
+var colorvalue = document.querySelector("#wall_color")
+var color
+
+colorvalue.addEventListener('input', updateValuecolour);
+function updateValuecolour(e) {
+    color = e.target.value;
+}
+coloridvalue.addEventListener('input', updateValueid);
+function updateValueid(e) {
+    colorid = e.target.value;
+}
+
+function changeHandler() {
+    // document.querySelector("`#${colorid}`").style.background=`${color}`
+    var divs = document.querySelectorAll("div")
+    divs.forEach(function findTarget(div) {
+        if (div.getAttribute("id") == colorid) {
+            div.style.background = color
+        }
+        else {
+            div.style.background = "none"
+        }
+    })
+}
+
+function resetHandler() {
+    var divs = document.querySelectorAll("div")
+
+    divs.forEach(function findTarget(div) {
+        div.style.background = "none"
+    })
+}
+
+Fundamentals of web development
+Create a basic webpage containing a button(id='btn') with text Click me and a div element with id 'text' which will display the number of times the button is clicked in the form
+You have clicked the button n times. , where n is the number of times the button is clicked.
+Also change the color text of 'Click me' on clicking of button according to the rule: if n is odd, then color is red, else blue(initially color of text is blue) and n is number of times the button is clicked.
+<!DOCTYPE html>
+<html>
+<body>
+<button id="btn" type="button"> Click me</button>
+<div id="text"></div>
+</body>
+</html>
+JS..
+let n = 1;
+const div = document.querySelector('#text');
+document.querySelector('#btn').addEventListener("click", function(){
+    div.innerHTML = `You have clicked the button ${n} times.`;
+
+    if(n % 2 != 0){
+        document.querySelector('#btn').style.color = 'red';
+    }else{
+        document.querySelector('#btn').style.color = 'blue';
+    }
+    n++;
+})
+
+#btn{
+    color: blue;
+    font-weight: bolder;
+}
+#text{
+    font-weight:bolder;
+}
+
+
+Bomberman 2 - JS Hoisting, JS higher order functions, Js array, JS Arrow functions, JS spread ... - In Class
+Bomberman 2
+The game we designed in Bomberman-1 was all based on luck. Let's extend the same game with the same 10x10 grid and try to help our fellow users get a path to win. But how?
+    Whenever a user clicks on a cell he/she should be able to see a number based on the following conditions:
+    Consider a rectangular area around the cell clicked.
+    Calculate the number of bombs contained in that area.
+    Display the number in the cell.
+One might think what about the cells at the extreme edges Worry Not!
+Consider the following images. These will help you consider various edge cases.
+How will it help?
+By clicking on various cells user may be able deduce which cells contain bombs. Following the same pattern the user may complete the game.
+Users first! 🙏
+You have helped users a lot by guiding them the path, but what if they could remember their conclusions out of those helping paths?
+For example: The user is sure that some cell contains a bomb, they may want to remember it so that they don't have to make calculations again and again.
+Let's get to the point.
+Give the users an option to flag a cell as follows:
+When users right-clicks on a cell they should see something like this.
+This way users can remember that they concluded there's a bomb in that cell and should not click it. If a user left-clicks on this flagged cell, normal flow should continue.
+Time for celebration 🎉
+If a user has scored 90 points it means he has clicked all the safe cells or flagged all the 10 bombs. A message should be displayed on the screen saying "YOU WIN!". Otherwise "YOU LOSE!".
+Acceptance criteria
+Use 🚩 💣 to flag and show bombs
+Each of the box will have id {0, 1, .. 99}
+For valid boxes className list should contain 'valid'
+For bomb boxes className list should contain 'bomb'
+Boxes which are revealed (on game over or user left-click) className list should contain 'checked'
+Flaged Boxes (*by user) className list should contain 'flag'
+Each of the box should have data attribute which has value equal to the number cells containing bomb in its neighbourhood
+ex: <div id="13" class="valid checked" data="0"></div>
+Message should be inside div tag of id 'result'
+Keep track of flags left inside span tag of element id 'flagsLeft' 
+<div class="container">
+      <div class="grid"></div>
+      <div>Flags left: <span id="flagsLeft"></span></div>
+      <div id="result"></div>
+    </div>
+
+const grid = document.querySelector('.grid');
+const flagsLeft = document.getElementById('flagsLeft');
+const result = document.getElementById('result');
+let validCounter = 0;
+let flagsCounter = 0;
+let totalFlags = 10;
+let gameOver = false;
+
+//Creating 100 boxes with random bomb locations
+(function createBoxes() {
+     flagsLeft.innerHTML = totalFlags;
+     let classArray = []
+     for (let i = 0; i < 100; i++) {
+          if (i > 89) {
+               classArray.push('bomb')
+          } else classArray.push('valid')
+     }
+     for (let i = 0; i < 100; i++) {
+          let box = document.createElement('div');
+          let index = Math.floor(Math.random() * classArray.length);
+          let className = classArray[index];
+          classArray.splice(index, 1);
+          box.setAttribute('id', i);
+          box.setAttribute('class', className);
+          grid.appendChild(box);
+     }
+})();
+
+const getBombsFromNeighbour = (target, val) => {
+     if (val === 0 || val === 9 || val === 90 || val === 99) {
+          setNumberOfBombs(target, cornerCase, val);
+     }
+     else if (val > 0 && val < 9 ||
+          val > 90 && val < 99 ||
+          val === 10 || val === 20 || val === 30 || val === 40 || val === 50 || val === 60 || val === 70 || val === 80 ||
+          val === 19 || val === 29 || val === 39 || val === 49 || val === 59 || val === 69 || val === 79 || val === 89) {
+          setNumberOfBombs(target, edgeCase, val);
+     } else {
+          setNumberOfBombs(target, generalCase, val);
+     }
+}
+
+//Handle Corner Cases
+const cornerCase = (val) => {
+     let arr;
+     if (val === 0) {
+          arr = [val + 1, val + 10, val + 10 + 1];
+     }
+     else if (val === 9) {
+          arr = [val - 1, val + 10, val + 10 - 1];
+     }
+     else if (val === 90) {
+          arr = [val + 1, val - 10, val - 10 + 1];
+     }
+     else if (val === 99) {
+          arr = [val - 1, val - 10, val - 10 - 1];
+     } 
+     return countBombs(arr);
+}
+
+//Handle edge cases
+const edgeCase = (val) => {
+     let arr;
+     if (val > 0 && val < 9) {
+          arr = [val + 1, val - 1, val + 10, val + 10 + 1, val + 10 - 1];
+     } else if (val === 10 || val === 20 || val === 30 || val === 40 || val === 50 || val === 60 || val === 70 || val === 80) {
+          arr = [val - 10, val + 10, val + 1, val - 10 + 1, val + 10 + 1];
+     } else if (val > 90 && val < 99) {
+          arr = [val + 1, val - 1, val - 10, val - 10 + 1, val - 10 - 1];
+     } else if (val === 19 || val === 29 || val === 39 || val === 49 || val === 59 || val === 69 || val === 79 || val === 89) {
+          arr = [val - 10, val + 10, val - 1, val - 10 - 1, val + 10 - 1];
+     }
+     return countBombs(arr);
+}
+
+//Handling Cases other than edge and corner
+const generalCase = (val) => {
+     let arr = [val - 1, val + 1, val - 10, val + 10, val - 10 - 1, val - 10 + 1, val + 10 - 1, val + 10 + 1];
+     return countBombs(arr);
+}
+
+// Counting Bombs in neighbour
+const countBombs = (arr) => {
+     let bombsInNeighbourHood = 0;
+     arr.forEach(item => {
+          let element = document.getElementById(item.toString());
+          if (element.classList.contains('bomb')) bombsInNeighbourHood++;
+     });
+     return bombsInNeighbourHood;
+}
+//setting class to the box on the basis of number of bombs
+const setNumberOfBombs = (target, cases, val) => {
+     let bombsInNeighbourHood = cases(val);
+     target.setAttribute('data', bombsInNeighbourHood);
+     if (bombsInNeighbourHood === 1) {
+          target.classList.add('one');
+     } else if (bombsInNeighbourHood === 2) {
+          target.classList.add('two');
+     } else if (bombsInNeighbourHood === 3) {
+          target.classList.add('three');
+     } else if (bombsInNeighbourHood === 4) {
+          target.classList.add('four');
+     }
+}
+//setting data attribute to the boxes on the bases of no. of bombs in surroundings 
+const setDataAttribute = () => {
+     let boxes = document.querySelectorAll('.valid, .bomb');
+     boxes.forEach((box, index) => {
+          getBombsFromNeighbour(box, index);
+     })
+}
+setDataAttribute();
+
+//Displaying all Bombs on Game over
+const showAllBombs = () => {
+     let bombs = document.querySelectorAll('.bomb');
+     bombs.forEach(bomb => {
+          bomb.innerHTML = '💣';
+          if (!bomb.classList.contains('checked')) {
+               bomb.classList.add('checked');
+          }
+     })
+}
+
+//Checking whether the flaged boxes contain bomb or not
+const checkFlagedBoxesContainBomb = () => {
+     let flagedBoxes = document.querySelectorAll('.flag');
+     for (let i = 0; i < flagedBoxes.length; i++) {
+          if (!flagedBoxes[i].classList.contains('bomb'))
+               return false;
+     }
+     return true;
+}
+
+//on Click
+grid.addEventListener('click', (e) => {
+     e.stopPropagation();
+     //if game not over
+     if (!gameOver) {
+          let target = e.target;
+          let numberOfBombsSurrounded = target.getAttribute('data');
+          let targetClasslist = e.target.classList;
+          //if element contains bomb set game is over
+          if (targetClasslist.contains('bomb')) {
+               gameStatusMessage('LOSE');
+               return;
+          }
+          //if element does not contain bomb
+          else if (targetClasslist.contains('valid')) {
+               //if element contains flag, remove the flag and decrement the flag counter
+               if (target.classList.contains('flag')) {
+                    target.classList.remove('flag');
+                    flagsCounter--;
+                    flagsLeft.innerHTML = totalFlags - flagsCounter;
+                    target.innerHTML = numberOfBombsSurrounded;
+               }
+               //if element is not checked , set it to checked and increment the valid counter
+               if (!targetClasslist.contains('checked')) {
+                    targetClasslist.add('checked');
+                    target.innerHTML = numberOfBombsSurrounded;
+                    validCounter += 1;
+                    //if validCounter becomes 90 show the message you won the game
+                    if (validCounter === 90) {
+                         gameStatusMessage('WIN');
+                    }
+               }
+          }
+     }
+}, false);
+
+//On right click
+grid.addEventListener('contextmenu', e => {
+     e.stopPropagation();
+     //preventing the default behaviour of the right click
+     e.preventDefault();
+     if (!gameOver) {
+          let target = e.target;
+          if (flagsCounter < totalFlags) {
+               //check if element is flagged, if flaged remove flag and decrement the flag counter
+               //else add flag and increment the flag counter
+               if (target.classList.contains('flag')){
+                    target.classList.remove('flag');
+                    flagsCounter--;
+                    flagsLeft.innerHTML = totalFlags - flagsCounter;
+                    target.innerHTML = '';
+               }
+               else if (!target.classList.contains('flag')){
+                    target.classList.add('flag');
+                    flagsCounter++;
+                    flagsLeft.innerHTML = totalFlags - flagsCounter;
+                    target.innerHTML = '🚩';
+                    //check if flag counter is equal to total flags
+                    // and also check all flagged boxes contain bomb
+                    //if they contain bomb display 'you have won message else lose message
+                    if (flagsCounter === totalFlags && checkFlagedBoxesContainBomb()) {
+                         gameStatusMessage('WIN');
+                    } else if (flagsCounter === 10 && !checkFlagedBoxesContainBomb()) {
+                         gameStatusMessage('LOSE');
+                    }
+               }
+          }
+     }
+});
+
+//set result message
+const gameStatusMessage = (winOrLose) => {
+     result.innerHTML = `GAME OVER: YOU ${winOrLose}!`;
+     gameOver = true;
+     showAllBombs();
+}
+
+.container {
+  width: 500px;
+  align-content: center;
+}
+
+.grid {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #dcd6bc;
+  margin-left: 50px;
+  margin-top: 20px;
+  border: 10px solid #dcd6bc;
+  margin-bottom: 10px;
+}
+
+div {
+  font-size: 25px;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+}
+.valid {
+  height: 40px;
+  width: 40px;
+  border: 5px solid;
+  border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+  box-sizing: border-box;
+}
+
+.checked {
+  height: 40px;
+  width: 40px;
+  border: 2px solid;
+  background-color: #cecab7;
+  border-color: #9c998d;
+  box-sizing: border-box;
+}
+
+.bomb {
+  height: 40px;
+  width: 40px;
+  border: 5px solid;
+  border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+  box-sizing: border-box;
+}
+
+.one {
+  color: #e76346;
+}
+
+.two {
+  color: #4199d3;
+}
+
+.three {
+  color: #57da59;
+}
+
+.four {
+  color: #bb41d3;
+}
+
+#result {
+  margin-top: 5px;
+  color: #e76346;
+}
+
+/* .bomb {
+  background-color: red;
+} */
+
+
+JS - DOM Events, Creating and Adding html elements to page - Post Class
+Todo List
+Make a Todo List in which users can
+1. Add a task to the list
+2. Delete a task from the list
+3. Mark a task as completed
+1. Add a task to the list: The users will type a task in the text input box and when they click on the 'Add' button, an element should get added within the < ul class="todo-list"> </ul>
+Note: Use preventDefault() Event Method to prevent it from submitting a form, since the Add button in HTML is of type submit.
+The element added within the < ul class="todo-list"> </ul> must contain the following in the given order:
+(a) A list element displaying Task inputted by the user with class todo-item
+(b) A 'Complete button' with class complete-btn
+(c) A 'Delete button' with class trash-btn
+2. Mark a task as completed: On clicking the completed button, the text of the corresponding task that was inputted by the user should get strike-through. e.g. make a coffee and on clicking the completed button again the strike-through should be removed. e.g. make a coffee
+Note: Only use the CSS property text-decoration: line-through solid rgb(0, 0, 0); to implement this.
+The completed button must have complete-btn as a class and should function as explained, otherwise your test cases will not pass.
+3. Delete a task from the list: On clicking the Delete Button, the corresponding component that contains that Delete button should get deleted.
+The Delete button must have trash-btn as a class and should function as explained above, otherwise your test cases will not pass.
+Do not make any changes to the HTML file.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TO Do List</title>
+</head>
+<body>
+    <header>My Todo list</header>
+    <form>
+        <div>
+            <input type="text" class="todo-input">
+            <button type="submit" class="todo-button">ADD</button>
+        </div>
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list">  
+        </ul>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
+
+.under-line{
+    text-decoration: line-through solid rgb(0, 0, 0);
+}
+
+const ul = document.querySelector('ul');
+const submitBtn = document.querySelector('button[type="submit"]');
+const input = document.querySelector('input');
+
+document.querySelector('form').onsubmit = function(e){
+    e.preventDefault();
+}
+
+let close = document.getElementsByClassName('complete-btn');
+console.log(close);
+submitBtn.addEventListener('click',function(e){
+    e.preventDefault();
+    let inp = input.value;
+    input.value = "";
+
+    let li = document.createElement('li');
+    li.className = 'todo-item';
+    li.textContent = inp;
+    ul.insertAdjacentElement('beforeend', li);
+
+    let completeBtn = document.createElement('button');
+    completeBtn.className = 'complete-btn';
+    completeBtn.textContent = 'complete';
+    ul.insertAdjacentElement('beforeend', completeBtn);
+
+    let deleteBtn = document.createElement('button');
+    deleteBtn.className = 'trash-btn';
+    deleteBtn.textContent = 'Delete';
+    ul.insertAdjacentElement('beforeend', deleteBtn);
+    completeBtn.onclick = function(){
+        li.classList.toggle('under-line');
+    }
+
+    deleteBtn.onclick = function(){
+        li.remove();
+        completeBtn.remove();
+        deleteBtn.remove();
+    }
+})
+
+
+Typing Game
+One of my favorite time passing game is touch typing. Good command of touch typing is a very important skill, especially when it comes to productivity. Sometimes you can feel it too.
+Touch typing gives leverage when you are competing with others. Also, it's fun, isn't it?
+Task: Create Touch Typing Game
+Description: Create a typing game which has a timer and show the typing speed in words per minute(WPM)
+Acceptace criteria
+Timer element ID timer
+WPM element ID wpm
+Container element ID container
+correct, incorrect classes should be used appropriately to mark letters if user typed some letters.
+Initially timer and wpm should be zero(0)
+User can start the game clicking on container element
+In order to start the game, start the timer and user should be able to type and see their progress in the wpm element
+User can stop the game by clicking outside of container
+In order to stop the game, stop the timer and set to zero(0), pause the wpm whatever it's value was and remove classes correct/incorrect from letter of the quote (make it like new rendered quote)
+If user typed the rendered quote completely (doesn't matter correct/incorrect), automatically render new quote and set timer to zero(0)
+Update the timer after each second by 1 (one) when game stated. Timer is showing the time passed in second.
+Given formula should be used to calculate speed(wpm)
+You should be using this API to get quotes. Be mindful for special letters/symbols
+Use fetch() to make API calls Use Math.round() in order to round wpm.
+Time-Elapsed (sec) should be calculate using Math.floor((new Date() - startTime) / 1000)startTime ->Timestamp(when timer started)
+WPM should be calculating using Math.round(parseFloat(correctStrokes()) / 5.0 / (parseFloat(Time-Elapsed(sec)) / 60.0)); Formula is shown in the picture
+Update the wpm on each-stroke(doesn't matter correct/incorrect) Input should be given to body tag. Hint add event listner to document.Use keydown event for input. Hint: e.key/e.keyCode
+Try to make it interactive/engaging/awsome. Happy coding :)
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Game</title>
+    
+  </head>
+  <body>
+    <label for="Timer" class="timerLabel">Timer</label>
+    <div class="timer" id="timer">0</div>
+    <label for="wpm" class="wpmLabel">WPM</label>
+    <div class="wpm" id="wpm">0</div>
+    <div class="container" id="container">
+      <div class="quote-display" id="quoteDisplay"></div>
+    </div>
+    
+  </body>
+</html>
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+  text-decoration: underline;
+}
+
+*{
+  box-sizing: border-box;
+}
+body{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 110vh;
+  margin: 0;
+  background-color: rgb(175,175,201);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;;
+}
+.container{
+ background-color: yellow;
+ padding: 1rem;
+ border-radius: 0.5rem;
+ width: 700px;
+ 
+ max-width: 90%;
+ border: 1px solid black;
+}
+.wpm, .wpmLabel{
+  color: rgb(175,78, 88);
+  position: absolute;
+  top: 6rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.timer, .timerLabel{
+  position: absolute;
+  top: 2rem;
+  font-size: 3rem;
+  color: yellow;
+  font-weight: bold;
+}
+
+.timerLabel, .wpmLabel{
+  left: 50rem;
+}
+.quote-display{
+  margin-bottom: 1rem;
+  margin-left: calc(1rem + 2px);
+
+}
+.container-focus{
+  border:3px solid black;
+}
+
+.quote-display .correct{
+  color: green;
+}
+
+const RANDOM_QUOTE_API_URL = "http://api.quotable.io/random";
+const container = document.getElementById("container");
+const quoteDisplayElement = document.getElementById("quoteDisplay");
+const timerElement = document.getElementById("timer");
+const wpmElement = document.getElementById("wpm");
+
+var timerID;
+var isTimerStated = false;
+var quote;
+var currentIndex = 0;
+var strokes;
+
+window.addEventListener("click", (e) => {
+  if (document.getElementById("container").contains(e.target)) {
+    if (!isTimerStated) {
+      container.classList.add("container-focus");
+      startTimer();
+    }
+  } else {
+    container.classList.remove("container-focus");
+    timerElement.innerText = 0;
+    stopTimer();
+    currentIndex = 0;
+    quoteDisplayElement.childNodes.forEach((node) => {
+      node.classList.remove("correct");
+      node.classList.remove("incorrect");
+    });
+  }
+});
+
+function calcualtewpm() {
+  if (getTimerTime() > 0) {
+    wpmElement.innerText = Math.round(
+      parseFloat(correctStrokes()) / 5.0 / (parseFloat(getTimerTime()) / 60.0)
+    );
+  }
+  // console.log("wpm", correctStrokes(), getTimerTime());
+}
+
+window.addEventListener("keydown", (e) => {
+  if (isTimerStated) {
+    var charCode = e.keyCode;
+    if (
+      (charCode > 64 && charCode < 91) ||
+      (charCode > 96 && charCode < 123) ||
+      charCode === 32 ||
+      charCode === 188 ||
+      charCode === 186 ||
+      charCode === 222 ||
+      charCode === 190 ||
+      charCode === 191 ||
+      charCode === 49 ||
+      charCode === 189
+    ) {
+      if (quote[currentIndex] == e.key) {
+        quoteDisplayElement.childNodes[currentIndex].classList.add("correct");
+        quoteDisplayElement.childNodes[currentIndex].classList.remove(
+          "incorrect"
+        );
+        strokes[currentIndex] = 1;
+      } else {
+        quoteDisplayElement.childNodes[currentIndex].classList.add("incorrect");
+        quoteDisplayElement.childNodes[currentIndex].classList.remove(
+          "correct"
+        );
+        strokes[currentIndex] = 0;
+      }
+      calcualtewpm();
+      currentIndex++;
+      if (currentIndex === quote.length) {
+        currentIndex = 0;
+        renderNewQuote();
+      }
+    } else if (charCode === 8) {
+      if (currentIndex === 0) return;
+      currentIndex--;
+      quoteDisplayElement.childNodes[currentIndex].classList.remove("correct");
+      quoteDisplayElement.childNodes[currentIndex].classList.remove(
+        "incorrect"
+      );
+    } else {
+      console.log("not a key");
+    }
+  }
+});
+
+const getRandomQuote = () => {
+  return fetch(RANDOM_QUOTE_API_URL)
+    .then((response) => response.json())
+    .then((data) => data.content);
+};
+
+function correctStrokes() {
+  let count = 0;
+  strokes.forEach((stroke) => {
+    if (stroke) count++;
+  });
+  return count;
+}
+
+const renderNewQuote = async () => {
+  quote = await getRandomQuote();
+  if (isTimerStated) {
+    stopTimer();
+    startTimer();
+  }
+  currentIndex = 0;
+  strokes = new Array(quote.length);
+  strokes.fill(0);
+  quoteDisplayElement.innerHTML = "";
+  quote.split("").forEach((char) => {
+    const charSpan = document.createElement("span");
+    charSpan.innerText = char;
+    quoteDisplayElement.appendChild(charSpan);
+  });
+};
+
+let startTime;
+function startTimer() {
+  isTimerStated = true;
+  timerElement.innerText = 0;
+  startTime = new Date();
+    timerID = setInterval(() => {
+    timerElement.innerText = getTimerTime();
+  }, 1000);
+}
+
+function getTimerTime() {
+  return Math.floor((new Date() - startTime) / 1000);
+}
+
+function stopTimer() {
+  isTimerStated = false;
+  clearInterval(timerID);
+}
+
+renderNewQuote();
+
+
+
+
+JS BOM, JS BOM history, JS BOM navigator, JS BOM window, DOM Manipulation, 
+
+Infinite Twitter News Feed
+Today we will design infinite scroll
+Infinite scrolling is a web-design technique that keeps loading content as the user scrolls down the page, eliminating the need for pagination. The success of infinite scrolling on social media sites such as Twitter has made this technique popular.
+Task
+Make any simple web-application that has vertical infinite scrolling functionality.
+Note: Add new elements directly inside the body tag.
+
+<body id="body"> </body>
+
+let body = document.getElementById("body");
+
+//Length of the next page => body.scrollHeight
+//clientHeight = the height of an element + the vertical padding.
+//scrollTop value is a measurement of the distance from the element's top to its topmost visible content
+const addPage = () => {
+  for (let i = 0; i < 20; i++) {
+    let div = document.createElement("div");
+    body.appendChild(div);
+  }
+};
+//if the user reaches bottom-> add next page
+document.addEventListener("scroll", function(){
+    if(body.scrollTop + body.clientHeight >= body.scrollHeight){
+        addPage();
+    }
+});
+ addPage();
+
+#body{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: grey;
+}
+
+div{
+    padding: 10px;
+    height: 20px;
+    border:1px solid black;
+}
+
+Hot or Cold: Part-1
+You are building the game Hot or Cold. In this game, the computer generates a random number and the user guesses the number. If the guess is close to the number, the computer replies with "Hot" and if the guess is far from the generated number, the computer replies with "Cold".
+Step-1 of the game is to learn to generate random numbers by the computer. So let's learn to do that.
+You can use Math.random() for generation of Random numbers.
+Generate random whole numbers in a range JS.
+    Make a p tag with id="main" and content I am learning to generate random number. I will be able to handle randomness in any of my applications that needs it. Press the button to get a random number.
+    Make a button with id="btn" which on click renders a random whole number each time between -20 & 20.
+    Make a p tag with id="num" where the random number is rendered. Initially, the p tag should contain an empty string.
+<Html>
+<p id="main">I am learning to generate random number. I will be able to handle randomness in any of my applications that needs it. Press the button to get a random number.</p>
+<button id="btn" onclick="displayRandomNumber()">Click Me!!</button>
+<p id="num"></p>
+
+JS
+function getRandomInt(min, max) {
+    //The maximum is inclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min + 1) + min); 
+}
+function displayRandomNumber(){
+    let min = -20;
+    let max = 20;
+    document.getElementById('num').innerText = getRandomInt(min, max);
+}
+
+
+Rotation
+Anirudh is given a square with height and width = 100px. Anirudh finds it really boring and decides to play with it. He wants the square to rotate when he brings his mouse cursor over it. Please help him out.
+Make sure that the square has id="box". You need to rotate the square by using the transform property of CSS on the square Every single time Anirudh brings the mouse over to the square, it should rotate 180 degrees
+The first rotation should be in the clockwise direction, the next should be in the anti-clockwise direction(back to original state). The next again in the clockwise direction. This order should continue on each mouseover.
+Do not change the initial styling of the square.
+
+<div id="box"></div>
+
+#box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: transform 2s;
+}
+
+.normal-rotated{
+    transform: rotate(180deg);
+}
+
+.anti-rotated{
+    transform: rotate(0deg);
+}
+JS Main Logic
+let count = 1;
+document.querySelector('#box').addEventListener("mouseover", function(){
+    if(count % 2 != 0){
+        count += 1;
+        document.getElementById("box").className = "normal-rotated";
+    }else{
+        document.getElementById("box").className = "anti-rotated";
+        count += 1;
+    }
+});
+
+
+Sum Calculator
+Get two Numbers(num1 and num2). Calculate their sum (num1 + num2) when the button clicked.
+    Two input boxes with id num1 and num2 respectively.
+    Button should have id as mybt
+    Show sum in input box with id result make it disabled
+<div style='margin-left: 10%;'>
+    <h3>Add Two Numbers</h3>
+    <input id="num1" type="number">
+    <input id="num2" type="number">
+    <button id="mybtn" type="submit">Add</button>
+    <input id="result" type="number" disabled>
+
+</div>
+
+const btn = document.querySelector('#mybtn');
+const n1 = document.querySelector('#num1');
+const n2 = document.querySelector('#num2');
+const result = document.querySelector('#result');
+let sum = 0;
+
+btn.addEventListener('click', function(){
+    sum = Number(n1.value) + Number(n2.value);
+    result.disabled = false;
+    result.value = sum;
+})
+
+
+Peek-a-boo
+You have a document and that has one paragraph that is important for some of your audience but useless for the rest. You want to ensure that your users get to choose if they want to hide or see the paragraph.
+Create a button that, on click, toggles the visibility of that paragraph <p>.
+That means, if the paragraph is visible, button click should hide it and if it is not visible, the button click should show it. The paragraph that is going to have its visibility toggled should have id="useless-paragraph"
+Now everyone can click the button and have the version they like.
+<h1>I am a headline made with HTML</h1>
+<br />
+<p id="useless-paragraph">Useless paragraph.</p>
+<br />
+<button onclick="toggleVisibility()" >Toggle Button</button>
+
+let para = document.getElementById("useless-paragraph");
+
+function toggleVisibility() {    
+    if (para.style.display === "none") {
+        para.style.display = "block";
+    } else {
+        para.style.display = "none";
+    }
+}
+
+Javascript Prototypes - JS Prototypes, Prototypes, prototype chain & prototypical inheritance - Post Class
+
+Javascript Prototypes
+Define a method on Array constructor called includesOneOf which accepts an array as a parameter. It will return true or false based on if an array contains one or more than one of the elements provided in the parameter array.
+As a result of this we should be able to access something like:
+const arr=[1, 2, 3, 4, 5, 6]
+arr. includesOneof([2, 8, 10]) ==>true
+arr. includesOneof([10, 11, 12])=>false
+arr. includesOneof([])=> Always false
+const arr2 = [{name:'James Bond",code":'OO7"},{name:"Edward Donne",code:"OO1"}]
+arr2.includesOneof([{name:"James Bond",code:'OO7'}]) ===> true
+arr2.includesOneof([{name:"James Bond",code:'OO7',organization: 'MI6'}]) ===> false
+const arr3 =[[1,22,33,4],[4,55,6,772]];
+arr3.includesOneof([[1,22,33,4]]) ===> true
+arr3.includesOneof([[1,33,22,4]]) ===> false
+Accptance criteria
+Should compare array and arrays by values
+Should handle integer,Decimal,String,Array,Object values
+Should handle empty arrays
+
+Array.prototype.contains = function(val){
+    return this.some(string => JSON.stringify(string) === JSON.stringify(val));
+}
+Array.prototype.includesOneof = function(array){
+    for(let i=0;i<array.length;i++){
+        if(this.contains(array[i])){
+            return true;
+        }
+    }
+    return false;
+}
+
+Arrays and objects should be compared by values
+Add average to array - JS Prototypes
+Add average to array easy
+How would you add your own method to the Array object so
+the following code would work?
+const arr = [1, 2, 3]
+console. log(arr.average()) 
+Array.prototype.average = function() {
+  var sum = this.reduce(function(prev, cur) { return prev + cur; });
+  return sum / this.length;
+}
+
+JS Array methods
+You are given an array of numbers. Use appropriate array methods to find all numbers that are greater than 5. 
+Complete the function getNumbersGreaterThan5 that accepts an array of integers nums and returns an array of numbers that are greater than 5.
+function getNumbersGreaterThan5(nums) {
+    // normal function call 
+    //const output = nums.filter(greater);
+    // With arrow function
+    const output = nums.filter((x) => x > 5);
+    return output;
+}
+
+function greater (x){
+    return x > 5;
+}
+
+
+Word highlighter JS
+In this project we will be creating the same functionality as the find function (control + f in windows and command + f on mac)
+of the browser.
+The html markup has already been pre defined for you.
+    #paragraph-input div is a normal div, but it has contenteditable
+    property set to true which makes it possible to type inside it.
+    Here the user will enter the text they want to search from.
+    #word-input will take input for the word we want to highlight/find. We want to highlight each time a character is typed, just like browser find on page functions.
+    span#word-counterwill contain the number of words found
+    #ignore-case checkbox will decide whether we want to it to be case sensitive or not, be default it is. Upon changing it, the highlighted text also should change, as in the demo video
+    All the highlighted sections of the paragraph will have class="highlighted-text"(hint:- use span in order not to change text spacing )
+    class .highlighted-text is already defined for you
+
+HTML
+<label for="paragraph-input">Enter paragraph here</label>
+    <div id="paragraph-input" contenteditable="true">Enter text here</div>
+    <br />
+    <br />
+    <div>Total matches:- <span id="words-counter">0</span></div>
+    <br />
+    <label for="word-input">Enter word to be higlighted here</label>
+    <input type="text" id="word-input" />
+    <br />
+    <br />
+    <label for="ignore-case">Ignore case?</label>
+    <input type="checkbox" id="ignore-case" />
+CSS
+#paragraph-input {
+            border: 2px solid rgb(150, 0, 0);
+            width: 400px;
+            height: 300px;
+            padding: 8px 16px;
+            overflow: scroll;
+        }
+
+        .highlighted-txt {
+            color: rgb(0, 0, 0);
+            background-color: rgb(241, 255, 45);
+        }
+MainJSS
+function countWord(str, find){
+	if(find == "") return 0;
+	return (str.split(find)).length - 1;
+}
+
+
+function updateText(){
+	let text = document.getElementById("paragraph-input").innerText;
+	let caseSensitive = document.getElementById("ignore-case").checked;
+	let searchWord = document.getElementById("word-input").value;
+
+	if(caseSensitive == true){
+		let textTemp = text.toLowerCase() ;
+		let searchTemp = searchWord.toLowerCase();
+
+		document.getElementById("words-counter").innerHTML = countWord(textTemp, searchTemp);
+
+		let regExp = new RegExp(searchWord, 'ig');
+
+		let modifiedText = text.replaceAll(regExp, (args)=> {
+			return `<span class = "highlighted-txt">${args}</span>`});
+		document.getElementById("paragraph-input").innerHTML = modifiedText;
+	}
+	else{
+		document.getElementById("words-counter").innerHTML = countWord(text, searchWord);	
+		let modifiedText = text.replaceAll(searchWord," <span class = 'highlighted-txt'>" + searchWord+ " </span>");
+		document.getElementById("paragraph-input").innerHTML  = modifiedText;
+	}
+}
+
+document.getElementById("word-input").addEventListener('input', function(){
+	updateText();
+});
+
+
+document.getElementById("ignore-case").addEventListener('input', function(){
+	updateText();
+});
+
+
+
+JS Query Params hard
+A typical Google search url looks like https://www.google.com/search?q=newtonschool, where the user input newtonschool is passed as variable via the query parameter q=.
+You have been provided employee details. Complete the function getEmployeeDetails as shown. Given a URL having id, name and designation of employee, access query parameters and return the statement with the employee details in the following form
+Employee id named name works as designation
+InputURL containing id, name and designation of employee in form of query parameters.
+OutputReturn the employee details in specified format
+Example
+Sample Input :www.newtonschool.co/search?id=1&name=John&designation=engineer
+Sample output :Employee 1 named John works as engineer. 
+// Complete the getEmployeeDetails function 
+function getEmployeeDetails(url) {
+    let queryString = url.substring( url.indexOf('?') + 1);
+    let urlParams = new URLSearchParams(queryString);
+    let id = urlParams.get('id');
+    let name = urlParams.get('name');
+    let designation = urlParams.get('designation');
+  
+    //another appraoch using object
+    // var params = {}, queries, temp, i, l;
+
+    // // Split into key/value pairs
+    // queries = queryString.split("&");
+    // // Convert the array of strings into an object
+    // for ( i = 0, l = queries.length; i < l; i++ ) {
+    //     temp = queries[i].split('=');
+    //     params[temp[0]] = temp[1];
+    // }
+    //console.log('Employee ' + params.id  + ' named ' + params.name + ' works as ' +params.designation + '.' );
+    //return 'Employee ' + params.id  + ' named ' + params.name + ' works as ' + params.designation + '.' ;
+    return 'Employee ' + id  + ' named ' + name + ' works as ' + designation + '';
+
+    //console.log('Employee ' + urlParams.get('id') + ' named ' +urlParams.get('name') + ' works as ' +urlParams.get('designation')+ '.' );   
+}
+
+
+JS Candy Crush
+medium
+Time Limit: 2 sec
+Memory Limit: 128000 kB
+Problem Statement
+John has N candies. He want to crush all of them. He feels that it would be boring to crush the candies randomly, 
+so he devices a method to crush them. He divides these candies in minimum number of groups such than no group contains more than 3 candy. 
+He crushes one candy from each group. If there are G groups in a single step, then the cost incurred in crushing a single candy for that step is G dollars. After candy from each group is crushed, he takes all the remaining candies and repeats the process until he has no candies left. He hasn't started crushing yet, but he wants to know how much total cost would be incurred. Can you help him?
+1 <= N <= 10^9
+Output return the cost from the function
+ExampleSample Input 1:4
+
+Explanation:
+Query 1: First step John divides the candies in two groups of 3 and 1 candy respectively. 
+Crushing one- one candy from both group would cost him 2x2 = 4 dollars. He is now left with 2 candies. He divides it into one group. He crushes one candy for 1 dollar. Now, he is left with 1 candy. 
+He crushes the last candy for 1 dollar. So, the total cost incurred is 4+1+1 = 6 dollars.
+//others answer need to check
+function findCost(n){
+  let sum=0;
+  while(n>0){
+    let a;
+    if(n==2)
+    return sum+2;
+    else if(n==1)
+    return sum+1;
+    if(n%3==0)
+      a=n/3;
+    else a= parseInt(n/3)+1;
+    sum += a*a;
+    n=n-a;
+  }
+  return sum;
+}
+
+Sum of several arrays easy
+You will be given an array of several arrays that each contain integers and your goal is to write a function that
+will sum up all the numbers in all the arrays. For example, if the input is [[3, 2], [1], [4, 12]] then your
+program should output 22 because 3 + 2 + 1 + 4 + 12 = 22
+function sum_array(arr) {
+    let sum =0;
+    for(let i=0;i<arr.length;i++){
+        let newarr = arr[i];
+        for(let j=0;j<newarr.length;j++){
+            sum += newarr[j];
+        }
+    }
+    console.log(sum)
+// write code here
+// use console.log for displaying the output
+}
+
+
+Most IMportant Links JavaScipt complete course from udemy
+1. Lecture 1 to 11 	https://drive.google.com/drive/folders/1dymY2h2sWu1E1bC4pZgurUKquwashP9R
+2. Lecture 12 to 17 	https://drive.google.com/drive/folders/1Hsh9Yd3sF5MuMPL2vM92Ikm-uPm0Pswv
+3. Lecture 18 to 20 	https://drive.google.com/drive/folders/1nBexf4fmw8TrgldJO85OU699jb4pl6x3
+
+Important links
+https://github.com/tsiege/Tech-Interview-Cheat-Sheet
+
+
+
+JS Object 
+JS Object - 1 easy
+Implement createUserObj which takes two arguments, email and password
+and the funtion returns and object with key email and value as email argument and key password
+and value as password.
+Input Function will take two arguments.
+Output Function will return object with keys email and password
+Example const obj = createUserObj("akshat. sethi@newtonschool. co", "123456")
+console. log(obj) // prints {email:"akshat. sethi@newtonschool. co", password:"123456"}
+function createUserObj(email, password){
+    // write code here
+   // return the output, do not console.log it
+    return {email, password};
+    //return  Object.keys(email).find(key => object[key] === value)
+}
+
+JS Object - 2 medium
+Implement getObjKeys which only takes one argument which will be a object.
+The function should return all they keys present in object as a string where elements are seperated by a ', '. (No nested objects)(Use JS Built in function)
+InpuFunction will take one argument which will be an object
+Output Function will is string which contain all the keys from the input object seperated by a ', '
+Example const obj = {email:"akshat. sethi@newtonschool. co", password:"123456"}
+const keyString = getObjKeys(obj)
+console. log(keyString) // prints email, password
+function getObjKeys(obj){
+   // write code here
+// retu{}rn the answer, dont use console.log here
+   return Object.keys(obj).join(","); 
+}
+
+Js Array Properties - JS Arrow functions, JS Removing elements, JS Emptying an array, JS Combining & s ... - Post Class
+Js Array Properties Implement the given js Functions
+1)Take input numbers in form of string by separating numbers with ,. If there is an invalid number throw and error in id #error. Display the input in #display after clicking the button #add
+2)Implement js filter by writing code for even numbers and odd numbers separately and display them in #display after clicking buttons #even #odd respectively
+3)Implement Join method without any space between elements and display in #display after clicking #join button
+Note: Use JSON.stringify for displaying arrays and display strings normally
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Methods</title>
+    <style>
+        .d-none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h3>JS Array Properties</h3>
+    <div>
+        <label for="input">Array</label>
+        <input type="text" id="input">
+        <button id="add">Add</button>
+    </div>
+    <div style="margin: 10px 0;">
+        <button id="join">Join</button>
+        <button id="even">Filter Even</button>
+        <button id="odd">Filter Odd</button>
+    </div>
+    <p id="display"></p>
+    <p id="error">Wrong Input!!</p>
+    <script src="./script.js"></script>
+</body>
+</html>
+
+JS
+const input = document.getElementById('input');
+const addBtn = document.getElementById('add');
+const display = document.getElementById('display');
+const even = document.getElementById('even');
+const odd = document.getElementById('odd');
+const join = document.getElementById('join');
+
+const inputArray = [];
+
+addBtn.addEventListener('click', () => {
+    let str = document.getElementById('input').value;
+    let arr = str.split(',');
+    arr.forEach(element => {
+        inputArray.push(Number(element));
+    })
+    display.textContent = JSON.stringify(inputArray);
+})
+
+even.addEventListener('click', () => {
+    display.textContent = JSON.stringify(inputArray.filter(x => x%2 ===0)); 
+})
+
+odd.addEventListener('click', () => {
+     display.textContent = JSON.stringify(inputArray.filter(x => x%2 === 1)); 
+})
+
+join.addEventListener('click', () => {
+    display.innerHTML = inputArray.join("");
+})
+
+
+
+JS Adding or removing properties, JS Enumerating properties of objects, JS Abstr ... - Post Cla
+
+JS Math - 4  Implement the function sumMaxMin, which should take 5 numbers as input
+and return its result as sum of max and min element of those 5 numbers (Use JS In built functions)
+console. log(sumMaxMin(100, 100, -200, 300, 0)) // prints 100 because 300+(-200) = 300-200 
+function sumMaxMin() {
+    // write code here
+    // return the output , do not use console.log here
+    let max =  -Infinity;
+    let min = Infinity;
+    for (let i = 1; i < arguments.length; i++) {
+        max = Math.max(max, arguments[i]);
+        min = Math.min(min, arguments[i]);
+    }
+    //console.log(min, max);
+    return max + min;
+}
+JS Math - 1 Implement the function round, which should take a number which can be a float(decimal)
+and return its result as an integer rounded of (Use JS In built functions)
+function round(num){
+    // write code here
+    // return the output , do not use console.log here
+    return Math.round(num);
+}
+
+JS String - 3
+Implement the function doesItContain, which takes 2 strings as argument,
+return true or false whether the first string contains second string or not(Use JS In built functions)
+function doesItContain() {
+    // write code here
+    // return the output , do not use console.log here
+    return arguments[0].includes(arguments[1]);
+}
+
+
+JS Adding or removing properties, JS Enumerating properties of objects, JS Abstr ... - In Class
+
+JS String - 1 
+Implement the function numOfWords, which should take a string
+and return its result as an integer which is the number of space seperated words in it (Use JS In built functions)
+Input Function will take a string as argument
+Output Function will return the number of space separated words
+Example console. log(numOfWords("Hi World")) // prints 2
+https://www.geeksforgeeks.org/count-words-in-a-given-string/
+var OUT = 0;
+var IN = 1;
+function numOfWords(str){
+    // return the output , do not use console.log here
+    var state = OUT;
+    var wc = 0; // word count
+    var i = 0;
+    // Scan all characters one by one
+    while (i < str.length) {
+        
+        // If next character is a separator, set the state as OUT
+        if (str[i] == ' ' || str[i] == '\n'|| str[i] == '\t')
+            state = OUT;
+                
+            // If next character is not a wordseparator and state is OUT, then set the state as IN and increment
+        // word count
+        else if (state == OUT) {
+            state = IN;
+            ++wc;
+        }
+        // Move to next character
+        ++i;
+    }
+          
+    return wc;
+}
+
+
+JS String - 2easy
+Implement the function correctMistake, which should take a string which will be the string we want to change the mistake in, and another string which is the wrong word or character, and third string which is the correct version and return its result as a string with mistakes (Use JS In built functions)
+Input Function will take 3 args,
+1) line arg which is the string with mistakes
+2) incorrectWord(or char) which is the char/word which needs to be replaced
+3) toBeReplacedWithChar which is a string
+Output Function will return string with corrected mistakes
+Example console. log(correctMistake("Hi World world", "world", "of coding")) // prints "Hi World of coding" since world is replaced by empty char
+console. log(correctMistake("hi hi hi", "hi", "hello")) // prints "hello hello hello"
+
+function correctMistake(str, inCorrectStr, replacedWithInccorrectStr) {
+    // write code here    // return the output , do not use console.log here
+    return str.replace(new RegExp(inCorrectStr,'g'), replacedWithInccorrectStr);
+	//The "g" modifier specifies a global match.
+    //A global match finds all matches (compared to only the first).
+}
+
+JS Math - 2 easy
+Implement the function floor, which should take a number which can be a float(decimal)
+and return its result as an integer with floor function applied to it (Use JS In built functions)
+unction will take a float as input
+Output Function will return a number
+Example console.log(floor(1.99)) // prints 1
+function floor(input){
+    // return the output , do not use console.log here
+    return Math.floor(input);
+}
+
+JS Math - 3easy
+Implement the function ceil, which should take a number which can be a float(decimal)
+and return its result as an integer with ceil function applied to it (Use JS In built functions)
+function ceil(num){
+    // return the output , do not use console.log here
+    return Math.ceil(num);
+}
+
+Reverse all words
+Given a string, reverse each word in the sentence
+InputA string containing multiple words
+ex:- "Welcome to this Javascript Guide!"
+OutputA string with all words reversed
+ex:- "emocleW ot siht tpircsavaJ !ediuG"
+function reverseWords(str){
+// write code here
+// use console.log to print output
+    console.log(str.split("").reverse().join("").split(" ").reverse().join(" "));
+}
+
+
+Js objects, Array loop methods (map, filter, reduce, forEach, some, every find), ... - Post Class
+
+
+
+Js Array Unique Numbers easy
+Print unique values from an array containing only numbers.
+Complete the given function such that it returns unique numbers from the array given as input.
+Input Array should contain only numbers.
+Output An array containing unique numbers.
+function uniqueNumber(arrOfNum){
+    // return the output , do not use console.log here
+    const uniqueArr = [...new Set(arrOfNum)]
+    return uniqueArr;
+    //console.log(uniqueArr)
+}
+Example
+const inputArr = [1,2,2,4,5,6,6];
+uniqueNumber(inputArr) // returns an array [1,2,4,5,6] 
+This another we can get unique element
+const ages = [26, 27, 26, 26, 28, 28, 29, 29, 30]
+const result = Array.from(new Set(ages));
+console.log(result)
+
+
+Unique Elements from array easy
+Remove duplicates of an array and return an array of only
+unique elements
+Input An array containing numbers:-
+Output Space separated unique elements from the array
+Example Sample Input:- [1, 2, 3, 5, 1, 5, 9, 1, 2, 8]
+Sample Output:- 1 2 3 5 9 8
+Explanation:- Extra 1, 2, 5 were removed since they were occurring multiple times.
+function removeDuplicates(arr){
+// write code here
+// use console.log for printing output
+        console.log(... new Set(arr)); 
+}
+
+Play with JS Objects
+Given a boiler plate of some text inputs and a button.
+Write a JS code for adding object properties and values by clicking the add button
+The object should be updated in the div with id #obj by using JSON.stringify()
+If there is an empty field then it should display some error message in div with id #error
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Add properties to Objects</h3>
+    <div class="field">
+        <label for="key">Key:</label>
+        <input type="text" id="key">
+    </div>
+    <div id="field">
+        <label for="val">Value:</label>
+        <input type="text" id="val">
+    </div>
+    <button id="add">Add</button>
+    <div id="error" class="error"></div>
+    <div id="obj"></div>
+    <script src="./script.js"></script>
+</body>
+</html>
+
+JS
+const key = document.getElementById('key');
+const val = document.getElementById('val');
+const display = document.getElementById('obj');
+const button = document.getElementById('add');
+const error = document.getElementById('error');
+
+const obj = {};
+
+button.addEventListener('click', () => {
+    if(!key.value){
+        error.textContent = 'key cannot be emoty';
+        return;
+    }
+    if(!val.value){
+        error.textContent = 'value cannot be emoty';
+        return;
+    }
+    error.textContent = '';
+    obj[key.value] = val.value;
+    display.innerHTML = JSON.stringify(obj);   
+})
+//display.innerHTML = JSON.stringify(obj);
+//display.innerHTML = JSON.stringify(obj)
+
+
+
+JAva Script Test
+styles editor 1
+A form with a submit button, a padding input with the id="padding", a margin input with the id="margin", and an html element with the id="main" are provided to you.
+When the submit button is clicked, use JS to change the margin and padding of the element with id="main" to the values specified in the corresponding inputs.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="row container">
+      <h1>Styles Editor</h1>
+      <div class="col md-6 container">
+        <div class="outer">
+          <div id="main" class="main">
+            <div class="inner">
+              <h3>Inner Element</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col md-6">
+        <div class="form">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Padding</label>
+            <input type="number" class="form-control" id="padding" placeholder="Enter padding in 'px'" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Margin</label>
+            <input type="number" class="form-control" id="margin" placeholder="Enter margin in 'px'" />
+          </div>
+          <button type="button" class="btn btn-primary" onclick="myFunction()">Submit</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+function myFunction(){
+
+    var element = document.getElementById("main");
+    let paddingChange = document.getElementById("padding").value;
+    let marginChange = document.getElementById("margin").value;
+    element.style.padding = paddingChange + 'px';
+    element.style.margin = marginChange + 'px';
+}
+.container {
+  height: 100vh;
+}
+.outer {
+  border: 2px solid rgb(0, 0, 0);
+  background: crimson;
+  margin-top: 50px !important;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+}
+.inner {
+  min-height: 200px;
+  background: aqua;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.main {
+  background: orange;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.form {
+  margin-top: 50px;
+}
+
+
+JAVA Scipts Assiggment
+
+
+JS Arrow functions, JS Removing elements, JS Emptying an array, JS Combining & s ... - Post Class
+
+Shopping Cart
+
+Instead of creating a static shopping list with paper and a pen, create it dynamically. Take the list item and the price from the user and further find the grand total.
+Details:
+    Two input fields should be displayed that take name and price as input.
+    A button with innerText Add should be rendered.
+    When the add button is clicked, list should be updated and rendered through a table.
+    data-ns-test="item-name" and data-ns-test="item-price" should be used to label name and price in table
+    item-name-input and item-price-input should be used as id for name and price input fields.
+    Total price of all element in the list should be displayed in an element with data-ns-test="grandTotal". This element should only have the value of the total and no other string.
+    Input fields should be cleared once element has been added to the list Initially, table should have only one row with grandTotal as 0.  Invalid input should not be accepted.
+JS:
+let SrNo = 1;
+const addToList = () => {
+  // console.log("added");
+
+    let productName = document.getElementById("item-name-input");
+    let productPrice = document.getElementById("item-price-input");
+
+    if (productName.value === "" || productPrice.value === "") {
+        return;
+    }else {
+    // console.log(productName.value);
+    // console.log(productPrice.value);
+
+        let row = document.createElement("tr");
+        let pSrNo = document.createElement("td");
+
+        pSrNo.innerHTML = SrNo++;
+        row.appendChild(pSrNo);
+
+        let pName = document.createElement("td");
+        pName.innerHTML = productName.value;
+
+        let pPrice = document.createElement("td");
+        pPrice.innerHTML = productPrice.value;
+
+        row.appendChild(pName);
+        row.appendChild(pPrice);
+
+        pName.setAttribute("data-ns-test", "item-name");
+        pPrice.setAttribute("data-ns-test", "item-price");
+
+        let table = document.querySelector("table");
+        table.appendChild(row);
+
+        let gTotal = document.getElementById("total");
+        // console.log(gTotal);
+        gTotal.innerHTML = Number(gTotal.innerHTML) + Number(productPrice.value);
+
+        productName.value = "";
+        productPrice.value = "";
+  }
+};
+function insertItem() {}
+
+HTML:
+<h1>Grocery List</h1>
+
+<input type="text" id="item-name-input" placeholder="Product Name" />
+
+<input type="number" min="0" id="item-price-input" placeholder="Product Price" />
+    
+<button onclick="addToList ()">Add</button>
+<br />
+
+<table>
+        <tr>
+             <th>Sr. No.</th>
+            <th>Title</th>
+            <th>Price</th>
+        </tr>
+</table>
+
+<h1>Grandtotal:-</h1>
+<h2 id="total" data-ns-test = "grandTotal">0</h2>
+
+
+
+Grofers Checkout You are given a Grocery list in a HTML table. You want to find the total price by calculating the sum of prices of individual items listed in the table. Write the sum logic in such a way that it works for given prices and also if the values are changed in the table. Show the total price by adding new row to the table with single cell that has the total price.
+Implementation Hint:
+    You can choose to use Element.querySelectorAll() to get the prices from the HTML table.
+    Once you get the numbers, you can add them to get the total price.
+    You can choose to use Document.createElement() to create the last row of the table that shows the total value.
+Make sure that you give the following data attributes and values to the elements. They are used to identify the elements when test cases are run.
+    data-ns-test="prices" for element that stores the price of each item in the list
+    data-ns-test="grandTotal" for the element where sum total is displayed
+
+https://codesandbox.io/s/r54of?file=/index.js:252-257
+HTML
+<table>        
+        <tr>
+            <td>1</td>
+            <td>Item-2</td>
+            <td data-ns-test="price">18361</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Item-2</td>
+            <td data-ns-test="price">18361</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Item-3</td>
+            <td data-ns-test="price">17373</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Item-4</td>
+            <td data-ns-test="price">17361</td>
+        </tr>
+    </table>
+
+JS
+let priceList = document.querySelectorAll("td[data-ns-test]");
+console.log(priceList[0]);
+let totalPrice = 0;
+for (let i = 0; i < priceList.length; i++) {
+  totalPrice += Number(priceList[i].innerHTML);
+}
+
+var tbodyRef = document.getElementsByTagName("tbody")[0].insertRow();
+var newCell = tbodyRef.insertCell();
+
+newCell.innerHTML = totalPrice;
+newCell.setAttribute("data-ns-test", "grandTotal");
+
+
+JS Hoisting, JS higher order functions, Js array, JS Arrow functions 
+Java Script introduction, Execution Context and Call Stack 
+
+
+Test divisors of three easy
+You will be given 2 parameters: a low and high number. Your goal is to print all numbers between low and high,
+and for each of these numbers print whether or not the number is divisible by 3. If the number is divisible by 3,
+print the word "div3" directly after the number.
+Input 2 numbers, one will be low and other high.
+0<=low<=high<=10000
+Output If the number is divisible by 3, print the word "div3" directly after the number.
+Example Sample input:- 1 6
+Sample output:- 1 2 3 div3 4 5 6 div3
+
+function test_divisors(low, high) {a
+// use console.log to display the output
+    //var output = [];
+    let str = '';
+
+    for(var i = low; i <= high; i ++){
+        //output.push(i);
+        str += i + ' '; 
+        if(i % 3 == 0){
+            //output.push('div3');
+            str += 'div3 '; 
+        }
+    }
+    //return output; 
+    console.log(str);
+}
+
+
+Is Array? medium
+Complete the function isArray which takes an input which can be any data type and returns true
+if it's an array else false.
+InputCould be any datatype string number object or an array
+Outputtrue or false
+ExampleSample Input:-
+1
+[2, 3]
+Sample Output
+false
+true
+function isArray(input){
+// write code here
+// use console.log to print the output
+    if (toString.call(input) === "[object Array]"){
+        console.log(true);
+    }else{
+         console.log(false);
+    }
+   
+}
+
+
+Sum of several arrays easy
+You will be given an array of several arrays that each contain integers and your goal is to write a function that
+will sum up all the numbers in all the arrays. For example, if the input is [[3, 2], [1], [4, 12]] then your
+program should output 22 because 3 + 2 + 1 + 4 + 12 = 22
+InputAn array containing arrays which can contain any number of elements.
+OutputSum of all the elements in all of the arrays.
+ExampleSample input:-[[3, 2], [1], [4, 12]]
+Sample output:-22
+Explanation:-3 + 2 + 1 + 4 + 12 = 22
+function sum_array(arr) {
+// write code here
+// use console.log for displaying the output
+
+    var sum = 0;
+  // loop through entire array
+  for (var i = 0; i < arr.length; i++) {
+    // loop through each inner array
+    for (var j = 0; j < arr[i].length; j++) {
+      // add this number to the current final sum
+      sum += arr[i][j];
+    }
+  }
+   console.log(sum);
+}
+
+Even-Odd seperate sorting easy
+Given an array A of positive integers. Your task is to sort them in such a way that the first part of the array contains odd numbers sorted in descending order, rest portion contains even numbers sorted in ascending order.
+Input First line of each test case cntains an integer N denoting the size of the array. The next line contains N space separated values of the array.
+1 <= N <= 100000
+0 <= A[i] <= 100000
+OutputPrint the space separated values of the modified array.
+Example Sample Input 7
+1 2 3 5 4 7 10
+Sample Output 7 5 3 1 2 4 10 
+// You need to return sorted array, not string
+// arr: input array
+// arrSize: size of array
+
+function sortEvenOdd(arr, arrSize){
+      
+// Javascript program sort arrayin even and odd manner. The odd numbers are to be sorted in descending order and the even numbers in ascending order
+// To do two way sort.// First sort even numbers in ascending order, then oddnumbers in descending order.
+   
+        // Current indexes from/ left and right
+        let l = 0, r = arrSize - 1;
+        // Count of odd numbers
+        let k = 0;
+        while (l < r)  {
+           
+            // Find first even number from left side.
+            while (arr[l] % 2 != 0)  {
+                l++;
+                k++;
+            }
+   
+            // Find first odd number from right side.
+            while (arr[r] % 2 == 0 && l < r)
+                r--;
+   
+            // Swap even number present on left and odd number right.
+            if (l < r) {
+                // swap arr[l] arr[r]
+                let temp = arr[l];
+                arr[l] = arr[r];
+                arr[r] = temp;
+            }
+        }
+           
+        let odd=new Array(k);
+        for(let i = 0; i < k; i++) {
+            odd[i]=arr[i];
+        }
+        let even=new Array(arrSize-k);
+        for(let i = 0; i < arrSize - k; i++) {
+            even[i] = arr[k + i];
+        }
+        // Sort odd number in descending order
+        odd.sort(function(a,b){return b - a;});
+        // Sort even number in ascending order
+        even.sort(function(a,b){return a - b;});
+         
+        return odd.concat(even);         
+  }
+
+// "2 x " + i + " = " + 2 * i 
+JS Dynamic Function Input medium
+Modify the takeMultipleNumbersAndAdd such that it can take any number of arguments
+and return its sum This is JS only question.
+InputFunction should be able to take any number of args
+OutputSum of the numbers
+Example takeMultipleNumbersAndAdd(1, 2, 2) should return 5 because 1 + 2 + 2 
+takeMultipleNumbersAndAdd(-1, 2, -1, 5) should return 5
+
+function takeMultipleNumbersAndAdd() {
+    //console.log(arguments);
+    let sum = 0
+    for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+    }
+    //console.log(sum)
+    return sum;
+
+}
+
+Youtube Likes 
+We've all seen the like and dislike buttons on youtube. There is a number that shows the count of total likes. Let's replicate that feature of Youtube and use it in our own social networking site.
+Acceptance Criteria:    Render two buttons. The Like button should have id="increment". The dislike button should have id="decrement" There should be a h3 element that displays the count of the count of Likes. This element should have id="counter"   The count should not go below zero. If dislike button is pressed when count is 0, it should remain at 0
+HTML
+<h3 id="counter">0</h3>
+<button id="increment"> Like</button>
+<button id="decrement"> dislike</button>
+JS
+let incrementBtn = document.getElementById("increment");
+let decrementBtn = document.getElementById("decrement");
+let counter = document.getElementById("counter");
+
+let count = 0;
+incrementBtn.addEventListener("click",(event) =>{
+    count ++;
+    //if(count < 0) count = 0;
+    counter.innerHTML = count;
+})
+
+decrementBtn.addEventListener("click",(event) =>{
+    count --;
+    if(count < 0) count = 0;
+    counter.innerHTML = count;
+})
+
+
+Sum of Product of Digits of a given number easy
+You are given two numbers n1 and n2. You need to find the sum of the products of their corresponding digits. So, for a number n1= 6 and n2 = 34, you'll do (6*4)+(0*3) = 24.
+User Task:Since this will be a functional problem, you don't have to take input. You just have to complete the function sumOfProductOfDigits() that takes the integers n1 and n2 as a parameter.
+Constraints:1 <= T <= 1000 <= n1, n2 <= 10^6
+OutputReturn the sum of product of corresponding digits of n1 and n2.
+ExampleSample Input:
+2
+9 0
+35 6798
+
+Sample Output:
+0
+67
+Explanation:-For test 2:-(8*5) + (9*3) + (7*0) + (6*0) = 67
+function sumOfProductOfDigits(n1, n2)
+{
+    let sum = 0;
+     
+    // Loop until one of the numbers
+    // have no digits remaining
+    while (n1 > 0 && n2 > 0)
+    {
+        sum += ((n1 % 10) * (n2 % 10));
+        n1 = Math.floor(n1/10);
+        n2 = Math.floor(n2/10);
+    }
+    return sum;
+    //https://www.geeksforgeeks.org/sum-of-the-products-of-same-placed-digits-of-two-numbers/
+}
+
+
+Js Error Handling
+Writing programs that work when everything goes as expected is a good start. Making your programs behave properly when encountering unexpected conditions is where it really gets challenging. Proper error handling is important as it can help users to understand what went wrong. One of the important reasons to include proper error handling in your Web applications is to help you fix it for the next release and to make development faster.
+We will be constructing a smart evaluator which will test the validity of the input field. The input string(expression) should only evaluate addition, subtraction, multiplication, division of positive and negative integers. An expression can contain spaces. Any other character will be considered invalid and shall give OutOfRangeError.
+Details- Create two class that Extends Error class (OutOfRangeError,InvalidExprError)
+- OutOfRangeError class should take one and should have message field value Expression should only consist of integers and +-/* characters and not < arg >
+- InvalidExprError should have message field Expression should not have an invalid combination of expression
+- Above two classes should have a name field equal to their class name
+- evalString function should
+- Throw error InvalidExprError if there is a combination of operators like ++, /+, etc.
+- Throw Syntax Error if Expression start with +,/,* operator with message Expression should not start with invalid operator
+- Throw Syntax Error if Expression ends with +,/,*,- operator with message Expression should not end with invalid operator
+- Write your code in the try-catch block given.
+- Don't alter other codes given.
+//created class for the erroe handling 
+
+class OutOfRangeError extends Error {
+  constructor(args) {
+    super();
+    this.name = "OutOfRangeError";
+    this.message =
+      "Expression should only consist of integers and +-/* characters and not '" +
+      args +
+      "' ";
+  }
+}
+
+class InvalidExprError extends Error {
+  constructor() {
+    super();
+    this.name = "InvalidExprError";
+    this.message =
+      "Expression should not have an invalid combination of expression";
+  }
+}
+function evalString() {
+  let str = document.getElementById("input1").value;
+  try {
+
+//write your code here
+  for (let i = 0; i < str.length; i++) {
+      if (
+        [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "+",
+          "/",
+          " ",
+          "-",
+          "*",
+        ].includes(str[i]) == false
+      ) {
+        throw new OutOfRangeError(str[i]);
+      }
+    }
+    str.replace(" ", "");
+    if (["+", "*", "/"].includes(str[0])) {
+      throw new SyntaxError(
+        "Expression should not start with invalid operator"
+      );
+    }
+    if (["+", "*", "/", "-"].includes(str[str.length - 1])) {
+      throw new SyntaxError(
+        "Expression should not end with invalid operator"
+      );
+    }
+    for (let i = 1; i < str.length - 1; i++) {
+      if (
+        (["+", "/", "-", "*"].includes(str[i - 1]) &&
+          ["+", "/", "*"].includes(str[i])) ||
+        (["+", "/", "-", "*"].includes(str[i - 1]) &&
+          str[i] == "-" &&
+          ["+", "-", "/", "*"].includes(str[i + 1]))
+      ) {
+        throw new InvalidExprError(
+          "Bad expression, Expression should not consist of an invalid sequence of operation"
+        );
+      }
+    }
+
+
+    alert("passed");
+  } catch (e) {
+    alert("failed " + e.name + " " + e.message);
+    if (window.Cypress) {
+      throw e;
+    }
+  }
+}
+
+if (window.Cypress) {
+  window.OutOfRangeError = OutOfRangeError
+    window.InvalidExprError = InvalidExprError
+}
+
+
+Number of primes easy
+Given a number n find the number of prime numbers less than equal to that number.
+Input There is only one integer containing value of n.
+Constraints:- 1 <= n <= 10000000 Output
+Return number of primes less than or equal to n
+Example Sample Input 5
+Sample Output 3
+Explanation:- 2 3 and 5 are the required primes.
+// You need to return the count of Primes less than equal to N
+// N: input number
+function numberOfPrimes(N){
+    let count = 0;
+
+    for(let i = 2 ; i <= N ;i++){
+    if(Count(i)) count++;
+    }
+
+      function Count(N){
+          for(let a = 2 ; a*a <= N ; a++){
+              if(N % a == 0)
+              return false;             
+            }
+            // console.log(N);
+          return true;
+      }
+      return count;
+ }
+
+Compound interesteasy
+Write a program to find the compound interest for given principal amount P, time Tm(in years), and interest rate R.
+InputThe input contains three integers P, R, and Tm.
+Constraints:-1 < = P < = 10^31 < = R < = 1001 < = Tm < = 20
+OutputPrint the compound interest by 2 decimal places.
+ExampleSample Input: 100 1 2
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+         double principle = sc.nextDouble();
+         double rate = sc.nextDouble();
+        double time = sc.nextDouble(); 
+        /* Calculate compound interest */
+        double A = principle * (Math.pow((1 + rate / 100), time));
+        double CI = A - principle;
+        System.out.println(String.format("%.2f", CI));
+    }
+}
+
+Base Elements, Form attributes, Form Elements, Select, Buttons, Option tag - Post Class
+Dynamic- css- frontend
+Create a div with class='text- here' id='text- container' containing some example text inside it.
+Create a textbox with id colorbox to change the color of the above text according to value entered in the textbox on a button click.
+Create a range input type for changing the size of the text. Default should be 55. The sizes should vary from 10 to 100. Create 3 buttons to change the text to bold italics underline and vice versa.
+Make a dropdown list containing the basic 5 font families and upon selection the font of the above text should change accordingly.
+Create another button which gives the above set css properties of the text in a way which can be straightaway copied to make any other text appear like the one in the div text- container.
+NOTE :The buttons should have class stylebt.
+
+<html>
+    <head>
+        <title> Page </title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+    <div id="main">
+        <div class="App">
+        <div class="text-here" id="text-container">
+            This is some example text
+        </div>
+
+        <div class="change-prop">
+            <p>
+                <input type="text" placeholder="Enter Color" id="colorbox"> </input>
+                <button onclick="setColor()" id="colorchange">Set Color</button>
+            </p>
+            <p>
+                Change font size using slider
+                <input type="range" name="text-size" min="10" max="100" default="55" oninput="sizeChange()" id="fontsize"> </input>
+            </p>
+            <p>
+                <button type="stylebt" onClick="setLine()" id="underline">Underline</button>
+                <button type="stylebt" onClick="setItalic()" id="italic">Italic</button>
+                <button type="stylebt" onClick="setBold()" id="bold">Bold</button>
+            </p>
+            <p>
+                Select Font Family: <select onchange="setFont()" id="list"></select>    
+            </p>
+            <button onclick="display()" id="getstyle"> Get Style Properties</button>
+            <p id="css-props"></p>
+            </div>
+    </body>
+    <script type="text/javascript" src="script.js"></script>
+</html>
+
+.App{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: aliceblue;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    border:0;
+    padding:0;
+    font-size: 20px;
+}
+.text-here{
+    width:100%;
+    margin-top: 5%;
+    height: 150px;
+    font-size: 55;
+}
+#css-props{
+    background-color: darkslategray;
+}
+button{
+    height: 30;
+    width: 150;
+}
+button:hover{
+    opacity: 0.9;
+}
+
+
+
+
+Frontend Subscription
+Your task is to create a subscription price grid component.
+The app is basically divided in 3 boxes each with a distinguishing background color and text.
+The table should also have some CSS formatting.
+The upper box should have should have a CSS class '.community' and background color of "rgb(255, 253, 253)".
+The lower box on right side,should have CSS class '.why-us' and background color of "rgba(85, 145, 142, 0.698)".
+The lower box on left side,should have CSS class '.card' and background color of "rgb(15, 67, 66)".
+The div containing these boxes should have CSS class '.container' and have border radius of 11 px.
+Make sure you have exact text in the 'why us' box .
+<!-- // https://my.newtonschool.co/playground/markup/jhxrgpikxwmm/ -->
+<div id="main">
+      <div class="container">
+                <div class="community">
+                  <h2 class="community-header">Join our community</h2>
+                  <h3 class="community-sub-header"> 30-day, hassle-free money back guarantee </h3>
+                  <p class="community-text">
+
+                    Gain access to our full library of tutorials along with expert 
+
+                    code reviews. Perfect for any developers who are serious about 
+
+                    honing their skills.
+                  </p>
+                </div>
+                <div class="card-details">
+                  <div class="card">
+                      <p class="card-header">Monthly Subscription</p>
+                      <div class="price"> 
+                      <span>$29</span> 
+                      <p>Per Month</p>
+                      </div>
+                      <p class="card-details-text">
+                        Full access for less than $1 a day
+                      </p>
+                      <a href="#" class="btn btn-card"> Sign Up </a>
+                  </div>
+                  <div class="why-us">
+                    <h4 class="why-us-header">Why Us</h4>
+                    <div class="why-us-lists">
+                        <ul class="why-us-items">
+                          <li class="why-us-items">Tutorials by industry experts</li>
+                          <li class="why-us-items">Peer & expert code review</li>
+                          <li class="why-us-items">Coding exercises</li>
+                          <li class="why-us-items">Access yo our GitHub repos</li>
+                          <li class="why-us-items">Community forum</li>
+                          <li class="why-us-items">Flashcard decks</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    </div>
+
+Another sol
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="./styles/App.css">
+<title>React Boilerplate</title>
+</head>
+<body>
+<div id="root">
+  <div id="main">
+    <section class="card-section">
+      <div class="container">
+        <div class="community">
+          <h2 class="community-header">Join our community</h2>
+          <h3 class="community-sub-header">30-day, hassle-free money back guarantee</h3>
+
+          <p class="community-text">
+            Gain access to our full library of tutorials along with expert 
+            code reviews. Perfect for any developers who are serious about 
+            honing their skills.
+          </p>
+        </div>
+
+        <div class="card-details">
+          <div class="card">
+            <p class="card-header"><h3>Monthly Subscription</h3></p>
+
+            <!-- <p class="price">$29 <span>Per Month</span></p> -->
+            <div class="price">
+              <span>$29</span>
+              <p>Per Month</p>
+            </div>
+
+            <p class="card-details-text">Full access for less than $1 a day</p>
+
+            <!-- <button>Sign Up</button> -->
+            <a href="#" class="btn btn-card"> Sign Up </a>
+          </div>
+
+          <div class="why-us">
+            <h4 class="why-us-header">Why Us</h4>
+            <div class="why-us-lists">
+              <ul class="why-us-items">
+                <li class="why-us-items">Tutorials by industry experts</li>
+                <li class="why-us-items">Peer & expert code review</li>
+                <li class="why-us-items">Coding exercises</li>
+                <li class="why-us-items">Access to our GitHub repos</li>
+                <li class="why-us-items">Community forum</li>
+                <li class="why-us-items">Flashcard decks</li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</html>
+
+
+.container{
+    display: grid;
+    border-radius: 11px;
+    grid-template-columns: 100%;
+    background-color: darkblue ;
+    padding: 15px;
+}
+
+.community{
+    background-color: rgb(255, 253,253);
+    text-align: center;
+}
+
+.card-details{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.card{
+    background-color: rgb(15, 67,66);
+    text-align: center;
+}
+
+.why-us{
+    text-align: center;
+    background-color: rgba(85,145,142,0.698);
+}

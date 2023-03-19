@@ -1,0 +1,272 @@
+HTML Concepts
+
+
+    What is HTML?
+
+    What do you mean by a markup language?
+
+    Can you share examples of other markup languages and how they differ from HTML?
+
+    What version of HTML do you use in your projects? How is HTML 5 different from HTML 4?
+
+    What are attributes in HTML?
+
+    What are data- attributes good for?
+
+    Describe the difference between &<script>, <script async> and <script defer>.
+
+    Why is it generally a good idea to position CSS <link>s between <head></head&> and JS <script>s just before </body>? Do you know any exceptions?
+
+Solution:
+
+1. 
+HTML is the standard markup language for creating Web pages.
+    HTML stands for Hyper Text Markup Language
+    HTML is the standard markup language for creating Web pages
+    HTML describes the structure of a Web page
+    HTML consists of a series of elements
+    HTML elements tell the browser how to display the content
+    HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+HTML (Hypertext Markup Language) is a markup language used to structure and format the content of web pages. HTML uses a set of special tags and attributes to define the structure and content of a web page, such as headings, paragraphs, lists, and links.
+HTML is a standard language that is used by web browsers to interpret and render the content of a web page. When a web browser receives an HTML document, it parses the document and converts the HTML tags into a visual representation of the page, such as text, images, and layou
+
+2. A markup language is a computer language that uses tags to define elements within a document. It is human-readable, meaning markup files contain standard words, rather than typical programming syntax. While several markup languages exist, the two most popular are HTML and XML.
+A markup language is a type of computer language that is used to annotate and structure text documents. Markup languages use a set of special characters or tags to add additional information or metadata to the text, which can be used to define the structure, format, and behavior of the document.
+
+3.
+There are many different markup languages in addition to HTML, and each one has its own unique features and capabilities. Some examples of other markup languages and how they differ from HTML are:
+XML (Extensible Markup Language): XML is a markup language that is similar to HTML, but it is more flexible and extensible. Unlike HTML, which has a fixed set of tags that define the structure and content of a document, XML allows developers to define their own tags and attributes to create custom data structures. XML is often used to store and exchange structured data between applications.
+LaTeX: LaTeX is a markup language that is used to typeset scientific and technical documents. Unlike HTML, which is designed for displaying and formatting web pages, LaTeX is focused on providing high-quality typography and layout for complex documents. LaTeX uses a set of special commands and symbols to define the structure and formatting of a document, and it is often used to create articles, books, and presentations.
+Markdown: Markdown is a lightweight markup language that is designed to be easy to read and write. Unlike HTML, which uses tags to define the structure and formatting of a document, Markdown uses a simple set of symbols and characters to define text formatting, such as bold, italic, and headers. Markdown is often used to write and format readme files, blog posts, and other types of online content.
+
+4. I will use HTML 5 in my project because their is lots of new feature provided by html5.
+HTML 5 is the latest version of the HTML language and has several new and improved features compared to HTML 4. Some of the key differences between HTML 5 and HTML 4 include:
+HTML 5 introduced new semantic elements, such as <header>, <footer>, and <section>, which make it easier to structure and organize the content of a page.
+HTML 5 added support for multimedia content, such as audio and video, without the need for additional plugins or external libraries.
+HTML 5 introduced new APIs, such as the Geolocation API and the Web Storage API, which allow developers to build more powerful and interactive web applications.
+HTML 5 added support for offline web applications, allowing users to access and use web apps even when they are not connected to the internet.
+HTML 5 introduced new form controls, such as the date and time input types, which make it easier to collect and validate user input.
+Overall, HTML 5 provides many new and improved features that make it easier for developers to create rich and interactive web applications
+
+5.  All HTML elements can have attributes
+    Attributes provide additional information about elements
+    Attributes are always specified in the start tag
+    Attributes usually come in name/value pairs like: name="value"
+Attributes can provide a wide range of additional information and behavior to HTML elements, including information about how an element should look, how it should behave, and how it should be structured. Different elements can have different attributes, and some attributes are specific to certain element
+For example, the href attribute is used on the <a> element to provide the URL of the linked page:
+<a href="https://example.com/">Click here</a>
+
+6. 
+The data-* attribute is used to store custom data private to the page or application. The data-* attribute gives us the ability to embed custom data attributes on all HTML elements.
+The stored (custom) data can then be used in the page's JavaScript to create a more engaging user experience (without any Ajax calls or server-side database queries).
+The data-* attribute consist of two parts: 
+    The attribute name should not contain any uppercase letters, and must be at least one character long after the prefix "data-"
+    The attribute value can be any string
+Note: Custom attributes prefixed with "data-" will be completely ignored by the user agent. 
+Applies to The data-* attribute is a Global Attribute, and can be used on any HTML element.
+
+Data attributes are particularly useful for storing small pieces of data that are specific to an HTML element and that need to be accessed and used in a script. They are also often used in conjunction with JavaScript libraries and frameworks to provide additional information or behavior to elements on the page.
+
+7. The <script> element is used to include and load external JavaScript files in an HTML document. There are a few different attributes that can be used with the <script> element to control how and when the JavaScript file is loaded and executed.
+We often use the script tag to insert a regular JavaScript file to page:
+<script src="/path/to/script.js"></script>
+When the browser sees a normal script tag declaration, it will perform the following steps:
+    Pause the document parser
+    Create a new request to download the script
+    Execute the script after it's downloaded completely
+    Continue parsing the document
+This flow gives a bad user experience because users can not interact with the page while the script is being downloaded. They have to wait for all scripts to be downloaded and executed completely before seeing the entire page is parsed.
+To fix that problem, HTML 5 provides two attributes for the script tag. They are async and defer:
+<script src="/path/to/script.js" async></script>
+<script src="/path/to/script.js" defer></script>
+These attributes let browser know that the scripts can be downloaded in parallel with the document parser process.
+The async and defer scripts are executed at different moments.
+After an async script is downloaded, the browser will pause the document parser, execute the script and resume parsing the document.
+
+<script async≥= If async is present: The script is executed asynchronously with the rest of the page (the script will be executed while the page continues the parsing) If async is not present and defer is present: The script is executed when the page has finished parsing.
+The async script is executed as soon as it is downloaded completely, hence they might not be executed at the same order as they appear in the page.
+On the other hand, the defer scripts guarantee the order of execution
+
+<script defer≥= The defer attribute tells the browser to only execute the script file once the HTML document has been fully parsed
+The defer script, on the other hand, will be executed only when the parser has completed its job.
+
+
+8. It is generally a good idea to position CSS <link> elements in the <head> section of an HTML document and JavaScript <script> elements just before the closing </body> tag for a few reasons.
+First, placing CSS <link> elements in the <head> section allows the browser to start loading and applying styles to the page as soon as possible. This can help improve the overall performance of the page by reducing the amount of time the user has to wait for the page to become visually complete.
+Second, placing JavaScript <script> elements just before the closing </body> tag can also improve performance by allowing the browser to load and render the main content of the page before it has to parse and execute any JavaScript. This can help reduce the amount of time the user has to wait for the page to become fully interactive.
+
+
+CSS Concept
+
+1. What is CSS and how does it work with HTML?
+
+2. What are selectors and what are their different types?
+
+3. What is CSS selector specificity and how does it work?
+
+4. Describe z-index and how stacking context is formed.
+
+5. Describe BFC (Block Formatting Context) and how it works.
+
+6.Have you ever used a grid system, and if so, what do you prefer?
+
+7. Have you used or implemented media queries or mobile specific layouts/CSS?
+
+8. Explain how a browser determines what elements match a CSS selector.
+
+9. Describe pseudo-elements and discuss what they are used for.
+
+10. Explain your understanding of the box mode.
+
+11. What does * { box-sizing: border-box; } do? What are its advantages?
+
+12. What is the CSS display property and can you give a few examples of its use?
+
+13. What's the difference between inline and inline-block?
+
+14.What's the difference between the "nth-of-type()" and "nth-child()" selectors?
+
+15. What's the difference between a relative, fixed, absolute and statically positioned element?
+
+16. What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
+
+17.Have you used CSS Grid?
+
+Solution :
+
+1. CSS (Cascading Style Sheets) is a stylesheet language that is used to describe the look and formatting of a document written in HTML (HyperText Markup Language). CSS is a separate file that is linked to an HTML document, and it can be used to style multiple HTML pages. It allows developers to control the style and layout of multiple web pages simultaneously, making it easier to maintain a consistent look and feel across a website.
+
+2. In CSS (Cascading Style Sheets), a selector is a pattern that matches the elements in a document that you want to style. There are several types of selectors that you can use to specify which elements you want to style:
+
+    Type selectors: These select elements based on their tag name. For example, the type selector "p" will select all <p> elements in the document.
+
+    Class selectors: These select elements based on their class attribute. For example, the class selector ".intro" will select all elements with a class of "intro".
+
+    ID selectors: These select elements based on their id attribute. For example, the ID selector "#main" will select the element with an id of "main".
+
+    Attribute selectors: These select elements based on the presence or value of a particular attribute. For example, the attribute selector "[href]" will select all elements with an href attribute, and the attribute selector "[href='https://example.com']" will select all elements with an href attribute with a value of "https://example.com".
+
+    Pseudo-class selectors: These select elements based on their state or position. For example, the pseudo-class selector ":hover" will select elements when the user hovers over them with the mouse, and the pseudo-class selector ":first-child" will select the first child element of its parent.
+
+    Pseudo-element selectors: These select specific parts of an element, such as the first letter or line of text. For example, the pseudo-element selector "::before" will insert content before the selected element, and the pseudo-element selector "::first-line" will select the first line of text in an element.
+
+ Combinators: These allow you to specify more complex relationships between elements. For example, the combinator ">" will select only direct children of an element, while the combinator "~" will select all siblings of an element.
+
+3.  CSS selector specificity is a concept that determines which style rules will be applied to an element when there is a conflict between multiple rules that apply to the same element. When two or more style rules apply to the same element, the one with the highest specificity will be the one that is applied.
+
+Specificity is calculated based on the weight of different types of selectors. The following list shows the relative specificity of each type of selector, from highest to lowest:
+
+    Inline style: An inline style is an element with a "style" attribute applied directly to it, and has the highest specificity.
+
+    ID selector: An ID selector is a type of selector that uses the "#" symbol followed by an ID to select an element. It has a higher specificity than other types of selectors.
+
+    Class selector, attribute selector, and pseudo-class: These types of selectors have a higher specificity than type selectors and pseudo-elements, but a lower specificity than ID selectors.
+
+    Type selector and pseudo-element: These types of selectors have the lowest specificity.
+
+When multiple rules apply to the same element and have the same specificity, the last rule defined will be the one that is applied.
+
+To calculate the specificity of a selector, you can count the number of each type of selector in the selector. For example, the selector "body p.intro #main" has a specificity of 0,1,1,1 (one ID selector, one class selector, one type selector, and one type selector). The specificity of a selector is usually written as four numbers, with each number representing the count of inline styles, ID selectors, class selectors, attribute selectors, and pseudo-classes, respectively.
+
+In general, it is a good practice to use specific selectors where possible to avoid conflicts and ensure that your styles are applied consistently. However, it is also important to avoid overly specific selectors, as they can make your styles more difficult to maintain and override.
+
+4.  The z-index property in CSS controls the stacking order of elements on the z-axis (the axis that runs perpendicular to the screen). Elements with a higher z-index will appear in front of elements with a lower z-index.
+
+The z-index property only applies to elements that are positioned (i.e., elements with a position value other than static). When two or more positioned elements overlap, the one with the higher z-index will be displayed in front of the others.
+
+A stacking context is a group of elements that are stacked together on the z-axis. A stacking context is formed when an element has a z-index value other than auto, or when it is a positioned element with a transform, opacity, or filter value other than none.
+
+An element's stacking context also includes its child elements, so any child elements will be stacked within the parent element's stacking context. This means that a child element with a higher z-index value will be displayed in front of a sibling element with a lower z-index value, even if the sibling element has a higher z-index value within its own stacking context.
+
+It is important to note that z-index only affects the stacking order of elements within the same stacking context. Elements in different stacking contexts are always stacked according to their DOM (Document Object Model) order, with elements later in the DOM appearing in front of elements earlier in the DOM.
+
+5. A block formatting context (BFC) is a layout mechanism in CSS that is used to contain and position elements within a block-level container. It is an invisible box that is created around elements and determines how they are rendered on the page.
+
+The main characteristics of a BFC are:
+
+    It is a block-level container.
+    It establishes a new coordinate system for its child elements.
+    It contains its child elements within itself, so that its child elements do not overlap with other elements outside of the BFC.
+    It is a layout context that is independent of its parent and sibling elements.
+
+A BFC is created in the following situations:
+
+    When an element has a display value of block, list-item, or table.
+    When an element has a position value of absolute or fixed.
+    When an element has a float value other than none.
+    When an element has an overflow value other than visible.
+
+Elements within a BFC are positioned according to the rules of normal flow, which means that they are laid out in the order they appear in the HTML source code, and are affected by margin, padding, and width values.
+
+BFCs can be useful for creating complex layouts and controlling the stacking order of elements. They can also help to prevent elements from overlapping and to fix layout issues caused by elements with a float value.
+
+6. Yes, I have used grid systems in the past when developing layouts for websites. A grid system is a way of organizing the layout of a webpage into rows and columns, with the aim of making it easier to create consistent and responsive layouts.
+
+There are many different grid systems available, and which one I prefer depends on the specific needs of the project. Some of the grid systems that I have used in the past include:
+
+    Bootstrap: This is a popular grid system that is easy to use and includes a wide range of pre-designed layout options. It is a good choice for projects that need a responsive layout and don't require a lot of customization.
+
+    Foundation: This is another popular grid system that is designed to be flexible and responsive. It offers a wide range of layout options and is easy to customize.
+
+    Pure.css: This is a minimalist grid system that is designed to be lightweight and easy to use. It is a good choice for projects that need a simple grid system without a lot of extra features.
+
+    Gridlex: This is a flexible grid system that is designed to be easy to use and customize. It offers a wide range of layout options and is good for projects that need a responsive layout.
+
+Ultimately, the best grid system for a particular project depends on the specific requirements and needs of the project. I typically choose a grid system based on the level of customization and responsiveness needed, as well as the overall design of the project.
+7.
+Yes, I have used media queries and mobile-specific layouts in web development projects. Media queries are a CSS feature that allows you to apply different styles based on the dimensions of the user's screen or device. They are often used to create responsive layouts that adjust to the size of the viewport, such as when creating a website that looks good on both desktop and mobile devices.
+
+To use media queries, you can include a @media rule in your CSS that specifies the conditions under which a particular set of styles should be applied. For example, you might use a media query to specify that certain styles should only be applied when the viewport width is less than a certain value, indicating that the user is on a small device such as a phone.
+
+Here is an example of a media query that applies different styles for viewport widths less than or equal to 500 pixels:
+
+@media (max-width: 500px) {
+  /* Styles go here */
+}
+
+You can also use media queries to target specific devices or device characteristics, such as screen resolution or aspect ratio. For example, you might use a media query to apply styles specifically for devices with a high-density pixel ratio, or to create a layout that is optimized for landscape or portrait orientations.
+
+Mobile-specific layouts and CSS can also be used to create custom styles and layouts specifically for mobile devices. This can be useful if you want to create a distinct look and feel for your mobile website, or if you need to make specific design adjustments for small screens.
+8.
+When a browser processes a CSS stylesheet, it reads through the styles and applies them to the elements in the HTML document according to the rules specified in the stylesheet. To determine which elements in the HTML document match a particular CSS selector, the browser follows these steps:
+
+    The browser starts at the root element of the HTML document and begins traversing the DOM (Document Object Model) tree.
+
+    As it encounters each element, the browser checks to see if it matches the CSS selector. If it does, the styles associated with the selector are applied to the element.
+
+    If the CSS selector contains descendant combinators (such as a space or >), the browser will also check any child elements of the current element to see if they match the selector. If a child element matches the selector, the styles are applied to it as well.
+
+    The browser continues to traverse the DOM tree, checking each element and its children as it goes, until it has processed the entire tree.
+
+To determine if an element matches a particular CSS selector, the browser will evaluate the element's tag name, class name(s), and ID, as well as any other attributes or values specified in the selector. For example, if the CSS selector is .my-class, the browser will check to see if the element has a class of my-class. If the selector is #my-id, the browser will check to see if the element has an ID of my-id.
+
+In addition to simple selectors like these, CSS also supports more complex selectors that can match elements based on their position in the DOM tree, their relationships with other elements, and other criteria. For example, the :hover pseudo-class will match an element when the user's mouse is hovering over it, and the :first-child pseudo-class will match the first child element of its parent.
+9.
+Pseudo-elements are special selectors in CSS that allow you to style specific parts of an element, rather than the element itself. They are called "pseudo" elements because they are not actually present in the HTML document, but are instead created by the browser as a way to style certain aspects of the document's layout or appearance.
+
+There are several different pseudo-elements that can be used in CSS, each with a specific purpose:
+
+    ::before and ::after: These pseudo-elements allow you to insert content before or after an element's content, respectively. They can be used to add decorative elements, such as icons or graphics, or to insert text or other content that is not part of the element's actual content.
+
+    ::first-letter: This pseudo-element allows you to style the first letter of an element's content. It is often used to apply special formatting to the first letter of a block of text, such as making it larger or changing its color.
+
+    ::first-line: This pseudo-element allows you to style the first line of an element's content. It is often used to apply special formatting to the first line of a block of text, such as changing its font or adding an indent.
+
+    ::selection: This pseudo-element allows you to style the portion of an element that is currently selected by the user. It is often used to change the background color or text color of a selected portion of text.
+
+Pseudo-elements are used in CSS to add extra styling and layout options that are not possible with regular CSS selectors. They can be a useful way to add decorative elements or to apply specialized styling to specific parts of an element's content.
+
+10.
+In CSS, the box model is a concept that describes how the dimensions and layout of an element are calculated. It determines the size of an element and the space around it, including its margins, borders, and padding.
+
+The box model consists of the following components:
+
+    Content box: This is the innermost part of the box model, and it represents the element's actual content. The width and height of the content box are determined by the element's content and the values of the width and height properties in the CSS.
+
+    Padding box: This is the area around the content box, and it is defined by the padding property in CSS. The padding is transparent and separates the content from the element's border.
+
+    Border box: This is the area around the padding box, and it is defined by the border property in CSS. The border can be a solid line, a dotted line, a dashed line, or any other style specified in the CSS.
+
+    Margin box: This is the outermost part of the box model, and it is defined by the margin property in CSS. The margin is transparent and separates the element from other elements on the page.
+
+The box model is used to calculate the size and position of an element on the page, and it is an important concept to understand when working with layout in CSS. By setting the values of the width, height, padding, border, and margin properties, you can control the dimensions and appearance of an element and the space around it.
