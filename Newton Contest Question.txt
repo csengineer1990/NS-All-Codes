@@ -70,9 +70,7 @@ In this question, you will create a calendar with a highlight dates feature, and
   <div class="calendar-day">23</div>
   <div class="calendar-day">24</div>
   <div class="calendar-day">25</div>
-  <di
-
-v class="calendar-day">26</div>
+  <div class="calendar-day">26</div>
   <div class="calendar-day">27</div>
   <div class="calendar-day">28</div>
   <div class="calendar-day">29</div>
@@ -166,7 +164,7 @@ function clearAll() {
 
 
 
-
+Contest 26-03-23
 Row Sort (contest)
 easy
 Time Limit: 2 sec
@@ -215,6 +213,69 @@ class Solution {
         return count;
     }
 }
+
+
+
+Gift for newton (Contest)
+easy
+Time Limit: 2 sec
+Memory Limit: 128000 kB
+Problem Statement
+On his birthday, newton was given an n*n matrix and instructions for it. The instruction consisted of symbols L and R where if the symbol L is given you need to rotate the matrix 90 degrees to the left, and for the symbol R you need to rotate the matrix 90 degrees to the right. The instruction was only 3 characters in length so newton could handle the twists with ease. Your task is to display the matrix that newton had at the end of these turns.
+Input
+User Task:
+Since this will be a functional problem, you don't have to take input. You have to complete the function Rotate() that takes an integer n and 2d matrix a of size n*n and a string of length 3 as parameters.
+
+Constraints:
+1 ≤ N ≤ 500
+Numbers can range from 1 to 500.
+Output
+Output the final matrix n*n.
+Example
+Sample Input:-
+2
+1 2
+3 4
+RLR
+Sample Output:-
+3 1
+4 2
+
+
+class Solution {
+    public void Rotate(int n,int [][]a,String s) {
+        for (char c : s.toCharArray()) {
+            if (c == 'L') {
+                // rotate matrix 90 degrees to the left
+                int[][] temp = new int[n][n];
+                for (int i = 0; i < n; i++) {
+                    for (int j = 0; j < n; j++) {
+                        temp[n-j-1][i] = a[i][j];
+                    }
+                }
+                a = temp;
+            } else if (c == 'R') {
+                // rotate matrix 90 degrees to the right
+                int[][] temp = new int[n][n];
+                for (int i = 0; i < n; i++) {
+                    for (int j = 0; j < n; j++) {
+                        temp[i][j] = a[n-j-1][i];
+                    }
+                }
+                a = temp;
+            }
+        }
+        // print the final matrix
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
 
 
 
