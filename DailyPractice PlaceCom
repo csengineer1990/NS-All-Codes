@@ -1,1 +1,105 @@
 
+
+Next vowel - Daily Practice Questions 10th Feb 2023
+Memory Limit: 128000 kB
+Problem Statement
+Given a string of length n consisting of lowercase English letters. Find the vowels in the string and replace each vowel with it's next vowel in the alphabetic order.
+
+Next vowel of a vowel is another vowel that comes after it in alphabet. Next vowel of { 'a', 'e', 'i', 'o', 'u'} are { 'e', 'i', 'o', 'u', 'a' } respectively.
+Input
+First line contains n.
+Next line contains a string.
+
+Constraints
+1 <= n <= 105
+Output
+print the string after replacing each vowel with it's next vowel.
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    public static void main (String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        String str = scanner.next();
+        char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+        StringBuilder modified_Str = new StringBuilder();
+
+        for(char c : str.toCharArray()){
+            if(new String (vowels).contains(Character.toString(c))){
+                switch (c) {
+                    case 'a':
+                        modified_Str.append('e');
+                        break;
+                    case 'e':
+                        modified_Str.append('i');
+                        break;
+                    case 'i':
+                        modified_Str.append('o');
+                        break;
+                    case 'o':
+                        modified_Str.append('u');
+                        break;
+                    default:
+                        modified_Str.append('a');
+                        break;
+                }
+            }else{
+                modified_Str.append(c);
+            }
+        }
+        System.out.println(modified_Str.toString());
+    }
+}
+
+
+
+
+Buy and Sell Stock
+easy
+Time Limit: 2 sec
+Memory Limit: 128000 kB
+Problem Statement
+You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+Print the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+Input
+First line contains n, denoting the number of days for the transaction.
+Next line contains n space separated integers denoting price on each day.
+
+Constraints
+1 <= n <= 105
+0 <= prices[i] <= 109
+Output
+A single integer denoting the maximum profit.
+
+import java.io.*; 
+import java.util.*; 
+
+class Main {
+    public static void main (String[] args) {
+       Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] prices = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            prices[i] = sc.nextInt();
+        }
+
+        int minPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+        for(int i = 0 ;i < n; i ++){
+            if(prices[i] < minPrice){
+                minPrice = prices[i];
+            }else if(prices[i] - minPrice > maxProfit){
+                maxProfit = prices[i] - minPrice;
+            }
+        }
+
+        System.out.println(maxProfit);
+
+    }
+}
