@@ -40,6 +40,114 @@ Dyanmic Css- Frontend
 //https://my.newtonschool.co/playground/markup/n5tww0b9ilv5/
 
 
+Display Movies and Sort Contest Ques 16042023
+
+In this question, we will be displaying Movies from an API, and adding sorting functionality by their release year. We have provided you with the HTML and CSS boilerplate. You will be adding the JS code.
+
+    For displaying the movies, fetch data from https://api.themoviedb.org/3/movie/top_rated?api_key=f1a87d30ad8792e0dd1c12ce07d37337&language=en-US&page=1 API. The properties of our interest are poster_path, title, release_date, and overview.
+
+    Use the HTML given below for displaying individual movie cards:
+    <div class="movie">
+    <img class="poster" src="poster_path" alt="movie-title">
+    <div>
+    <h2 class="movie-title">movie-title</h2>
+    <p class="release-year">release year</p>
+    <p class="movie-overview">overview</p>
+    </div>
+    </div>
+    Append each div with class="movie" in the div class="movies".
+
+    For displaying the image, append the poster_path to https://image.tmdb.org/t/p/w500/, which will be https://image.tmdb.org/t/p/w500${poster_path} and add this as source of image.
+    The default view of displaying the movies should be in Ascending order, that is, from the oldest movie to the latest movie. On selecting the Descending option, the movies should be sorted in descending order, that should be, from the latest movie to the oldest movie.
+    Make sure you sort movies by their year and not by release date. Get the full year from the release date.
+HTML
+<label>
+        Sort by Release Year:
+        <select id="sort">
+          <option value="asc">Ascending</option>
+          <option value="desc">Descending</option>
+        </select>
+    </label>
+
+    <div id="movies"></div>
+CSS
+.movie {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.movie img {
+    margin-right: 10px;
+    width: 100px;
+    height: 150px;
+}
+JS
+const moviesContainer = document.getElementById("movies");
+const sortSelect = document.getElementById("sort");
+
+const renderMovies = (movies) => {
+  moviesContainer.innerHTML = "";
+  movies.forEach((movie) => {
+    const movieCard = document.createElement("div");
+    movieCard.classList.add("movie");
+
+    const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+    const title = movie.title;
+    const releaseYear = new Date(movie.release_date).getFullYear();
+    const overview = movie.overview;
+
+    movieCard.innerHTML = `
+      <img class="poster" src="${posterUrl}" alt="${title}">
+      <div>
+        <h2 class="movie-title">${title}</h2>
+        <p class="release-year">${releaseYear}</p>
+        <p class="movie-overview">${overview}</p>
+      </div>
+    `;
+
+    moviesContainer.appendChild(movieCard);
+  });
+};
+
+fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=f1a87d30ad8792e0dd1c12ce07d37337&language=en-US&page=1")
+  .then(response => response.json())
+  .then(data => {
+    let sortedMovies = data.results.sort((a, b) => {
+      const aYear = new Date(a.release_date).getFullYear();
+      const bYear = new Date(b.release_date).getFullYear();
+      return aYear - bYear;
+    });
+
+    sortSelect.addEventListener("change", () => {
+      const selectedOption = sortSelect.value;
+      if (selectedOption === "asc") {
+        sortedMovies = data.results.sort((a, b) => {
+          const aYear = new Date(a.release_date).getFullYear();
+          const bYear = new Date(b.release_date).getFullYear();
+          return aYear - bYear;
+        });
+      } else if (selectedOption === "desc") {
+        sortedMovies = data.results.sort((a, b) => {
+          const aYear = new Date(a.release_date).getFullYear();
+          const bYear = new Date(b.release_date).getFullYear();
+          return bYear - aYear;
+        });
+      }
+      renderMovies(sortedMovies);
+    });
+
+    renderMovies(sortedMovies);
+  })
+  .catch(error => console.error(error));
+
+    
+
+
+
 Bubble Sort visualizer
 In this project, we will be building a bubble sort visualizer.
     Take input from the user, It will be numbers separated by commas from input tag with id numbers_input.
