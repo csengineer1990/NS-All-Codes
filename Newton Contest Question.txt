@@ -1,7 +1,6 @@
 
- Contest 07-05-23
- DNA Sequence
-easy
+Contest 07-05-23
+DNA Sequence
 Time Limit: 2 sec
 Memory Limit: 128000 kB
 Problem Statement
@@ -119,8 +118,147 @@ class Main {
     }
 }
 
+REact and JS 070523
+Password generator
+You are given HTML CSS and JS boilerplate
+The flow of the app is given below
 
- Contest 26-03-23
+
+    There are 4 checkboxes, 1 input field, and 1 button in the app.
+    Checking the checkbox ensures that that kind of characters is included in the password
+    Input field have id #length and it determines the length of the password.
+    The checkbox to include Uppercase letters have id #uppercase
+    The checkbox to include lowercase letters have id #lowercase
+    The checkbox to include numbers have id #numbers
+    The checkbox to include symbols have id #symbols
+    When the button with id #generate is clicked it generates a password in the span tag having id result and it has the length that is mentioned in the input field with id #length and it contains characters whose checkbox are ticked before clicking the button.
+    If any checkbox in unchecked before clicking the generate password button then the password does not include that kind of character in it.
+    When the app loads it has all checkboxes checked and the initial input value in the input box is 20.
+
+
+Complete the JS file and do not change anything in the HTML and CSS file.
+Demo Video
+
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Password Generator</h2>
+      <div class="result-container">
+        <span id="result"></span>
+      </div>
+      <div class="settings">
+        <div class="setting">
+          <label>Password Length</label>
+          <input type="number" id="length" min="4" max="20" value="20">
+        </div>
+        <div class="setting">
+          <label>Include uppercase letters</label>
+          <input type="checkbox" id="uppercase" checked>
+        </div>
+        <div class="setting">
+          <label>Include lowercase letters</label>
+          <input type="checkbox" id="lowercase" checked>
+        </div>
+        <div class="setting">
+          <label>Include numbers</label>
+          <input type="checkbox" id="numbers" checked>
+        </div>
+        <div class="setting">
+          <label>Include symbols</label>
+          <input type="checkbox" id="symbols" checked>
+        </div>
+      </div>
+
+      <button class="btn btn-large" id="generate">
+        Generate Password
+      </button>
+    </div>
+ 
+  </body>
+</html>
+
+JS
+// Get the necessary elements from the DOM
+const lengthInput = document.getElementById("length");
+const uppercaseCheckbox = document.getElementById("uppercase");
+const lowercaseCheckbox = document.getElementById("lowercase");
+const numbersCheckbox = document.getElementById("numbers");
+const symbolsCheckbox = document.getElementById("symbols");
+const generateBtn = document.getElementById("generate");
+const resultSpan = document.getElementById("result");
+
+// Characters to be included in the password
+const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+const numberChars = "0123456789";
+const symbolChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+
+// Generate a random character from a given string
+const getRandomChar = (chars) => {
+  const randomIndex = Math.floor(Math.random() * chars.length);
+  return chars.charAt(randomIndex);
+};
+
+// Generate the password based on the selected options
+const generatePassword = () => {
+  const length = lengthInput.value;
+  let password = "";
+
+  const includeUppercase = uppercaseCheckbox.checked;
+  const includeLowercase = lowercaseCheckbox.checked;
+  const includeNumbers = numbersCheckbox.checked;
+  const includeSymbols = symbolsCheckbox.checked;
+
+  // Build the character set based on the selected options
+  let charSet = "";
+  if (includeUppercase === true) { // Fix: Use strict equality comparison
+    charSet += uppercaseChars;
+  }
+  if (includeLowercase === true) { // Fix: Use strict equality comparison
+    charSet += lowercaseChars;
+  }
+  if (includeNumbers === true) { // Fix: Use strict equality comparison
+    charSet += numberChars;
+  }
+  if (includeSymbols === true) { // Fix: Use strict equality comparison
+    charSet += symbolChars;
+  }
+
+  // Generate the password
+  for (let i = 0; i < length; i++) {
+    password += getRandomChar(charSet);
+  }
+
+  // Display the generated password
+  resultSpan.textContent = password;
+};
+
+// Generate the password when the button is clicked
+generateBtn.addEventListener("click", generatePassword);
+// Generate the initial password
+generatePassword();
+
+CSS
+body {
+
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 10px;
+  margin: 0;
+}
+
+
+Contest 26-03-23
 
 
 React Question
