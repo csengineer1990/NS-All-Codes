@@ -1,3 +1,125 @@
+
+ Contest 07-05-23
+ DNA Sequence
+easy
+Time Limit: 2 sec
+Memory Limit: 128000 kB
+Problem Statement
+The DNA sequence is composed of a series of nucleotides abbreviated as 'A', 'C', 'G', and 'T'.
+For example, "ACGAATTCCG" is a DNA sequence.
+When studying DNA, it is useful to identify repeated sequences within the DNA.
+Given a string s that represents a DNA sequence, return all the 10-letter long sequences (substrings) that occur more than once in a DNA molecule. You may return the answer in any order. This is a functional problem you have to complete the solve function.
+Input
+The first line of the input contains the string s.
+
+Constraints
+1 <= s. length() <= 1e5
+s[i] is either 'A', 'C', 'G', or 'T'
+Output
+Complete the function and return the relevant strings.
+ai_logoAI CodeLens
+BETA
+Example
+Sample Input:-
+GGGGGGGGGGGGG
+
+Sample Output:-
+GGGGGGGGGG
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        List<String> repeatedSequences = findRepeatedSequences(str);
+        for (String sequence : repeatedSequences) {
+            System.out.println(sequence);
+        }
+    }
+    public static List<String> findRepeatedSequences(String s) {
+          List<String> result = new ArrayList<>();
+        Map<String, Integer> sequenceFreq = new HashMap<>();
+
+        for (int i = 0; i <= s.length() - 10; i++) {
+            String sequence = s.substring(i, i + 10);
+            sequenceFreq.put(sequence, sequenceFreq.getOrDefault(sequence, 0) + 1);
+        }
+
+        for (Map.Entry<String, Integer> entry : sequenceFreq.entrySet()) {
+            if (entry.getValue() > 1) {
+                result.add(entry.getKey());
+            }
+        }
+
+        Collections.sort(result); // Sort the output
+
+        return result;
+    }
+
+}
+
+
+Candy Shopping
+easy
+Time Limit: 2 sec
+Memory Limit: 128000 kB
+Problem Statement
+There are N candies, ith of them costing pi. You have M amount of money with you. Find the maximum number of candies you can buy.
+Input
+The first line of the input contains two integers N and M.
+The second line of the input contains N space seperated integers.
+
+Constraints:
+1 <= N <= 105
+1 <= M <= 1014
+1 <= pi <= 109
+Output
+Print the maximum number of candies you can buy.
+ai_logoAI CodeLens
+BETA
+Example
+Sample Input:
+4 7
+3 1 4 2
+
+Sample Output:
+3
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class Main {
+    public static void main (String[] args) {
+        // Your code here
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        long M = scanner.nextLong();
+
+        int[] cost = new int[N];
+        for (int i = 0; i < N; i++) {
+            cost[i] = scanner.nextInt();
+        }
+
+        Arrays.sort(cost);
+        int totalCandies = 0;
+        for (int i = 0; i < N; i++) {
+            if (M >= cost[i]) {
+                totalCandies++;
+                M -= cost[i];
+            } else {
+                break;
+            }
+        }
+
+        System.out.println(totalCandies);
+    }
+}
+
+
  Contest 26-03-23
 
 
